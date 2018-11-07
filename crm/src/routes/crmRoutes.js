@@ -1,8 +1,8 @@
-import { addNewContact,
-        getContacts,
-        updateContact,
-        deleteContact,
-        getContactWithID } from '../controllers/crmController';
+import { addNewPost,
+        getPosts,
+        updatePost,
+        deletePost,
+        getPostWithID } from '../controllers/crmController';
 
 const routes = (app) => {
     app.route('/fetch')
@@ -12,20 +12,20 @@ const routes = (app) => {
         console.log(`Request from: ${req.originalUrl}`)
         console.log(`Request type: ${req.method}`)
         next();
-    }, getContacts)
+    }, getPosts)
 
     // POST endpoint
-    .post(addNewContact);
+    .post(addNewPost);
 
     app.route('/fetch/:userId')
     // get specific contact
-    .get(getContactWithID)
+    .get(getPostWithID)
 
     // put request
-    .put(updateContact)
+    .put(updatePost)
 
     // delete request
-    .delete(deleteContact);
+    .delete(deletePost);
 }
 
 export default routes;

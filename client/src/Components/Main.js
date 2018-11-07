@@ -44,7 +44,7 @@ export default class Main extends React.Component{
     var temp = this.state.data;
     temp[index].likes = temp[index].likes+1;
     this.setState(temp);
-    fetch('http://localhost:8080/fetch', {method: 'POST'})
+    fetch('http://localhost:8080/fetch/', {method: 'POST'})
     .then(function(response) {
       if(response.ok) {
         console.log('Click was recorded');
