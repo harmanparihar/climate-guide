@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import NavMenu from './navigation/NavMenu';
-// import searchIcon from './../images/search-solid.svg';
+import searchIcon from './../images/search-solid.svg';
 
 class Header extends Component {
     render() {
@@ -24,7 +24,7 @@ class Header extends Component {
                         placeholder="Search"
                     />
                     <button type="submit" className="search-submit">
-
+                        <img src={searchIcon} alt="Search Icon" />
                     </button>
                 </div>
             </header>

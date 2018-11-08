@@ -8,18 +8,29 @@ const routes = (app) => {
     app.route('/fetch')
     .get((req, res, next) => {
         // middleware
-        res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+        res.setHeader('Access-Control-Allow-Origin', '*');
         console.log(`Request from: ${req.originalUrl}`)
         console.log(`Request type: ${req.method}`)
         next();
     }, getPosts)
 
     // POST endpoint
-    .post(addNewPost);
+    .post((req, res, next) => {
+        // middleware
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        console.log(`Request from: ${req.originalUrl}`)
+        console.log(`Request type: ${req.method}`)
+        next();
+    }, addNewPost)
 
     app.route('/fetch/:userId')
-    // get specific contact
-    .get(getPostWithID)
+    .get((req, res, next) => {
+        // middleware
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        console.log(`Request from: ${req.originalUrl}`)
+        console.log(`Request type: ${req.method}`)
+        next();
+    }, getPostWithID)
 
     // put request
     .put(updatePost)

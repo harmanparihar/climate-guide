@@ -1,10 +1,9 @@
 import mongoose from 'mongoose';
-import { ContactSchema } from '../models/crmModel';
+import { DataSchemaReply } from '../models/crmModel';
 
-const Contact = mongoose.model('Contact', ContactSchema);
+const Contact = mongoose.model('comments', DataSchemaReply);
 
 export const addNewPost = (req, res) => {
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
     let newContact = new Contact(req.body);
 
     newContact.save((err, contact) => {

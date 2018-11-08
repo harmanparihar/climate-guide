@@ -11,7 +11,7 @@ export default class Main extends React.Component{
     }
   }
   clickHandler(){
-    if(this.state.show_form == false)
+    if(this.state.show_form === false)
     {
       this.setState({show_form:true});
     }
@@ -21,7 +21,7 @@ export default class Main extends React.Component{
   }
   componentDidMount(){
     this.serverRequest = axios
-    .get('http://localhost:8080/fetch', {mode: 'no-cors'})
+    .get('http://localhost:8080/fetch')
     .then(function(result){
       var tempposts = result.data;
       console.log("Result is");
@@ -30,21 +30,21 @@ export default class Main extends React.Component{
         data:tempposts
       });
     }.bind(this));
-    // this.postServer = axios
-    // .post('http://localhost:8080/fetch',  this.state.data)
-    // .then(function (response) {
-    //   console.log(response);
-    // })
-    // .catch(function (error) {
-    //   console.log(error);
-    // });
-    // this.update = setInterval(this.postServer, 2000);
   }
+  updateData(temp){
+    this.setState(temp);
+  }
+  // deletePost(index){
+  //
+  // }
   incrementUpvotes(index){
     var temp = this.state.data;
     temp[index].likes = temp[index].likes+1;
     this.setState(temp);
-    fetch('http://localhost:8080/fetch/', {method: 'POST'})
+    fetch(`http://localhost:8080/fetch/${temp[index]._id}`, {method: 'PUT',headers: {
+            "Content-Type": "application/json; charset=utf-8",
+            // "Content-Type": "application/x-www-form-urlencoded",
+        },body: JSON.stringify(this.state.data[index])})
     .then(function(response) {
       if(response.ok) {
         console.log('Click was recorded');
@@ -57,8 +57,8 @@ export default class Main extends React.Component{
     });
   };
   componentWillUnmount(){
+    // clearInterval(this.update)
     this.serverRequest.abort();
-    clearInterval(this.update)
   }
   render(){
     return(
@@ -66,7 +66,7 @@ export default class Main extends React.Component{
           <h1>Get Involved</h1>
           <div className="add_post">
           <button id="new_post" onClick={this.clickHandler.bind(this)}><span className="add_symbol">+ </span>Add New Post</button>
-          {this.state.show_form ? <Form placeholder_text="Share your thoughts"/> : null}
+          {this.state.show_form ? <Form data={this.state.data} updatedb={this.updateData.bind(this)} placeholder_text="Share your thoughts"/> : null}
           </div>
           <Posts data={this.state.data} incrementUps={this.incrementUpvotes.bind(this)}/>
         </main>

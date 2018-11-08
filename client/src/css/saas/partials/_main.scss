@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 body{
   margin:0;
+  font-family: 'Open Sans', sans-serif;
   padding: 0;
 }
 main{
@@ -75,7 +77,8 @@ main{
   display: grid;
   padding: 2% 10%;
   grid-template-columns: 1fr 100px;
-  textarea{
+
+  textarea, input{
     width: 100%;
     padding: 6px 12px;
     box-sizing: border-box;
@@ -108,4 +111,7 @@ button:focus{
 }
 input:focus{
   outline: none;
+}
+h1{
+  text-align: center;
 }

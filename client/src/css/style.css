@@ -1,13 +1,132 @@
-header {
-  height: 10vh;
-  background: linear-gradient(to left, #182057, #75302a); }
+/*--------------------------------------------------------------
+## Define the main colors
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Define the support colors
+--------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Rubik:400,400i,700,700i|Fira+Sans:400,400i,700,700i|Proza+Libre:400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+body, input {
+  font-family: "Rubik", helvetica, verdana, arial, sans-serif;
+  font-weight: 400;
+  font-feature-settings: normal;
+  font-stretch: 100%;
+  font-style: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Proza Libre", helvetica, verdana, arial, sans-serif; }
+
+h2 {
+  text-transform: uppercase; }
+
+h3 {
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace; }
+
+/*******************************************************************/
+/*                                                                 */
+/*                       HEADER LAYOUT                             */
+/*                                                                 */
+/*******************************************************************/
+header {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
+  header:before {
+    content: "";
+    height: 100%;
+    background: linear-gradient(to left, #182057, #75302a);
+    position: absolute;
+    width: 100vw;
+    left: calc(500px - 50vw);
+    z-index: -1; }
+  header .site-title {
+    flex-grow: 0; }
+    header .site-title .site-logo {
+      font-size: 12px;
+      display: inline-block;
+      border: 1px solid white;
+      border-radius: 50%;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 22px;
+      padding-bottom: 22px;
+      margin-right: .5rem;
+      vertical-align: super; }
+    header .site-title .site-title-h1 {
+      display: inline-block;
+      font-size: 1.5em; }
+  header .header-nav {
+    flex-grow: 1; }
+    header .header-nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center; }
+      header .header-nav ul li {
+        padding-left: 2%;
+        padding-right: 2%; }
+  header .search-form {
+    flex: 0 0 167px;
+    position: relative; }
+    header .search-form .search-field {
+      box-sizing: content-box;
+      border: solid 1px #ccc;
+      border-radius: 10em;
+      padding-left: 10px;
+      padding-right: 25px;
+      padding-top: 9px;
+      padding-bottom: 9px; }
+    header .search-form .search-submit {
+      position: absolute;
+      right: 5px;
+      border: none;
+      background-color: initial;
+      top: 10px; }
+      header .search-form .search-submit img {
+        width: 15px; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+.site-title a {
+  color: white; }
+
+.site-header nav a, .site-footer nav a {
+  color: white;
+  font-weight: 400;
+  text-transform: capitalize; }
+  .site-header nav a:hover, .site-footer nav a:hover {
+    box-shadow: 0 -2px inset white; }
+
+/*******************************************************************/
+/* ================= end of header layout ======================== */
+/*******************************************************************/
 footer {
   height: 10vh;
   background: linear-gradient(to left, #182057, #75302a); }
 
 body {
   margin: 0;
+  font-family: 'Open Sans', sans-serif;
   padding: 0; }
 
 main {
@@ -72,7 +191,7 @@ main {
   display: grid;
   padding: 2% 10%;
   grid-template-columns: 1fr 100px; }
-  .add_post_form textarea {
+  .add_post_form textarea, .add_post_form input {
     width: 100%;
     padding: 6px 12px;
     box-sizing: border-box;
@@ -102,5 +221,8 @@ button:focus {
 
 input:focus {
   outline: none; }
+
+h1 {
+  text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

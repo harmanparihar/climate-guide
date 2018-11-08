@@ -1,4 +1,113 @@
-header{
-  height: 10vh;
-  background: $background_gradient;
+/*******************************************************************/
+/*                                                                 */
+/*                       HEADER LAYOUT                             */
+/*                                                                 */
+/*******************************************************************/
+
+header {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    @include padding-y(2rem);
+    &:before {
+        content: "";
+        height: 100%;
+        background: $background_gradient;
+        position: absolute;
+        width: 100vw;
+        left: calc(500px - 50vw);
+        // right: 50vw;
+        z-index: -1;
+    }
+
+    .site-title {
+        flex-grow: 0;
+
+        .site-logo {
+            font-size: 12px;
+            display: inline-block;
+            border: 1px solid white;
+            border-radius: 50%;
+            @include padding-x(15px);
+            @include padding-y(22px);
+            margin-right: .5rem;
+            vertical-align: super;
+        }
+
+        .site-title-h1 {
+            display: inline-block;
+            font-size: 1.5em;
+        }
+    }
+
+    .header-nav {
+        flex-grow: 1;
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+
+            li {
+                @include padding-x(2%);
+            }
+        }
+    }
+
+    .search-form {
+        flex: 0 0 167px;
+        position: relative;
+
+        .search-field {
+            box-sizing: content-box;
+            border: solid 1px #ccc;
+            border-radius: 10em;
+            padding-left: 10px;
+            padding-right: 25px;
+            @include padding-y(9px);
+        }
+
+        .search-submit {
+            position: absolute;
+            right: 5px;
+            border: none;
+            background-color: initial;
+            top: 10px;
+
+            img {
+                width: 15px;
+            }
+        }
+    }
 }
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.site-title {
+    a {
+        color: white;
+    }
+}
+
+.site-header, .site-footer {
+    nav a {
+        color: white;
+        font-weight: 400;
+        text-transform: capitalize;
+
+        &:hover {
+            box-shadow: 0 -2px inset white;
+        }
+    }
+}
+/*******************************************************************/
+/* ================= end of header layout ======================== */
+/*******************************************************************/
