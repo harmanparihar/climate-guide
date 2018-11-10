@@ -1,3 +1,5 @@
+// Form.js use React local state management to render the notification of successfully sent message
+
 import React, { Component } from "react";
 
 class Form extends Component {
