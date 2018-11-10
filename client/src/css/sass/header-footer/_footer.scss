@@ -1,4 +1,45 @@
-footer{
-  height: 10vh;
-  background: $background_gradient;
+/*******************************************************************/
+/*                                                                 */
+/*                       FOOTER LAYOUT                             */
+/*                                                                 */
+/*******************************************************************/
+
+.site-footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-top: 5rem;
+    position: relative;
+
+    max-width: 1000px;
+    margin: auto;
+
+    &:before {
+        content: "";
+        height: 100%;
+        background: linear-gradient(to bottom right, #182057, #75302a);
+        // background: $color__hippie-pink;
+        position: absolute;
+        width: 100vw;
+        left: calc(500px - 50vw);
+        z-index: -1;
+    }
+
+    ul {
+        list-style: none;
+        @include margin-y(0);
+        @include padding-y(1rem);
+        display: flex;
+        flex-flow: row nowrap;
+
+        li {
+            @include padding-x(.5rem);
+        }
+    }
+
 }
+
+
+/*******************************************************************/
+/* ================= end of footer layout ======================== */
+/*******************************************************************/

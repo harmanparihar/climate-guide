@@ -4,7 +4,7 @@ import Main from './components/discussion-board/Main';
 import Sidebar from './components/discussion-board/Sidebar';
 import Footer from './components/Footer';
 
-import './css/style.css';
+import './App.scss';
 class App extends Component {
   render() {
     return (

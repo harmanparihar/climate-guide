@@ -1,9 +1,16 @@
-import React from 'react';
+import React, {Component} from 'react';
+import NavMenu from "./navigation/NavMenu";
+import SocialMenu from "./navigation/SocialMenu";
 
-export default class Footer extends React.Component{
-  render(){
-    return(
-        <footer></footer>
-    );
-  }
+class Footer extends Component {
+    render() {
+        return (
+            <footer className="site-footer">
+                <NavMenu className="footer-nav" />
+                <SocialMenu className="footer-social" />
+            </footer>
+        );
+    }
 }
+
+export default Footer
