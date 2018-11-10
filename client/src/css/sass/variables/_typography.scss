@@ -1,4 +1,3 @@
-$font_color_button: white;
 @import url('https://fonts.googleapis.com/css?family=Rubik:400,400i,700,700i|Fira+Sans:400,400i,700,700i|Proza+Libre:400,400i,700,700i');
 
 $font__heading: "Proza Libre", helvetica, verdana, arial, sans-serif;
@@ -35,3 +34,5 @@ h3 {
 code {
     font-family: $font__code;
 }
+
+$font_color_button: white;

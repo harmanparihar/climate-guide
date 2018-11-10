@@ -1,0 +1,19 @@
+/* Mixins and variables first */
+@import 'mixins/mixins';
+@import 'variables/colors';
+@import 'variables/typography';
+
+/* All forms and elements (links, buttons) */
+@import 'forms/forms';
+@import 'navigation/links';
+
+/* Header and footer */
+@import "header-footer/header";
+@import "header-footer/footer";
+
+/* Discussion Board */
+@import 'discussion-board/main';
+@import 'discussion-board/sidebar';
+
+/* Media: images */
+@import 'media/media';

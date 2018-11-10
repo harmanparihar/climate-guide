@@ -1,0 +1,28 @@
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.site-title {
+    a {
+        color: white;
+    }
+}
+
+.site-header, .site-footer {
+    nav a {
+        color: white;
+        font-weight: 400;
+        text-transform: capitalize;
+
+        &:hover {
+            box-shadow: 0 -2px inset white;
+        }
+    }
+}
+
+.footer-social {
+    a {
+        font-size: 1.2rem;
+    }
+}
