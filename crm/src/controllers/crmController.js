@@ -1,7 +1,9 @@
 import mongoose from 'mongoose';
 import { DataSchemaReply } from '../models/crmModel';
+import { userSchema } from '../models/user';
 
 const Contact = mongoose.model('comments', DataSchemaReply);
+const User = mongoose.model('User', userSchema)
 
 export const addNewPost = (req, res) => {
     let newContact = new Contact(req.body);
