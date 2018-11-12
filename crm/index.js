@@ -137,7 +137,7 @@ const result2 = excelToJson({
         range: 'A42:D78',
         columnToKey: {
         	A: 'x',
-    		C: 'y'
+    		D: 'y'
         }
     }]
 });
@@ -150,7 +150,7 @@ const result3 = excelToJson({
         range: 'A42:D78',
         columnToKey: {
         	A: 'x',
-    		D: 'y'
+    		C: 'y'
         }
     }]
 });

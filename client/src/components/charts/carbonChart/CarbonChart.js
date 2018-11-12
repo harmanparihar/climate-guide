@@ -28,7 +28,7 @@ const dataSource = {
             "data": dataSet1["Global Carbon Budget"]
         },
         {
-            "seriesname": "Land-use Change Emissions",
+            "seriesname": "Atmospheric Growth",
             "drawLine": true,
             "color": "ff00ff",
             "anchorsides": "3",
@@ -39,7 +39,7 @@ const dataSource = {
             "data": dataSet2["Global Carbon Budget"]
         },
         {
-            "seriesname": "Atmospheric Growth",
+            "seriesname": "Land-use Change Emissions",
             "drawLine": true,
             "color": "0000ff",
             "anchorsides": "3",
