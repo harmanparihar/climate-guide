@@ -1,5 +1,5 @@
 {
-  "name": "fullstack_app",
+  "name": "climateguide",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -12,6 +12,7 @@
     "bcryptjs": "^2.4.3",
     "concurrently": "^4.0.1",
     "connect-mongo": "^2.0.1",
+    "convert-excel-to-json": "^1.5.2",
     "express-session": "^1.15.6",
     "node-sass": "^4.10.0",
     "passport": "^0.4.0",

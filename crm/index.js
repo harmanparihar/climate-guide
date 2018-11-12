@@ -20,15 +20,15 @@ mongoose.Promise = global.Promise;
 mongoose.connect(db_dev, {
    useMongoClient: true
 }).then(
-    () => { 
+    () => {
         console.log('Connected to Mongo');
-        
+
     },
     err => {
-         /** handle initial connection error */ 
+         /** handle initial connection error */
          console.log('error connecting to Mongo: ')
          console.log(err);
-         
+
         }
   );
 
@@ -44,7 +44,7 @@ routes(app);
 
 // Sessions
 
-//not working sessions. line 51 isn't saving the session 
+//not working sessions. line 51 isn't saving the session
 app.use(
   session({
     secret: 'fraggle-rock', //pick a random string to make the hash that is generated secure
@@ -56,8 +56,8 @@ app.use(
 
 
 // Passport
-app.use(passport.initialize())
-app.use(passport.session()) // calls the deserializeUser
+app.use(passport.initialize());
+app.use(passport.session()); // calls the deserializeUser
 app.use('/user', user);
 
 
@@ -70,3 +70,126 @@ app.get('/',(req,res)=>
 app.listen(PORT,() =>
   console.log(`your server is running on ${PORT}`)
 );
+
+
+
+/***************************************************************/
+/*   Fetch and Create chart data                               */
+/*       Modified by: Maggie                                   */
+/*       Nov 11, 2018                                          */
+/***************************************************************/
+
+const request = require('request');
+const fs = require('fs');
+let dataArray1 = [];
+let dataArray2 = [];
+let dataArray3 = [];
+let dataArray4 = [];
+
+const urlTemp= "https://climate.nasa.gov/system/internal_resources/details/original/647_Global_Temperature_Data_File.txt";
+
+request.get(urlTemp, (error, respond, body) => {
+    if (!error && respond.statusCode == 200) {
+
+        // loop through the lines of body of txt file then push elements of lines to dataArray
+        for (let line of body.split("\n")) {
+            dataArray1.push({
+                "x": line.split("\t")[0],
+                "y": line.split("\t")[1]
+            });
+            dataArray2.push({
+                "x": line.split("\t")[0],
+                "y": line.split("\t")[2].replace("\r", "")
+            });
+        }
+    } else {
+        console.log('************************** ' + error);
+    }
+
+    // create 2 new JSON files so that react charts can use
+    fs.writeFile('../client/src/components/charts/tempChart/dataSource/dataset1.json', JSON.stringify(dataArray1), 'utf8');
+    fs.writeFile('../client/src/components/charts/tempChart/dataSource/dataset2.json', JSON.stringify(dataArray2), 'utf8');
+});
+
+// end of Temperature data
+
+// Carbon data (fetch from excel)
+const excelToJson = require('convert-excel-to-json');
+let sourcePath = '../client/src/components/charts/carbonChart/dataSource';
+
+const result1 = excelToJson({
+    sourceFile: sourcePath + '/carbon.xlsx',
+    sheets: [{
+        name: 'Global Carbon Budget',
+        range: 'A42:D78',
+        columnToKey: {
+        	A: 'x',
+    		B: 'y'
+        }
+    }]
+});
+fs.writeFile(sourcePath + '/dataset1.json', JSON.stringify(result1), 'utf8');
+
+const result2 = excelToJson({
+    sourceFile: sourcePath + '/carbon.xlsx',
+    sheets: [{
+        name: 'Global Carbon Budget',
+        range: 'A42:D78',
+        columnToKey: {
+        	A: 'x',
+    		C: 'y'
+        }
+    }]
+});
+fs.writeFile(sourcePath + '/dataset2.json', JSON.stringify(result2), 'utf8');
+
+const result3 = excelToJson({
+    sourceFile: sourcePath + '/carbon.xlsx',
+    sheets: [{
+        name: 'Global Carbon Budget',
+        range: 'A42:D78',
+        columnToKey: {
+        	A: 'x',
+    		D: 'y'
+        }
+    }]
+});
+fs.writeFile(sourcePath + '/dataset3.json', JSON.stringify(result3), 'utf8');
+// end of Carbon
+
+
+// CO2 (fetch from live URL)
+// const urlCO2= "ftp://aftp.cmdl.noaa.gov/products/trends/co2/co2_mm_mlo.txt";
+
+const ftp = require('ftp');
+let data = "";
+const path = require('path');
+const filePath = path.join('../client/src/components/charts/co2Chart/dataSource', 'dataset1.txt');
+
+let client = new ftp();
+client.on('ready', function() {
+    client.get('products/trends/co2/co2_annmean_mlo.txt', function(err, stream) {
+        if (err) throw err;
+        stream.once('close', function() { client.end(); });
+        stream.pipe(fs.createWriteStream('../client/src/components/charts/co2Chart/dataSource/dataset1.txt'));
+
+        fs.readFile(filePath, {encoding: 'utf-8'}, function(error, body){
+            if (!error) {
+                dataArray3 = body.split('\n');
+                for (let line = 57; line < dataArray3.length-1; line++) {
+                    dataArray4.push({
+                        "x": dataArray3[line].trim().split("   ")[0],
+                        "y": dataArray3[line].trim().split("   ")[1]
+                    });
+                }
+                fs.writeFile('../client/src/components/charts/co2Chart/dataSource/dataset1.json', JSON.stringify(dataArray4), 'utf8');
+            } else {
+                console.log('************************** ' + error);
+            }
+        });
+    });
+});
+
+client.connect({
+    host: "aftp.cmdl.noaa.gov"
+});

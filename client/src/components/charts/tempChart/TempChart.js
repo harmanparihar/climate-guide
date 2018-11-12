@@ -26,7 +26,6 @@ const dataSource = {
             "anchorsides": "3",
             "anchorBorderThickness": "0.1",
             "anchorradius": "3",
-            "anchorbgcolor": "D5FFD5",
             "hoverColor": "#999CA5",
             // "showRegressionLine": true,
             "data": dataSet1
@@ -38,7 +37,6 @@ const dataSource = {
             "anchorsides": "3",
             "anchorBorderThickness": "0.1",
             "anchorradius": "3",
-            "anchorbgcolor": "C6C6FF",
             "hoverColor": "#999CA5",
             "data": dataSet2
         }
@@ -69,17 +67,17 @@ const dataSource = {
     // ],
 }
 
-class ZoomScatter extends Component {
+class TemperatureChart extends Component {
    render() {
       return (
       <ReactFusioncharts
          type = "zoomscatter"
-         width = '100%'
-         height = '30%'
+         width = '1000'
+         height = '500'
          dataFormat = "json"
          dataSource = {dataSource} />
       );
    }
 }
 
-export default ZoomScatter;
+export default TemperatureChart;
