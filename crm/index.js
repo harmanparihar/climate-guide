@@ -81,7 +81,7 @@ app.listen(PORT,() =>
 
 const request = require('request');
 const fs = require('fs');
-let dataArray1 = [];
+let dataArray1 = [[], []];
 let dataArray2 = [];
 let dataArray3 = [];
 let dataArray4 = [];
@@ -93,11 +93,11 @@ request.get(urlTemp, (error, respond, body) => {
 
         // loop through the lines of body of txt file then push elements of lines to dataArray
         for (let line of body.split("\n")) {
-            dataArray1.push({
+            dataArray1[0].push({
                 "x": line.split("\t")[0],
                 "y": line.split("\t")[1]
             });
-            dataArray2.push({
+            dataArray1[1].push({
                 "x": line.split("\t")[0],
                 "y": line.split("\t")[2].replace("\r", "")
             });
@@ -107,8 +107,7 @@ request.get(urlTemp, (error, respond, body) => {
     }
 
     // create 2 new JSON files so that react charts can use
-    fs.writeFile('../client/src/components/causes/tempChart/dataSource/dataset1.json', JSON.stringify(dataArray1), 'utf8');
-    fs.writeFile('../client/src/components/causes/tempChart/dataSource/dataset2.json', JSON.stringify(dataArray2), 'utf8');
+    fs.writeFile('../client/src/components/causes/tempChart/dataSource/dataset.json', JSON.stringify(dataArray1), 'utf8');
 });
 
 // end of Temperature data
@@ -118,112 +117,101 @@ const excelToJson = require('convert-excel-to-json');
 let sourcePath = '../client/src/components/causes/carbonChart/dataSource';
 
 // Fossil Fuel - column B
-fs.writeFile(sourcePath + '/dataset1.json', JSON.stringify(
-    excelToJson({
-        sourceFile: sourcePath + '/carbon.xlsx',
-        sheets: [{
-            name: 'Global Carbon Budget',
-            range: 'A42:F78',
-            columnToKey: {
-            	A: 'x',
-        		B: 'y'
-            }
-        }]
-    })
-), 'utf8');
+dataArray2.push(excelToJson({
+    sourceFile: sourcePath + '/carbon.xlsx',
+    sheets: [{
+        name: 'Global Carbon Budget',
+        range: 'A42:F78',
+        columnToKey: {
+            A: 'x',
+            B: 'y'
+        }
+    }]
+}));
 
 // Atmospheric Growth - column D
-fs.writeFile(sourcePath + '/dataset2.json', JSON.stringify(
-    excelToJson({
-        sourceFile: sourcePath + '/carbon.xlsx',
-        sheets: [{
-            name: 'Global Carbon Budget',
-            range: 'A42:F78',
-            columnToKey: {
-            	A: 'x',
-        		D: 'y'
-            }
-        }]
-    })
-), 'utf8');
+dataArray2.push(excelToJson({
+    sourceFile: sourcePath + '/carbon.xlsx',
+    sheets: [{
+        name: 'Global Carbon Budget',
+        range: 'A42:F78',
+        columnToKey: {
+            A: 'x',
+            D: 'y'
+        }
+    }]
+}));
 
 // Land-use Change Emissions - column C
-fs.writeFile(sourcePath + '/dataset3.json', JSON.stringify(
-    excelToJson({
-        sourceFile: sourcePath + '/carbon.xlsx',
-        sheets: [{
-            name: 'Global Carbon Budget',
-            range: 'A42:F78',
-            columnToKey: {
-            	A: 'x',
-        		C: 'y'
-            }
-        }]
-    })
-), 'utf8');
+dataArray2.push(excelToJson({
+    sourceFile: sourcePath + '/carbon.xlsx',
+    sheets: [{
+        name: 'Global Carbon Budget',
+        range: 'A42:F78',
+        columnToKey: {
+            A: 'x',
+            C: 'y'
+        }
+    }]
+}));
 
 // Land Sink - column E
-fs.writeFile(sourcePath + '/dataset4.json', JSON.stringify(
-    excelToJson({
-        sourceFile: sourcePath + '/carbon.xlsx',
-        sheets: [{
-            name: 'Global Carbon Budget',
-            range: 'A42:F78',
-            columnToKey: {
-            	A: 'x',
-        		E: 'y'
-            }
-        }]
-    })
-), 'utf8');
+dataArray2.push(excelToJson({
+    sourceFile: sourcePath + '/carbon.xlsx',
+    sheets: [{
+        name: 'Global Carbon Budget',
+        range: 'A42:F78',
+        columnToKey: {
+            A: 'x',
+            E: 'y'
+        }
+    }]
+}));
 
 // Ocean Sink - column F
-fs.writeFile(sourcePath + '/dataset5.json', JSON.stringify(
-    excelToJson({
-        sourceFile: sourcePath + '/carbon.xlsx',
-        sheets: [{
-            name: 'Global Carbon Budget',
-            range: 'A42:F78',
-            columnToKey: {
-            	A: 'x',
-        		F: 'y'
-            }
-        }]
-    })
-), 'utf8');
+dataArray2.push(excelToJson({
+    sourceFile: sourcePath + '/carbon.xlsx',
+    sheets: [{
+        name: 'Global Carbon Budget',
+        range: 'A42:F78',
+        columnToKey: {
+            A: 'x',
+            F: 'y'
+        }
+    }]
+}));
+fs.writeFile(sourcePath + '/dataset.json', JSON.stringify(dataArray2), 'utf8');
 // end of Carbon
 
 
-// CO2 (fetch from live URL)
+// CO2 (fetch from live URL - FTP protocol)
 // const urlCO2= "ftp://aftp.cmdl.noaa.gov/products/trends/co2/co2_mm_mlo.txt";
 
 const ftp = require('ftp');
-let data = "";
 const path = require('path');
-const filePath = path.join('../client/src/components/causes/co2Chart/dataSource', 'dataset1.txt');
 
 let client = new ftp();
 client.on('ready', () => {
-    client.get('products/trends/co2/co2_annmean_mlo.txt', (err, stream) => {
-        if (err) throw err;
+    client.get('products/trends/co2/co2_annmean_mlo.txt', (error, stream) => {
+        if (error) throw error;
+
         stream.once('close', () => {
             client.end();
         });
-        stream.pipe(fs.createWriteStream('../client/src/components/causes/co2Chart/dataSource/dataset1.txt'));
 
-        fs.readFile(filePath, {encoding: 'utf-8'}, (error, body) => {
-            if (!error) {
-                dataArray3 = body.split('\n');
-                for (let line = 57; line < dataArray3.length-1; line++) {
-                    dataArray4.push({
-                        "x": dataArray3[line].trim().split("   ")[0],
-                        "y": dataArray3[line].trim().split("   ")[1]
-                    });
-                }
-                fs.writeFile('../client/src/components/causes/co2Chart/dataSource/dataset1.json', JSON.stringify(dataArray4), 'utf8');
-            } else {
-                console.log('************************* ' + error);
+        let content = "";
+        stream.on('data', (chunk) => {
+            content += chunk;
+        });
+        stream.on('end', () => {
+            dataArray3 = content.split('\n');
+            for (let line = 57; line < dataArray3.length-1; line++) {
+                dataArray4.push({
+                    "x": dataArray3[line].trim().split("   ")[0],
+                    "y": dataArray3[line].trim().split("   ")[1]
+                });
             }
+            fs.writeFile('../client/src/components/causes/co2Chart/dataSource/dataset.json', JSON.stringify(dataArray4), 'utf8');
         });
     });
 });

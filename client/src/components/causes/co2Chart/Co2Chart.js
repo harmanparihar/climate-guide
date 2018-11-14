@@ -6,7 +6,7 @@ import Chart from 'fusioncharts/fusioncharts.zoomscatter';
 
 // import dataCategories from './dataSource/categories.json';
 import chartConfig from './dataSource/chartConfig.json';
-import dataSet1 from './dataSource/dataset1.json';
+import dataSet from './dataSource/dataset.json';
 
 // this method shows errors when deploy (but not on other chart type???)
 // ReactFusioncharts.fcRoot(FusionCharts, Chart, CandyTheme);
@@ -27,7 +27,7 @@ const dataSource = {
             "anchorradius": "3",
             "hoverColor": "#999CA5",
             // "showRegressionLine": true,
-            "data": dataSet1
+            "data": dataSet
         }
     ]
 }

@@ -6,11 +6,12 @@ import Chart from 'fusioncharts/fusioncharts.zoomscatter';
 
 // import dataCategories from './dataSource/categories.json';
 import chartConfig from './dataSource/chartConfig.json';
-import dataSet1 from './dataSource/dataset1.json';
-import dataSet2 from './dataSource/dataset2.json';
-import dataSet3 from './dataSource/dataset3.json';
-import dataSet4 from './dataSource/dataset4.json';
-import dataSet5 from './dataSource/dataset5.json';
+import dataSet from './dataSource/dataset.json';
+// import dataSet1 from './dataSource/dataset1.json';
+// import dataSet2 from './dataSource/dataset2.json';
+// import dataSet3 from './dataSource/dataset3.json';
+// import dataSet4 from './dataSource/dataset4.json';
+// import dataSet5 from './dataSource/dataset5.json';
 
 Chart(FusionCharts);
 
@@ -27,7 +28,7 @@ const dataSource = {
             "anchorradius": "3",
             "hoverColor": "#999CA5",
             // "showRegressionLine": true,
-            "data": dataSet1["Global Carbon Budget"]
+            "data": dataSet[0]["Global Carbon Budget"]
         },
         {
             "seriesname": "Atmospheric Growth",
@@ -38,7 +39,7 @@ const dataSource = {
             "anchorradius": "3",
             "hoverColor": "#999CA5",
             // "showRegressionLine": true,
-            "data": dataSet2["Global Carbon Budget"]
+            "data": dataSet[1]["Global Carbon Budget"]
         },
         {
             "seriesname": "Land-use Change",
@@ -49,7 +50,7 @@ const dataSource = {
             "anchorradius": "3",
             "hoverColor": "#999CA5",
             // "showRegressionLine": true,
-            "data": dataSet3["Global Carbon Budget"]
+            "data": dataSet[2]["Global Carbon Budget"]
         },
         {
             "seriesname": "Land Sink",
@@ -60,7 +61,7 @@ const dataSource = {
             "anchorradius": "3",
             "hoverColor": "#999CA5",
             // "showRegressionLine": true,
-            "data": dataSet4["Global Carbon Budget"]
+            "data": dataSet[3]["Global Carbon Budget"]
         },
         {
             "seriesname": "Ocean Sink",
@@ -71,7 +72,7 @@ const dataSource = {
             "anchorradius": "3",
             "hoverColor": "#999CA5",
             // "showRegressionLine": true,
-            "data": dataSet5["Global Carbon Budget"]
+            "data": dataSet[4]["Global Carbon Budget"]
         }
     ],
 }
