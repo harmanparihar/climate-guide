@@ -9,6 +9,8 @@ import chartConfig from './dataSource/chartConfig.json';
 import dataSet1 from './dataSource/dataset1.json';
 import dataSet2 from './dataSource/dataset2.json';
 import dataSet3 from './dataSource/dataset3.json';
+import dataSet4 from './dataSource/dataset4.json';
+import dataSet5 from './dataSource/dataset5.json';
 
 Chart(FusionCharts);
 
@@ -19,7 +21,7 @@ const dataSource = {
         {
             "seriesname": "Fossil Fuel & Industry",
             "drawLine": true,
-            "color": "ff6600",
+            "color": "91f1f9",
             "anchorsides": "3",
             "anchorBorderThickness": "0.1",
             "anchorradius": "3",
@@ -30,7 +32,7 @@ const dataSource = {
         {
             "seriesname": "Atmospheric Growth",
             "drawLine": true,
-            "color": "ff00ff",
+            "color": "ff6759",
             "anchorsides": "3",
             "anchorBorderThickness": "0.1",
             "anchorradius": "3",
@@ -39,15 +41,37 @@ const dataSource = {
             "data": dataSet2["Global Carbon Budget"]
         },
         {
-            "seriesname": "Land-use Change Emissions",
+            "seriesname": "Land-use Change",
             "drawLine": true,
-            "color": "0000ff",
+            "color": "8747d1",
             "anchorsides": "3",
             "anchorBorderThickness": "0.1",
             "anchorradius": "3",
             "hoverColor": "#999CA5",
             // "showRegressionLine": true,
             "data": dataSet3["Global Carbon Budget"]
+        },
+        {
+            "seriesname": "Land Sink",
+            "drawLine": true,
+            "color": "670800",
+            "anchorsides": "3",
+            "anchorBorderThickness": "0.1",
+            "anchorradius": "3",
+            "hoverColor": "#999CA5",
+            // "showRegressionLine": true,
+            "data": dataSet4["Global Carbon Budget"]
+        },
+        {
+            "seriesname": "Ocean Sink",
+            "drawLine": true,
+            "color": "182057",
+            "anchorsides": "3",
+            "anchorBorderThickness": "0.1",
+            "anchorradius": "3",
+            "hoverColor": "#999CA5",
+            // "showRegressionLine": true,
+            "data": dataSet5["Global Carbon Budget"]
         }
     ],
 }

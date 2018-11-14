@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import Header from './components/Header';
 import Sidebar from './components/discussion-board/Sidebar';
 import Footer from './components/Footer';
-import TempChart from './components/charts/tempChart/TempChart';
-import CarbonChart from './components/charts/carbonChart/CarbonChart';
-import Co2Chart from './components/charts/co2Chart/Co2Chart';
+import Causes from './components/causes/Causes';
 
 import { Route } from 'react-router-dom';
 import LoginSystem from './components/discussion-board/Loginsystem';
@@ -75,12 +73,7 @@ class App extends Component {
             />
             <br/><br/>
 
-            <TempChart />
-            <br/><br/>
-            <CarbonChart />
-            <br/><br/>
-            <Co2Chart />
-            <br/><br/>
+            <Causes /><br/>
 
             <Footer />
             </div>

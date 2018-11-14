@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import NavMenu from './navigation/NavMenu';
-// import searchIcon from './../images/search-solid.svg';
 
 class Header extends Component {
     render() {

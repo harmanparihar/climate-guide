@@ -55,7 +55,7 @@ header {
     position: relative;
 
     .search-field {
-      background: url('components/images/search.svg') no-repeat right center;
+      background: url('components/assets/icons/search.svg') no-repeat right center;
       background-size:30px;
       width: 30px;
       color: #000;
@@ -73,7 +73,7 @@ header {
         border-color: #66CC75;
         cursor: auto;
         padding-right:30px;
-     
+
       }
       &:hover{
         // background-color: #fff;
