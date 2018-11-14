@@ -35,7 +35,7 @@ const dataSource = {
 class CO2Chart extends Component {
    render() {
       return (
-      <ReactFusioncharts
+      <ReactFusioncharts className="causes-chart"
          type = "zoomscatter"
          width = '1000'
          height = '500'

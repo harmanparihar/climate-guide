@@ -4,14 +4,8 @@ import ReactFusioncharts from 'react-fusioncharts';
 import Chart from 'fusioncharts/fusioncharts.zoomscatter';
 // import CandyTheme from 'fusioncharts/themes/fusioncharts.theme.candy';
 
-// import dataCategories from './dataSource/categories.json';
 import chartConfig from './dataSource/chartConfig.json';
 import dataSet from './dataSource/dataset.json';
-// import dataSet1 from './dataSource/dataset1.json';
-// import dataSet2 from './dataSource/dataset2.json';
-// import dataSet3 from './dataSource/dataset3.json';
-// import dataSet4 from './dataSource/dataset4.json';
-// import dataSet5 from './dataSource/dataset5.json';
 
 Chart(FusionCharts);
 
@@ -80,7 +74,7 @@ const dataSource = {
 class CarbonChart extends Component {
    render() {
       return (
-      <ReactFusioncharts
+      <ReactFusioncharts className="causes-chart"
          type = "zoomscatter"
          width = '1000'
          height = '500'

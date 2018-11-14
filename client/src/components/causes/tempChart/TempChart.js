@@ -7,12 +7,7 @@ import Chart from 'fusioncharts/fusioncharts.zoomscatter';
 // import dataCategories from './dataSource/categories.json';
 import chartConfig from './dataSource/chartConfig.json';
 import dataSet from './dataSource/dataset.json';
-// import dataSet2 from './dataSource/dataset2.json';
 
-// this method shows errors when deploy (but not on other chart type???)
-// ReactFusioncharts.fcRoot(FusionCharts, Chart, CandyTheme);
-
-// this method deploys the chart but does not define theme with it (theme can be copied and pasted in json format)
 Chart(FusionCharts);
 
 const dataSource = {
@@ -70,7 +65,7 @@ const dataSource = {
 class TemperatureChart extends Component {
    render() {
       return (
-      <ReactFusioncharts
+      <ReactFusioncharts className="causes-chart"
          type = "zoomscatter"
          width = '1000'
          height = '500'

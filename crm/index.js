@@ -107,7 +107,9 @@ request.get(urlTemp, (error, respond, body) => {
     }
 
     // create 2 new JSON files so that react charts can use
-    fs.writeFile('../client/src/components/causes/tempChart/dataSource/dataset.json', JSON.stringify(dataArray1), 'utf8');
+    fs.writeFile('../client/src/components/causes/tempChart/dataSource/dataset.json', JSON.stringify(dataArray1), 'utf8', (error) => {
+        if (error) throw error;
+    });
 });
 
 // end of Temperature data
@@ -180,7 +182,9 @@ dataArray2.push(excelToJson({
         }
     }]
 }));
-fs.writeFile(sourcePath + '/dataset.json', JSON.stringify(dataArray2), 'utf8');
+fs.writeFile(sourcePath + '/dataset.json', JSON.stringify(dataArray2), 'utf8', (error) => {
+    if (error) throw error;
+});
 // end of Carbon
 
 
@@ -188,7 +192,6 @@ fs.writeFile(sourcePath + '/dataset.json', JSON.stringify(dataArray2), 'utf8');
 // const urlCO2= "ftp://aftp.cmdl.noaa.gov/products/trends/co2/co2_mm_mlo.txt";
 
 const ftp = require('ftp');
-const path = require('path');
 
 let client = new ftp();
 client.on('ready', () => {
@@ -211,7 +214,9 @@ client.on('ready', () => {
                     "y": dataArray3[line].trim().split("   ")[1]
                 });
             }
-            fs.writeFile('../client/src/components/causes/co2Chart/dataSource/dataset.json', JSON.stringify(dataArray4), 'utf8');
+            fs.writeFile('../client/src/components/causes/co2Chart/dataSource/dataset.json', JSON.stringify(dataArray4), 'utf8', (error) => {
+                if (error) throw error;
+            });
         });
     });
 });

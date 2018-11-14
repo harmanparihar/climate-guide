@@ -10,8 +10,8 @@ class CausesSection extends Component {
                 <img src={weather} alt='Causes' />
                 <h2>Causes</h2>
                 <p></p>
-                <CarbonChart className='causes-chart' />
-                <Co2Chart className='causes-chart' />
+                <CarbonChart />
+                <Co2Chart />
             </section>
         );
     }

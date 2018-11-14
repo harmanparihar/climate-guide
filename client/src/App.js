@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from './components/Header';
 import Sidebar from './components/discussion-board/Sidebar';
 import Footer from './components/Footer';
-import Causes from './components/causes/Causes';
+// import Causes from './components/causes/Causes';
 
 import { Route } from 'react-router-dom';
 import LoginSystem from './components/discussion-board/Loginsystem';
@@ -71,9 +71,7 @@ class App extends Component {
             path="/signup"
             render={() => <Signup />}
             />
-            <br/><br/>
 
-            <Causes /><br/>
 
             <Footer />
             </div>
