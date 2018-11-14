@@ -14,7 +14,7 @@ import './App.scss';
 
 class App extends Component {
     constructor() {
-        super()
+        super();
         this.state = {
             loggedIn: false,
             username: null
