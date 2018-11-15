@@ -12,14 +12,29 @@ Chart(FusionCharts);
 
 const dataSource = {
     "chart": chartConfig,
+    "annotations": {
+        "groups": [{
+            "id": "anchor-highlight",
+            "items": [{
+                "id": "high-star",
+                "type": "circle",
+                "x": "965",
+                "y": "65",
+                "radius": "8",
+                "color": "ff0000",
+            }]
+        }]
+    },
     // "categories": dataCategories,
     "dataset": [
         {
             "seriesname": "Annual Mean",
             "drawLine": true,
             "color": "ff6600",
-            "anchorsides": "3",
-            "anchorBorderThickness": "0.1",
+            "alpha": 50,
+            "anchorsides": "1",
+            "anchorAlpha": 0,
+            "anchorBorderThickness": "0",
             "anchorradius": "3",
             "hoverColor": "#999CA5",
             // "showRegressionLine": true,
@@ -66,11 +81,11 @@ class TemperatureChart extends Component {
    render() {
       return (
       <ReactFusioncharts className="causes-chart"
-         type = "zoomscatter"
-         width = '1000'
-         height = '500'
-         dataFormat = "json"
-         dataSource = {dataSource} />
+          type = "zoomscatter"
+          width = '1000'
+          height = '500'
+          dataFormat = "json"
+          dataSource = {dataSource} />
       );
    }
 }
