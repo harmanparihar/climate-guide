@@ -9,7 +9,14 @@ import { Route } from 'react-router-dom';
 import LoginSystem from './components/discussion-board/Loginsystem';
 import Signup from './components/discussion-board/Sign-up';
 import Login from './components/discussion-board/login-form';
+import Calculator from './components/home/paper/Calculator';
+import Causes from './components/causes/Causes';
+import About from './components/contact/About';
+import Form from './components/contact/Form';
 import axios from 'axios';
+
+//import routing packages
+import {Router, browserHistory} from 'react-router';
 
 import './App.scss';
 
@@ -75,24 +82,51 @@ class App extends Component {
     */
     return (
         <div className="App">
-        <Header />
-
+        <Route
+        path="/"
+        render={() => <Header />}
+        />
+        <Route
+        path="/"
+        render={() => <HomeMenu />}
+        />
         <Sidebar />
 
-        <LoginSystem updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
+
 
         <Route
         path="/login"
         render={() => <Login updateUser={this.updateUser} />}
         />
-
+        <Route
+        path="/tips"
+        render={() => <Calculator />}
+        />
+        <Route
+        path="/causes"
+        render={() => <Causes />}
+        />
         <Route
         path="/signup"
         render={() => <Signup />}
         />
-
-        <HomeMenu/>
-        <Footer />
+        <Route
+        path="/about"
+        render={() => <About />}
+        />
+        <Route
+        path="/about"
+        render={() => <Form />}
+        />
+        
+        <Route
+        path="/get involved"
+        render={() => <LoginSystem updateUser={this.updateUser} loggedIn={this.state.loggedIn} />}
+        />
+        <Route
+        path="/"
+        render={() => <Footer />}
+        />
         </div>
         );
     }

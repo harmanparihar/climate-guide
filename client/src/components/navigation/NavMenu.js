@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom'
 
 class NavMenu extends Component {
     render() {
@@ -7,9 +8,13 @@ class NavMenu extends Component {
 
         const navLinks = pages.map((page, i) => {
             return (
+
                 <li key={i}>
+                <Link to={"/" + page}>
                     <a href={"#" + page}>{page}</a>
+                </Link>
                 </li>
+
             );
         });
 
