@@ -1,6 +1,9 @@
 $background_gradient : linear-gradient(to left, rgba(24, 32, 87,1),rgba(117, 48, 42,1));
-$bg_header: rgba(47,9,69,.7);
+$bg_topnav: rgba(102,46,85,1);
+$bg_footer: rgba(19,23,40,1);
+$bg_body: linear-gradient(to bottom left, rgba(255, 103, 89,1),rgba(173, 47, 35,.7),rgba(135, 71, 209,1),rgba(25, 32, 87,1));
 $primary_purple: #2F0945;
+
 /*--------------------------------------------------------------
 ## Define the main colors
 --------------------------------------------------------------*/
@@ -10,6 +13,9 @@ $color__bossanova: #422b5f;
 //rgb(66, 43, 95)
 $color__hippie-pink: #b24257;
 //rgb(178, 66, 87)
+
+$white: #fff;
+
 
 /*--------------------------------------------------------------
 ## Define the support colors

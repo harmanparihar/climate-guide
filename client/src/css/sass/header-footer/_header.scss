@@ -6,13 +6,13 @@
 header {
   width: 100%;
   position: relative;
-  background: $bg_header;
+  background: $bg_topnav;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  @include padding-y(2rem);
+  @include padding-y(.5rem);
   @include padding-x(2rem);
 
 
@@ -23,11 +23,9 @@ header {
 
     .site-logo {
       font-size: 12px;
-      display: inline-block;
-      border: 1px solid white;
-      border-radius: 50%;
-      @include padding-x(15px);
-      @include padding-y(22px);
+      display: block;
+      width: 50px;
+
       margin-right: .5rem;
       vertical-align: super;
     }
@@ -40,6 +38,8 @@ header {
 
   .header-nav {
     flex-grow: 1;
+    font-family: $font__heading;
+    font-weight: 700;
 
     ul {
       list-style: none;
@@ -55,9 +55,13 @@ header {
   }
 
   .search-form {
-    flex: 0 0 167px;
+    // flex: 0 0 167px;
+
     position: relative;
     margin-right:1rem;
+    border-left:2px solid $white;
+    border-right:2px solid $white;
+
     i {
       position: absolute;
       right:10px;
@@ -135,8 +139,7 @@ a {
 
 .site-header, .site-footer {
   nav a {
-    color: white;
-    font-weight: 400;
+    color: $white;
     text-transform: capitalize;
 
     &:hover {
@@ -151,7 +154,6 @@ a {
   position: fixed;
   top: -150px;
   width: 100%;
-  display: block;
   transition: top 0.7s;
 }
 /*******************************************************************/

@@ -6,7 +6,6 @@
 ## Define the support colors
 --------------------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css?family=Rubik:400,400i,700,700i|Fira+Sans:400,400i,700,700i|Proza+Libre:400,400i,700,700i");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 body, input {
   font-family: "Rubik", helvetica, verdana, arial, sans-serif;
   font-weight: 400;
@@ -62,9 +61,16 @@ a {
   font-size: 1.2rem;
 }
 
+/*Globa css (for all site) */
+body {
+  background: linear-gradient(to bottom left, #ff6759, rgba(173, 47, 35, 0.7), #8747d1, #192057) no-repeat;
+}
+
 /* Menu at home*/
 .menu-home {
   flex-grow: 1;
+  font-family: "Proza Libre", helvetica, verdana, arial, sans-serif;
+  font-weight: 700;
 }
 .menu-home ul {
   list-style: none;
@@ -81,8 +87,10 @@ a {
   margin-left: 2%;
   margin-right: 2%;
   text-transform: capitalize;
-  border: 1px solid #000;
   white-space: nowrap;
+}
+.menu-home ul li a {
+  color: #fff;
 }
 
 /* Header and footer */
@@ -94,14 +102,14 @@ a {
 header {
   width: 100%;
   position: relative;
-  background: rgba(47, 9, 69, 0.7);
+  background: #662e55;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   padding-left: 2rem;
   padding-right: 2rem;
 }
@@ -110,13 +118,8 @@ header .site-title {
 }
 header .site-title .site-logo {
   font-size: 12px;
-  display: inline-block;
-  border: 1px solid white;
-  border-radius: 50%;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 22px;
-  padding-bottom: 22px;
+  display: block;
+  width: 50px;
   margin-right: 0.5rem;
   vertical-align: super;
 }
@@ -126,6 +129,8 @@ header .site-title h1 {
 }
 header .header-nav {
   flex-grow: 1;
+  font-family: "Proza Libre", helvetica, verdana, arial, sans-serif;
+  font-weight: 700;
 }
 header .header-nav ul {
   list-style: none;
@@ -139,9 +144,10 @@ header .header-nav ul li {
   padding-right: 2%;
 }
 header .search-form {
-  flex: 0 0 167px;
   position: relative;
   margin-right: 1rem;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
 }
 header .search-form i {
   position: absolute;
@@ -207,8 +213,7 @@ a {
 }
 
 .site-header nav a, .site-footer nav a {
-  color: white;
-  font-weight: 400;
+  color: #fff;
   text-transform: capitalize;
 }
 .site-header nav a:hover, .site-footer nav a:hover {
@@ -220,7 +225,6 @@ a {
   position: fixed;
   top: -150px;
   width: 100%;
-  display: block;
   transition: top 0.7s;
 }
 
@@ -241,7 +245,7 @@ a {
   position: relative;
   width: 100%;
   margin: auto;
-  background: linear-gradient(to bottom right, #182057, #75302a);
+  background: #131728;
   padding-left: 2rem;
   padding-right: 2rem;
 }
@@ -274,7 +278,6 @@ a {
 /* Discussion Board */
 body {
   margin: 0;
-  font-family: "Open Sans", sans-serif;
   padding: 0;
 }
 
