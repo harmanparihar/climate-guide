@@ -1,92 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 263.3 87" style="enable-background:new 0 0 263.3 87;" xml:space="preserve">
+	 viewBox="0 0 260 87" style="enable-background:new 0 0 260 87;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#FBED21;}
-	.st1{fill:none;}
-	.st2{fill:#1B1464;}
-	.st3{fill:#FFFF00;}
-	.st4{fill:none;stroke:#000000;stroke-miterlimit:10;}
-	.st5{fill:url(#SVGID_1_);}
-	.st6{filter:url(#Adobe_OpacityMaskFilter);}
-	.st7{fill:url(#SVGID_3_);}
-	.st8{mask:url(#SVGID_2_);fill:url(#SVGID_4_);}
-	.st9{fill:#FFFFFF;}
-	.st10{fill:url(#SVGID_5_);}
-	.st11{fill:url(#SVGID_6_);}
-	.st12{fill:url(#SVGID_7_);}
-	.st13{filter:url(#Adobe_OpacityMaskFilter_1_);}
-	.st14{fill:url(#SVGID_9_);}
-	.st15{mask:url(#SVGID_8_);fill:url(#SVGID_10_);}
-	.st16{filter:url(#Adobe_OpacityMaskFilter_2_);}
-	.st17{fill:url(#SVGID_12_);}
-	.st18{mask:url(#SVGID_11_);fill:url(#SVGID_13_);}
-	.st19{filter:url(#Adobe_OpacityMaskFilter_3_);}
-	.st20{fill:url(#SVGID_15_);}
-	.st21{mask:url(#SVGID_14_);fill:url(#SVGID_16_);}
-	.st22{fill:url(#SVGID_17_);}
-	.st23{fill:url(#SVGID_18_);}
-	.st24{fill:url(#SVGID_19_);}
-	.st25{filter:url(#Adobe_OpacityMaskFilter_4_);}
-	.st26{fill:url(#SVGID_21_);}
-	.st27{mask:url(#SVGID_20_);fill:url(#SVGID_22_);}
-	.st28{filter:url(#Adobe_OpacityMaskFilter_5_);}
-	.st29{fill:url(#SVGID_24_);}
-	.st30{mask:url(#SVGID_23_);fill:url(#SVGID_25_);}
-	.st31{filter:url(#Adobe_OpacityMaskFilter_6_);}
-	.st32{fill:url(#SVGID_27_);}
-	.st33{mask:url(#SVGID_26_);fill:url(#SVGID_28_);}
-	.st34{fill:none;stroke:#CBCBCB;stroke-miterlimit:10;}
-	.st35{fill:url(#SVGID_29_);}
-	.st36{fill:url(#SVGID_30_);}
-	.st37{fill:url(#SVGID_31_);}
-	.st38{filter:url(#Adobe_OpacityMaskFilter_7_);}
-	.st39{fill:url(#SVGID_33_);}
-	.st40{mask:url(#SVGID_32_);fill:url(#SVGID_34_);}
-	.st41{filter:url(#Adobe_OpacityMaskFilter_8_);}
-	.st42{fill:url(#SVGID_36_);}
-	.st43{mask:url(#SVGID_35_);fill:url(#SVGID_37_);}
-	.st44{filter:url(#Adobe_OpacityMaskFilter_9_);}
-	.st45{fill:url(#SVGID_39_);}
-	.st46{mask:url(#SVGID_38_);fill:url(#SVGID_40_);}
-	.st47{fill:url(#SVGID_41_);}
-	.st48{fill:url(#SVGID_42_);}
-	.st49{fill:url(#SVGID_43_);}
-	.st50{filter:url(#Adobe_OpacityMaskFilter_10_);}
-	.st51{fill:url(#SVGID_45_);}
-	.st52{mask:url(#SVGID_44_);fill:url(#SVGID_46_);}
-	.st53{filter:url(#Adobe_OpacityMaskFilter_11_);}
-	.st54{fill:url(#SVGID_48_);}
-	.st55{mask:url(#SVGID_47_);fill:url(#SVGID_49_);}
-	.st56{filter:url(#Adobe_OpacityMaskFilter_12_);}
-	.st57{fill:url(#SVGID_51_);}
-	.st58{mask:url(#SVGID_50_);fill:url(#SVGID_52_);}
-	.st59{fill:url(#SVGID_53_);}
-	.st60{fill:url(#SVGID_54_);}
-	.st61{fill:url(#SVGID_55_);}
-	.st62{filter:url(#Adobe_OpacityMaskFilter_13_);}
-	.st63{fill:url(#SVGID_57_);}
-	.st64{mask:url(#SVGID_56_);fill:url(#SVGID_58_);}
-	.st65{filter:url(#Adobe_OpacityMaskFilter_14_);}
-	.st66{fill:url(#SVGID_60_);}
-	.st67{mask:url(#SVGID_59_);fill:url(#SVGID_61_);}
-	.st68{filter:url(#Adobe_OpacityMaskFilter_15_);}
-	.st69{fill:url(#SVGID_63_);}
-	.st70{mask:url(#SVGID_62_);fill:url(#SVGID_64_);}
-	.st71{fill:url(#SVGID_65_);}
-	.st72{fill:url(#SVGID_66_);}
-	.st73{fill:url(#SVGID_67_);}
-	.st74{filter:url(#Adobe_OpacityMaskFilter_16_);}
-	.st75{fill:url(#SVGID_69_);}
-	.st76{mask:url(#SVGID_68_);fill:url(#SVGID_70_);}
-	.st77{filter:url(#Adobe_OpacityMaskFilter_17_);}
-	.st78{fill:url(#SVGID_72_);}
-	.st79{mask:url(#SVGID_71_);fill:url(#SVGID_73_);}
-	.st80{filter:url(#Adobe_OpacityMaskFilter_18_);}
-	.st81{fill:url(#SVGID_75_);}
-	.st82{mask:url(#SVGID_74_);fill:url(#SVGID_76_);}
-	.st83{font-family:'ProzaLibre-Medium';}
-	.st84{font-size:22px;}
+	.st0{fill:#FFFFFF;}
+	.st1{font-family:'ProzaLibre-Medium';}
+	.st2{font-size:21.6893px;}
 </style>
+<g>
+	<path id="XMLID_7_" class="st0" d="M54.3,77c-0.8,0.7-1.7,1.3-2.8,1.8s-2.2,1-3.4,1.3c-1.2,0.4-2.4,0.6-3.7,0.8
+		c-1.3,0.2-2.5,0.3-3.8,0.3c-2.7,0-5.3-0.5-7.5-1.4c-2.3-0.9-4.4-2.2-6.1-3.9c-1.7-1.7-3-3.8-4-6.1c-1-2.4-1.4-5.1-1.4-8
+		c0-2.4,0.3-4.6,0.9-6.5c0.6-2,1.4-3.8,2.5-5.5c1.1-1.6,2.3-3.1,3.7-4.3c1.4-1.2,3-2.3,4.7-3.1c1.7-0.8,3.5-1.5,5.3-1.9
+		c1.9-0.4,3.8-0.6,5.7-0.6c0.6,0,1.3,0,2.2,0.1c0.8,0,1.7,0.1,2.6,0.2c0.9,0.1,1.9,0.3,2.8,0.4c1,0.2,1.9,0.4,2.7,0.6l-1.6,7
+		l-0.5,0.2c-1.5-0.8-3-1.3-4.4-1.6c-1.4-0.3-2.7-0.4-3.8-0.4c-1.7,0-3.3,0.3-4.8,1c-1.4,0.6-2.6,1.5-3.7,2.7
+		c-1.1,1.2-1.8,2.6-2.4,4.3c-0.6,1.7-0.8,3.6-0.8,5.7c0,2.2,0.3,4.2,0.9,5.9c0.6,1.8,1.5,3.3,2.6,4.5c1.1,1.2,2.5,2.2,4.2,2.8
+		c1.6,0.7,3.5,1,5.6,1c0.9,0,1.7-0.1,2.4-0.2c0.8-0.1,1.5-0.3,2.1-0.4c0.7-0.2,1.3-0.4,1.9-0.6c0.6-0.2,1.1-0.5,1.7-0.7v4.8L54.3,77
+		L54.3,77z"/>
+	<path id="XMLID_6_" class="st0" d="M94.3,78.4c-2.6,1-5.1,1.7-7.3,2.2c-2.4,0.5-4.8,0.7-7.1,0.7c-3.6,0-6.5-0.5-9.1-1.4
+		c-2.6-0.9-4.7-2.2-6.3-3.9c-1.7-1.7-2.9-3.7-3.7-6c-0.8-2.3-1.2-4.9-1.2-7.7c0-2.5,0.3-4.8,0.9-6.8c0.6-2.1,1.4-4,2.5-5.7
+		s2.3-3.1,3.8-4.4c1.5-1.3,3-2.3,4.7-3.1c1.7-0.8,3.5-1.5,5.4-1.9c1.9-0.4,3.9-0.6,5.8-0.6c0.6,0,1.4,0,2.3,0.1
+		c0.9,0,1.8,0.1,2.8,0.2c1,0.1,1.9,0.3,2.9,0.4c1,0.2,1.9,0.4,2.8,0.6l-1.5,7l-0.8,0.4c-0.8-0.4-1.5-0.7-2.3-1
+		c-0.8-0.3-1.6-0.5-2.3-0.6c-0.7-0.2-1.5-0.3-2.2-0.3c-0.7-0.1-1.3-0.1-1.9-0.1c-1.8,0-3.5,0.3-5,0.9c-1.5,0.6-2.7,1.5-3.8,2.7
+		c-1,1.2-1.8,2.7-2.4,4.4c-0.6,1.7-0.8,3.7-0.8,6c0,2.1,0.3,4.1,0.8,5.8c0.5,1.8,1.2,3.3,2.2,4.6c0.9,1.3,2.1,2.3,3.4,3
+		c1.3,0.7,2.8,1.1,4.5,1.1c0.2,0,0.5,0,0.9,0c0.3,0,0.7,0,1-0.1c0.3,0,0.7-0.1,1-0.1c0.3-0.1,0.6-0.1,0.8-0.2V60.3h9.4v18.2
+		L94.3,78.4L94.3,78.4z"/>
+	<path id="XMLID_5_" class="st0" d="M72.7,27c8.4,0.4,16.8,1.2,24.3,2.4c7,1.4,14,3.3,20.5,5.3c0.3,0.1,0.7,0.3,1,0.4
+		c-9-14.7-25.4-29.8-41.2-34.7c-0.1,3.1-0.1,6.1-0.2,9.2c-4.8-0.7-9.8-1-15.1-0.7C28.8,10.5,1,25.5,0,49.3
+		c-0.6,14.8,9.1,28.4,24.6,36.9c-9.9-6.9-15.9-16-15.4-25.5C9.9,40.4,29.3,25.1,72.7,27"/>
+	<text id="XMLID_4_" transform="matrix(1 0 0 1 110.1353 80.3027)" class="st0 st1 st2">Clim</text>
+	<text id="XMLID_3_" transform="matrix(1 0 0 1 158.2793 80.3027)" class="st0 st1 st2">a</text>
+	<text id="XMLID_2_" transform="matrix(1 0 0 1 170.5635 80.3027)" class="st0 st1 st2">t</text>
+	<text id="XMLID_1_" transform="matrix(1 0 0 1 180.668 80.3027)" class="st0 st1 st2">e Guide</text>
+</g>
 </svg>

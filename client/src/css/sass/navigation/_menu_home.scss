@@ -1,12 +1,14 @@
 .menu-home{
-    flex-grow: 1;
+  flex-grow: 1;
+  font-family: $font__heading;
+  font-weight: 700;
 
-    ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: center;
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
       // margin-bottom: 100vw; //test for the sliding menu
 
       li {
@@ -14,8 +16,11 @@
         @include padding-y(1%);
         @include margin-x(2%);
         text-transform: capitalize;
-        border:1px solid #000;
         white-space: nowrap;
+        a{
+          color:#fff;
+
+        }
       }
       
     }
