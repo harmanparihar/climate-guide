@@ -94,7 +94,7 @@ a {
 header {
   width: 100%;
   position: relative;
-  background: rgba(47, 9, 69, 0.7);
+  background: #662e55;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -220,7 +220,6 @@ a {
   position: fixed;
   top: -150px;
   width: 100%;
-  display: block;
   transition: top 0.7s;
 }
 
