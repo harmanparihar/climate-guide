@@ -62,6 +62,29 @@ a {
   font-size: 1.2rem;
 }
 
+/* Menu at home*/
+.menu-home {
+  flex-grow: 1;
+}
+.menu-home ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+.menu-home ul li {
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin-left: 2%;
+  margin-right: 2%;
+  text-transform: capitalize;
+  border: 1px solid #000;
+  white-space: nowrap;
+}
+
 /* Header and footer */
 /****************************************************************/
 /*                                                              */
@@ -71,7 +94,7 @@ a {
 header {
   width: 100%;
   position: relative;
-  background: linear-gradient(to left, #182057, #75302a);
+  background: rgba(47, 9, 69, 0.7);
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -97,7 +120,7 @@ header .site-title .site-logo {
   margin-right: 0.5rem;
   vertical-align: super;
 }
-header .site-title .site-title-h1 {
+header .site-title h1 {
   display: inline-block;
   font-size: 1.5em;
 }
@@ -118,10 +141,17 @@ header .header-nav ul li {
 header .search-form {
   flex: 0 0 167px;
   position: relative;
+  margin-right: 1rem;
+}
+header .search-form i {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #fff;
+  font-weight: 900;
 }
 header .search-form .search-field {
-  background: url("components/images/search.svg") no-repeat right center;
-  background-size: 30px;
+  background: transparent;
   width: 30px;
   color: #000;
   cursor: pointer;
@@ -131,6 +161,8 @@ header .search-form .search-field {
   border-radius: 10em;
   transition: all 0.5s;
   float: right;
+  position: relative;
+  z-index: 99;
 }
 header .search-form .search-field:focus {
   width: 130px;
@@ -138,6 +170,10 @@ header .search-form .search-field:focus {
   border-color: #66CC75;
   cursor: auto;
   padding-right: 30px;
+}
+header .search-form .search-field:focus + i {
+  color: #000;
+  z-index: 9999;
 }
 header .search-form .search-submit {
   position: absolute;
@@ -148,6 +184,17 @@ header .search-form .search-submit {
 }
 header .search-form .search-submit img {
   width: 15px;
+}
+header .support-us {
+  background: #91F1F9;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
 }
 
 a {
@@ -166,6 +213,15 @@ a {
 }
 .site-header nav a:hover, .site-footer nav a:hover {
   box-shadow: 0 -2px inset white;
+}
+
+/*test for sliding from top menu*/
+.slide {
+  position: fixed;
+  top: -150px;
+  width: 100%;
+  display: block;
+  transition: top 0.7s;
 }
 
 /*******************************************************************/
@@ -206,6 +262,15 @@ a {
 /*******************************************************************/
 /* ================= end of footer layout ======================== */
 /*******************************************************************/
+/* Causes */
+/*--------------------------------------------------------------
+## Charts
+--------------------------------------------------------------*/
+.causes-chart {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 /* Discussion Board */
 body {
   margin: 0;

@@ -5,7 +5,7 @@ class SupportButton extends Component {
 
     render() {
         return (
-            <button>Support Us</button>
+            <button className="support-us">Support Us</button>
         );
     }
 }

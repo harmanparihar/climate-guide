@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
+import HomeMenu from './components/navigation/HomeMenu';
 import Sidebar from './components/discussion-board/Sidebar';
 import Footer from './components/Footer';
 // import Causes from './components/causes/Causes';
@@ -23,6 +24,7 @@ class App extends Component {
         this.getUser = this.getUser.bind(this);
         this.componentDidMount = this.componentDidMount.bind(this);
         this.updateUser = this.updateUser.bind(this);
+
     }
 
     componentDidMount() {
@@ -54,27 +56,44 @@ class App extends Component {
         });
     }
     render() {
-        return (
-            <div className="App">
-            <Header />
 
-            <Sidebar />
+        /*
 
-            <LoginSystem updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
+        //not working, and I don't know react enough to fix this problem
+       window.onscroll = function() {myFunction()};
 
-            <Route
-            path="/login"
-            render={() => <Login updateUser={this.updateUser} />}
-            />
+       var header = document.getElementsByClassName("site-header");
+       var sticky = header.offsetTop;
 
-            <Route
-            path="/signup"
-            render={() => <Signup />}
-            />
+       function myFunction() {
+          if (window.pageYOffset > sticky) {
+            header.classList.add("slide");
+        } else {
+            header.classList.remove("slide");
+        }
+    }
+    */
+    return (
+        <div className="App">
+        <Header />
 
+        <Sidebar />
 
-            <Footer />
-            </div>
+        <LoginSystem updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
+
+        <Route
+        path="/login"
+        render={() => <Login updateUser={this.updateUser} />}
+        />
+
+        <Route
+        path="/signup"
+        render={() => <Signup />}
+        />
+
+        <HomeMenu/>
+        <Footer />
+        </div>
         );
     }
 }

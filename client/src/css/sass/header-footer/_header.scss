@@ -6,7 +6,7 @@
 header {
   width: 100%;
   position: relative;
-  background: $background_gradient;
+  background: $bg_header;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -14,6 +14,10 @@ header {
   box-sizing: border-box;
   @include padding-y(2rem);
   @include padding-x(2rem);
+
+
+  
+
   .site-title {
     flex-grow: 0;
 
@@ -53,11 +57,19 @@ header {
   .search-form {
     flex: 0 0 167px;
     position: relative;
+    margin-right:1rem;
+    i {
+      position: absolute;
+      right:10px;
+      top:10px;
+      color:#fff;
+      font-weight: 900;
 
+    }
     .search-field {
-      background: url('components/assets/icons/search.svg') no-repeat right center;
-      background-size:30px;
+      background: transparent;
       width: 30px;
+      // width: 0px;
       color: #000;
       cursor: pointer;
       outline: none;
@@ -66,16 +78,22 @@ header {
       border-radius: 10em;
       transition: all .5s;
       float: right;
+      position: relative;
+      z-index: 99;
 
       &:focus{
-          width: 130px;
-          background-color: #fff;
-          border-color: #66CC75;
-          cursor: auto;
-          padding-right:30px;
+        width: 130px;
+        background-color: #fff;
+        border-color: #66CC75;
+        cursor: auto;
+        padding-right:30px;
       }
+      &:focus + i{
+       color:#000;
+       z-index:9999;
+     }
 
-      &:hover{
+     &:hover{
         // background-color: #fff;
       }
       // @include padding-y(9px);
@@ -92,6 +110,16 @@ header {
         width: 15px;
       }
     }
+  }
+
+  .support-us{
+    background: #91F1F9;
+    color:#000;
+    border:none;
+    border-radius:8px;
+    font-weight: bold;
+    @include padding-x(1.5%);
+    @include padding-y(.5%);
   }
 }
 a {
@@ -115,6 +143,16 @@ a {
       box-shadow: 0 -2px inset white;
     }
   }
+}
+
+
+/*test for sliding from top menu*/
+.slide{
+  position: fixed;
+  top: -150px;
+  width: 100%;
+  display: block;
+  transition: top 0.7s;
 }
 /*******************************************************************/
 /* ================= end of header layout ======================== */
