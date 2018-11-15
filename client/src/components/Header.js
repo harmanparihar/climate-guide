@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import NavMenu from './navigation/NavMenu';
+import SupportButton from './navigation/SupportButton';
 
 class Header extends Component {
     render() {
@@ -9,7 +10,7 @@ class Header extends Component {
                     <a href="#home">
                         {/* <img className="site-logo" /> */}
                         <span className="site-logo">LOGO</span>
-                        <h1 className="site-title-h1">ClimateGuide</h1>
+                        <h1>ClimateGuide</h1>
                     </a>
                 </div>
 
@@ -22,13 +23,13 @@ class Header extends Component {
                         title="Enter a keyword..."
                         placeholder="Search"
                     />
-                    <button type="submit" className="search-submit">
-
-                    </button>
+                    <button type="submit" className="search-submit"></button>
                 </div>
+
+                <SupportButton />
             </header>
         );
     }
 }
 
-export default Header
+export default Header;

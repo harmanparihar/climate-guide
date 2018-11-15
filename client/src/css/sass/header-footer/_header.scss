@@ -28,7 +28,7 @@ header {
       vertical-align: super;
     }
 
-    .site-title-h1 {
+    h1 {
       display: inline-block;
       font-size: 1.5em;
     }
@@ -66,15 +66,15 @@ header {
       border-radius: 10em;
       transition: all .5s;
       float: right;
+
       &:focus{
-
-        width: 130px;
-        background-color: #fff;
-        border-color: #66CC75;
-        cursor: auto;
-        padding-right:30px;
-
+          width: 130px;
+          background-color: #fff;
+          border-color: #66CC75;
+          cursor: auto;
+          padding-right:30px;
       }
+
       &:hover{
         // background-color: #fff;
       }
