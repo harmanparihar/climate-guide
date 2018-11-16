@@ -4,15 +4,15 @@
 @import 'variables/typography';
 
 /* All forms and elements (links, buttons) */
-@import 'contact/forms';
-@import 'contact/contact';
+@import 'about/forms';
+@import 'about/contact';
 @import 'navigation/links';
 
 
-/*Globa css (for all site) */
+/* Global css (for all site) */
 @import 'global/global';
 
-/* Menu at home*/
+/* Menu at home (after carousel)*/
 @import 'navigation/menu_home';
 
 /* Header and footer */
@@ -25,6 +25,9 @@
 /* Discussion Board */
 @import 'discussion-board/main';
 @import 'discussion-board/sidebar';
+
+/* Articles (accessed from carousel) */
+@import 'articles/articles';
 
 /* Media: images */
 @import 'media/media';

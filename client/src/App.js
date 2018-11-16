@@ -11,8 +11,7 @@ import Signup from './components/discussion-board/Sign-up';
 import Login from './components/discussion-board/login-form';
 import Calculator from './components/home/paper/Calculator';
 import Causes from './components/causes/Causes';
-import About from './components/contact/About';
-import Form from './components/contact/Form';
+import About from './components/about/About';
 import axios from 'axios';
 
 //import routing packages
