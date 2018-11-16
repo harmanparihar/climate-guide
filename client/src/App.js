@@ -114,10 +114,6 @@ class App extends Component {
                 path="/about"
                 render={() => <About />}
             />
-            <Route
-                path="/about"
-                render={() => <Form />}
-            />
 
             <Route
                 path="/get involved"
