@@ -80,6 +80,24 @@ export default class Main extends React.Component{
     // clearInterval(this.update)
     this.serverRequest.abort();
   }
+  deletePost(index){
+    var temp = this.state.data;
+    fetch(`http://localhost:8080/fetch/${temp[index]._id}`, {method: 'DELETE',headers: {
+            "Content-Type": "application/json; charset=utf-8",
+            // "Content-Type": "application/x-www-form-urlencoded",
+        }})
+    .then(function(response) {
+      if(response.ok) {
+        console.log('Record was deleted');
+        return;
+
+      }
+      throw new Error('Request failed.');
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+  }
   render(){
     return(
         <main>
@@ -88,7 +106,7 @@ export default class Main extends React.Component{
           <button id="new_post" onClick={this.clickHandler.bind(this)}><span className="add_symbol">+ </span>Add New Post</button>
           {this.state.show_form ? <Form data={this.state.data} updatedb={this.updateData.bind(this)} placeholder_text="Share your thoughts"/> : null}
           </div>
-          <Posts data={this.state.data} incrementUps={this.incrementUpvotes.bind(this)}/>
+          <Posts data={this.state.data} deletePost={this.deletePost.bind(this)} incrementUps={this.incrementUpvotes.bind(this)}/>
         </main>
     );
   }
