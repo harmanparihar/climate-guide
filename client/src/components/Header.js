@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom'
 import NavMenu from './navigation/NavMenu';
 import SupportButton from './navigation/SupportButton';
 import logoSymbol from './assets/logos/cg_symbol.svg';
@@ -8,10 +9,10 @@ class Header extends Component {
         return (
             <header className="site-header">
                 <div className="site-title">
-                    <a href="#home">
+                     <Link to="/">
                         {/* <img className="site-logo" /> */}
                         <span className="site-logo"><img src={logoSymbol} alt="ClimateGuide" className="hor_logo"/></span>
-                    </a>
+                   </Link>
                 </div>
 
                 <NavMenu className="header-nav" />

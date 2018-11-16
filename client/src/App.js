@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
-import HomeMenu from './components/navigation/HomeMenu';
+import Home from './components//home/Home';
+// import HomeMenu from './components/navigation/HomeMenu';
 import Sidebar from './components/discussion-board/Sidebar';
 import Footer from './components/Footer';
 // import Causes from './components/causes/Causes';
@@ -81,47 +82,48 @@ class App extends Component {
     */
     return (
         <div className="App">
-            <Route
-                path="/"
-                render={() => <Header />}
-            />
-            <Route
-                path="/"
-                render={() => <HomeMenu />}
-            />
-            <Sidebar />
+        <Route
+        path="/"
+        render={() => <Header />}
+        />
+        <Route
+        exact
+        path="/"
+        render={() => <Home />}
+        />
+        <Sidebar />
 
 
 
-            <Route
-                path="/login"
-                render={() => <Login updateUser={this.updateUser} />}
-            />
-            <Route
-                path="/tips"
-                render={() => <Calculator />}
-            />
-            <Route
-                path="/causes"
-                render={() => <Causes />}
-            />
-            <Route
-                path="/signup"
-                render={() => <Signup />}
-            />
-            <Route
-                path="/about"
-                render={() => <About />}
-            />
+        <Route
+        path="/login"
+        render={() => <Login updateUser={this.updateUser} />}
+        />
+        <Route
+        path="/tips"
+        render={() => <Calculator />}
+        />
+        <Route
+        path="/causes"
+        render={() => <Causes />}
+        />
+        <Route
+        path="/signup"
+        render={() => <Signup />}
+        />
+        <Route
+        path="/about"
+        render={() => <About />}
+        />
 
-            <Route
-                path="/get involved"
-                render={() => <LoginSystem updateUser={this.updateUser} loggedIn={this.state.loggedIn} />}
-            />
-            <Route
-                path="/"
-                render={() => <Footer />}
-            />
+        <Route
+        path="/get involved"
+        render={() => <LoginSystem updateUser={this.updateUser} loggedIn={this.state.loggedIn} />}
+        />
+        <Route
+        path="/"
+        render={() => <Footer />}
+        />
         </div>
         );
     }
