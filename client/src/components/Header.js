@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import NavMenu from './navigation/NavMenu';
 import SupportButton from './navigation/SupportButton';
-import logoSymbol from './assets/logo/cg_symbol.svg';
+import logoSymbol from './assets/logos/cg_symbol.svg';
 
 class Header extends Component {
     render() {
@@ -17,7 +17,7 @@ class Header extends Component {
                 <NavMenu className="header-nav" />
 
                 <div className= "search-form">
-               
+
                     <input
                         type="search"
                         className="search-field"

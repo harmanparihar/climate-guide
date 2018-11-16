@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Member from './Member';
+import Form from './Form';
 
 class About extends Component {
     render() {
@@ -29,6 +30,8 @@ class About extends Component {
                     memberImg
                     memberRole="Project manager / Development & QA support"
                     memberDesc="Having a Master degree in Information and Communications Technology, Maggie has a solid background in the ICT economy and regulation. Her experience working in different industries and cultures allows her to empower her team members and leverage the collective strengths. She will ensure that the project is complete on time within scope." />
+
+            <Form />
 
             </div>
         );

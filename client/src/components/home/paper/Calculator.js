@@ -31,6 +31,16 @@ class Calculator extends Component {
             officePaper: 1,
             newspaper: 1
         };
+
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(e) {
+        const stateName = e.target.name;
+        const stateValue = e.target.value;
+        this.setState({
+            [stateName]: stateValue
+        });
     }
 
     render() {
@@ -44,6 +54,7 @@ class Calculator extends Component {
                             type="number"
                             name="paper-cups"
                             value={this.state.paperCups}
+                            onChange={this.handleChange}
                         />
                     </label>
 
@@ -53,6 +64,7 @@ class Calculator extends Component {
                             type="number"
                             name="office-paper"
                             value={this.state.officePaper}
+                            onChange={this.handleChange}
                         />
                     </label>
 
@@ -62,9 +74,10 @@ class Calculator extends Component {
                             type="number"
                             name="newspaper"
                             value={this.state.newspaper}
+                            onChange={this.handleChange}
                         />
                     </label>
-                    <button type="submit">Calculate</button>
+                    <input type="submit" value="Calculate" />
                 </form>
 
                 <ReactFusioncharts
