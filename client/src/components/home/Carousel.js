@@ -1,5 +1,5 @@
 import React from 'react'
-import Coverflow from 'react-coverflow'
+import CoverFlow from 'react-coverflow'
 
 class Carousel extends React.Component{
 
@@ -11,13 +11,13 @@ class Carousel extends React.Component{
 
       <div className="carousel-container">
 
-        <Coverflow
+        <CoverFlow
           width={400}
           height={450}
-          displayQuantityOfSlide={0.5}
+          displayQuantityOfSide={0.5}
           infiniteScroll={true}
-          navigation={true}
-          enableHeading={false}
+          navigation={false}
+          enableHeading={true}
           active={0}
         >
 
@@ -31,7 +31,7 @@ class Carousel extends React.Component{
 
           <img src='images/sunset.jpg' alt='This is the sunset pic.' />
 
-        </Coverflow>
+        </CoverFlow>
       </div>
 
     )//end return
