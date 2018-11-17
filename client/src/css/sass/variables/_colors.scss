@@ -1,22 +1,48 @@
-$background_gradient : linear-gradient(to left, rgba(24, 32, 87,1),rgba(117, 48, 42,1));
-$bg_topnav: rgba(102,46,85,1);
-$bg_footer: rgba(19,23,40,1);
-$bg_body: linear-gradient(to bottom left, rgba(255, 103, 89,1),rgba(173, 47, 35,.7),rgba(135, 71, 209,1),rgba(25, 32, 87,1));
-$primary_purple: #2F0945;
 
 /*--------------------------------------------------------------
 ## Define the main colors
 --------------------------------------------------------------*/
-$color__carnation: #f76e5b;
-//rgb(247, 110, 91)
-$color__bossanova: #422b5f;
-//rgb(66, 43, 95)
-$color__hippie-pink: #b24257;
-//rgb(178, 66, 87)
+$color__purple-primary: rgba(47, 9, 69, 1);
+$primary_purple: rgba(47, 9, 69, 1);
+$primary-purple: rgba(47, 9, 69, 1);
+// #2f0945
 
-$white: #fff;
+$color__topnav: rgba(102, 46, 85, 1);
+$bg_topnav: rgba(102,46,85,1);
+// #662e55
+
+$color__skyblue: rgba(144, 241, 249, 1);
+// #90f1f9
+
+$color__button: rgba(104, 67, 136, 1);
+// #684488
+
+$color__menu-mobile: rgba(61, 32, 82, 1);
+// #3d2052
+
+$color__footer-bg: rgba(19, 23, 40, 1);
+$bg_footer: rgba(19,23,40,1);
+// #131728
+
+$color__white: rgba(255, 255, 255, 1);
+// #fff
+
+$color__black: rgba(0, 0, 0, 1);
+// #000
 
 
 /*--------------------------------------------------------------
 ## Define the support colors
 --------------------------------------------------------------*/
+
+
+
+
+/*--------------------------------------------------------------
+## Define the gradients
+--------------------------------------------------------------*/
+
+$background_gradient : linear-gradient(to left, rgba(24, 32, 87,1),rgba(117, 48, 42,1));
+
+
+$bg_body: linear-gradient(to bottom left, rgba(255, 103, 89,1),rgba(173, 47, 35,.7),rgba(135, 71, 209,1),rgba(25, 32, 87,1));

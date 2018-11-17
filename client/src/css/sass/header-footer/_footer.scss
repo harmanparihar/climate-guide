@@ -10,11 +10,13 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     margin-top: 5rem;
-    position: relative;
+    // position: relative;
     width: 100%;
     margin: auto;
     background: $bg_footer;
-    @include padding-x(2rem);
+    border-top: 1px solid $color__skyblue;
+    // @include padding-x(2rem);
+
     ul {
         list-style: none;
         @include margin-y(0);

@@ -16,7 +16,7 @@ header {
   @include padding-x(2rem);
 
 
-  
+
 
   .site-title {
     flex-grow: 0;
@@ -58,15 +58,15 @@ header {
     // flex: 0 0 167px;
 
     position: relative;
-    margin-right:1rem;
-    border-left:2px solid $white;
-    border-right:2px solid $white;
+    margin-right: 1rem;
+    border-left: 2px solid $color__white;
+    border-right: 2px solid $color__white;
 
     i {
       position: absolute;
-      right:10px;
-      top:10px;
-      color:#fff;
+      right: 10px;
+      top: 10px;
+      color: $color__white;
       font-weight: 900;
 
     }
@@ -117,10 +117,10 @@ header {
   }
 
   .support-us{
-    background: #91F1F9;
-    color:#000;
-    border:none;
-    border-radius:8px;
+    background: $color__skyblue;
+    color: $color__black;
+    border: none;
+    border-radius: 8px;
     font-weight: bold;
     @include padding-x(1.5%);
     @include padding-y(.5%);
@@ -133,24 +133,24 @@ a {
 
 .site-title {
   a {
-    color: white;
+    color: $color__white;
   }
 }
 
 .site-header, .site-footer {
   nav a {
-    color: $white;
+    color: $color__white;
     text-transform: capitalize;
 
     &:hover {
-      box-shadow: 0 -2px inset white;
+      box-shadow: 0 -2px inset $color__white;
     }
   }
 }
 
 
 /*test for sliding from top menu*/
-.slide{
+.slide {
   position: fixed;
   top: -150px;
   width: 100%;

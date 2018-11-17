@@ -4,7 +4,7 @@ $font__heading: "Proza Libre", helvetica, verdana, arial, sans-serif;
 $font__main: "Rubik", helvetica, verdana, arial, sans-serif;
 $font__code: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 
-body, input {
+body, input, button {
     font-family: $font__main;
     font-weight: 400;
     font-feature-settings: normal ;
