@@ -1,0 +1,59 @@
+.expand-collapse-container{
+  margin: 0;
+  padding: 0;
+  margin: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+
+  background-color: #eee;
+}
+
+.container-head{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  h2, p{
+    grid-column: 1;
+  }
+
+  .btn{
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
+.container-head p{
+  margin: 0;
+  padding: 0;
+
+  font-size: 1.2em;
+}
+
+.container-head .btn{
+  align-self: flex-start;
+  justify-self: flex-end;
+
+  background-color: #91F1F9;
+  color: #000;
+
+  border-radius: 8px;
+  font-weight: bold;
+
+  padding: 10px 15px;
+  font-size: 1rem;
+
+  transition: all .5s;
+}
+
+.container-head .btn:hover{
+  cursor: pointer;
+  color: #91F1F9;
+  background-color: #000;
+}
+
+.container-body img{
+  width: 100%;
+  height: 450px;
+
+  object-fit: cover;
+}

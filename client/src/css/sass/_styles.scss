@@ -12,6 +12,10 @@
 /* Global css (for all site) */
 @import 'global/global';
 
+/* For carousel images */
+@import 'carousel/carousel';
+@import 'carousel/expandcollapse';
+
 /* Menu at home (after carousel)*/
 @import 'navigation/menu_home';
 
