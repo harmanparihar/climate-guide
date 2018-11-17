@@ -189,7 +189,7 @@ fs.writeFile(sourcePath + '/dataset.json', JSON.stringify(dataArray2), 'utf8', (
 
 
 // CO2 (fetch from live URL - FTP protocol)
-// const urlCO2= "ftp://aftp.cmdl.noaa.gov/products/trends/co2/co2_mm_mlo.txt";
+// const urlCO2= "ftp://aftp.cmdl.noaa.gov/products/trends/co2/co2_annmean_mlo.txt";
 
 const ftp = require('ftp');
 
