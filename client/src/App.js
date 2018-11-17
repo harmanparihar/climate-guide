@@ -93,8 +93,6 @@ class App extends Component {
         />
         <Sidebar />
 
-
-
         <Route
         path="/login"
         render={() => <Login updateUser={this.updateUser} />}
