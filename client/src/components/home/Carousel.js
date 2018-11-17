@@ -1,13 +1,15 @@
-import React from 'react'
-import CoverFlow from 'react-coverflow'
+import React from 'react';
+import CoverFlow from 'react-coverflow';
+
+import bus from '../assets/images/bus-camper.jpg';
+import coffee from '../assets/images/coffee-cup.jpg';
+import book from '../assets/images/book-collection.jpg';
+import evening from '../assets/images/evening.png';
+import sunset from '../assets/images/sunset.jpg';
 
 class Carousel extends React.Component{
-
-
-
-  render(){
-
-    return(
+  render() {
+    return (
 
       <div className="carousel-container">
 
@@ -21,15 +23,15 @@ class Carousel extends React.Component{
           active={0}
         >
 
-          <img src='images/bus-camper.jpg' alt='Travelling into bus can save 2 tons of gas per year.' />
+            <img src={bus} alt='Travelling into bus can save 2 tons of gas per year.' />
 
-          <img src='images/coffee-cup.jpg' alt='1 cup can save 2 million trees.' />
+            <img src={coffee} alt='1 cup can save 2 million trees.' />
 
-          <img src='images/book-collection.jpg' alt='Paper really helps to reduce waste.' />
+            <img src={book} alt='Paper really helps to reduce waste.' />
 
-          <img src='images/evening.png' alt='This pic clicked in evening.' />
+            <img src={evening} alt='This pic clicked in evening.' />
 
-          <img src='images/sunset.jpg' alt='This is the sunset pic.' />
+            <img src={sunset} alt='This is the sunset pic.' />
 
         </CoverFlow>
       </div>
@@ -40,4 +42,4 @@ class Carousel extends React.Component{
 
 }//end class
 
-export default Carousel
+export default Carousel;

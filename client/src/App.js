@@ -82,48 +82,48 @@ class App extends Component {
     */
     return (
         <div className="App">
-        <Route
-        path="/"
-        render={() => <Header />}
-        />
-        <Route
-        exact
-        path="/"
-        render={() => <Home />}
-        />
-        <Sidebar />
+            <Route
+                path="/"
+                render={() => <Header />}
+            />
+            <Route
+                exact
+                path="/"
+                render={() => <Home />}
+            />
+            <Sidebar />
 
 
 
-        <Route
-        path="/login"
-        render={() => <Login updateUser={this.updateUser} />}
-        />
-        <Route
-        path="/tips"
-        render={() => <Calculator />}
-        />
-        <Route
-        path="/causes"
-        render={() => <Causes />}
-        />
-        <Route
-        path="/signup"
-        render={() => <Signup />}
-        />
-        <Route
-        path="/about"
-        render={() => <About />}
-        />
+            <Route
+                path="/login"
+                render={() => <Login updateUser={this.updateUser} />}
+            />
+            <Route
+                path="/tips"
+                render={() => <Calculator />}
+            />
+            <Route
+                path="/causes"
+                render={() => <Causes />}
+            />
+            <Route
+                path="/signup"
+                render={() => <Signup />}
+            />
+            <Route
+                path="/about"
+                render={() => <About />}
+            />
 
-        <Route
-        path="/get involved"
-        render={() => <LoginSystem updateUser={this.updateUser} loggedIn={this.state.loggedIn} />}
-        />
-        <Route
-        path="/"
-        render={() => <Footer />}
-        />
+            <Route
+                path="/get involved"
+                render={() => <LoginSystem updateUser={this.updateUser} loggedIn={this.state.loggedIn} />}
+            />
+            <Route
+                path="/"
+                render={() => <Footer />}
+            />
         </div>
         );
     }
