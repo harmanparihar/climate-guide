@@ -4,7 +4,7 @@ import CoverFlow from 'react-coverflow';
 import bus from '../assets/images/bus-camper.jpg';
 import coffee from '../assets/images/coffee-cup.jpg';
 import book from '../assets/images/book-collection.jpg';
-import evening from '../assets/images/evening.png';
+import automobiles from '../assets/images/automobiles.jpg';
 import sunset from '../assets/images/sunset.jpg';
 
 class Carousel extends React.Component{
@@ -29,7 +29,7 @@ class Carousel extends React.Component{
 
             <img src={book} alt='Paper really helps to reduce waste.' />
 
-            <img src={evening} alt='This pic clicked in evening.' />
+            <img src={automobiles} alt='This pic clicked in evening.' />
 
             <img src={sunset} alt='This is the sunset pic.' />
 

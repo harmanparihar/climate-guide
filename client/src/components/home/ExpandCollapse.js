@@ -1,5 +1,6 @@
-import React from 'react'
-import AnimateHeight from 'react-animate-height'
+import React from 'react';
+import AnimateHeight from 'react-animate-height';
+import book from '../assets/images/book-collection.jpg';
 
 class ExpandCollapse extends React.Component{
 
@@ -8,16 +9,16 @@ class ExpandCollapse extends React.Component{
   }
 
   toggle = () => {
-    const { height } = this.state
+    const { height } = this.state;
 
     this.setState({
-      height: height === 0 ? 'auto' : 0,
+      height: height === 0 ? 'auto' : 0
     })
   }
 
-  render(){
+  render() {
 
-    const { height } = this.state
+    const { height } = this.state;
 
     return(
 
@@ -43,7 +44,7 @@ class ExpandCollapse extends React.Component{
               Recycling one ton of officer papers save 17 <b>trees</b>, 7,000 gallon of <b>water</b>, 463 gallon <b>oil</b>, 3 cubic yard of <b>landfil space</b> and enough energy to to heat an average home for six months.
             </p>
 
-            <img src="images/book-collection.jpg" alt="paper-image" />
+            <img src={book} alt="paper-image" />
 
             <div className="tips-container">
 
