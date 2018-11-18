@@ -44,7 +44,7 @@ button {
     @include padding-y(.3rem);
 
     &:hover {
-        background-color: $color__skyblue;
+        background-color: $color__button_hover;
         color: #fff;
         cursor: pointer;
     }
