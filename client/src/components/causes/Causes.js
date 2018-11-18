@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
-import GlobalWarming from './GlobalWarming';
-import CausesSection from './CausesSection';
+import weather from '../assets/icons/weather.svg';
+import CarbonChart from './carbonChart/CarbonChart';
+import Co2Chart from './co2Chart/Co2Chart';
 
 class Causes extends Component {
     render() {
         return (
-            <div>
-                <GlobalWarming />
-                <CausesSection />
-            </div>
+            <section>
+                <img src={weather} alt='Causes' />
+                <h2>Causes</h2>
+                <p></p>
+                <CarbonChart />
+                <Co2Chart />
+            </section>
         );
     }
 }

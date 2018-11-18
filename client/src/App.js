@@ -4,14 +4,12 @@ import Home from './components//home/Home';
 // import HomeMenu from './components/navigation/HomeMenu';
 import Sidebar from './components/discussion-board/Sidebar';
 import Footer from './components/Footer';
-// import Causes from './components/causes/Causes';
 
 import { Route } from 'react-router-dom';
 import LoginSystem from './components/discussion-board/Loginsystem';
 import Signup from './components/discussion-board/Sign-up';
 import Login from './components/discussion-board/login-form';
-import Calculator from './components/home/paper/Calculator';
-import Causes from './components/causes/Causes';
+import CausesEffects from './components/causes/CausesEffects';
 import About from './components/about/About';
 import axios from 'axios';
 
@@ -101,11 +99,11 @@ class App extends Component {
             />
             <Route
                 path="/tips"
-                render={() => <Calculator />}
+                render={() => <Home />}
             />
             <Route
-                path="/causes"
-                render={() => <Causes />}
+                path="/causes & effects"
+                render={() => <CausesEffects />}
             />
             <Route
                 path="/signup"

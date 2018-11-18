@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import NavMenu from './navigation/NavMenu';
 import SupportButton from './navigation/SupportButton';
 import logoSymbol from './assets/logos/cg_symbol.svg';
