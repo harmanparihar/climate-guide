@@ -381,6 +381,12 @@ h3 {
   font-weight: 600;
 }
 
+h4 {
+  font-size: 22px;
+  color: #2f0945;
+  font-weight: 600;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
@@ -469,6 +475,12 @@ body {
   margin: 0 auto;
   min-height: 100vh;
 }
+@media (max-width: 768px) {
+  .wrapper {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}
 
 .container {
   background: rgba(255, 255, 255, 0.75);
@@ -547,7 +559,7 @@ body {
 .container-head .btn:hover {
   cursor: pointer;
   color: white;
-  background: black;
+  background: #502b70;
 }
 
 .container-body img {
@@ -702,6 +714,11 @@ header {
 header .site-title {
   flex-grow: 0;
 }
+@media (max-width: 768px) {
+  header .site-title {
+    flex-grow: 1;
+  }
+}
 header .site-title .site-logo {
   font-size: 12px;
   display: block;
@@ -717,6 +734,11 @@ header .header-nav {
   flex-grow: 1;
   font-family: "Proza Libre", helvetica, verdana, arial, sans-serif;
   font-weight: 700;
+}
+@media (max-width: 768px) {
+  header .header-nav {
+    display: none;
+  }
 }
 header .header-nav ul {
   list-style: none;
@@ -735,6 +757,12 @@ header .search-form {
   border-left: 2px solid white;
   border-right: 2px solid white;
   padding: 0 1rem 0 1.5rem;
+}
+@media (max-width: 768px) {
+  header .search-form {
+    border-left: none;
+    margin-right: 4rem;
+  }
 }
 header .search-form i {
   position: absolute;
@@ -788,6 +816,11 @@ header .support-us {
   padding-top: 0.5%;
   padding-bottom: 0.5%;
 }
+@media (max-width: 768px) {
+  header .support-us {
+    display: none;
+  }
+}
 
 a {
   text-decoration: none;
@@ -808,12 +841,87 @@ a {
 
 /*test for sliding from top menu*/
 .slide {
-  position: fixed;
+  position: relative;
   top: -150px;
   width: 100%;
   transition: top 0.7s;
 }
 
+/*menu mobile */
+.bm-burger-button {
+  display: none;
+}
+
+.responsive_menu {
+  top: 0;
+}
+
+@media (max-width: 768px) {
+  /* Individual item */
+  .bm-item {
+    display: inline-block;
+    /* Our sidebar item styling */
+    text-decoration: none;
+    margin-bottom: 10px;
+    color: #d1d1d1;
+    transition: color 0.2s;
+  }
+
+  /* Change color on hover */
+  .bm-item:hover {
+    color: white;
+  }
+
+  /* The rest copied directly from react-burger-menu docs */
+  /* Position and sizing of burger button */
+  .bm-burger-button {
+    position: fixed;
+    width: 36px;
+    height: 30px;
+    right: 36px;
+    top: 20px;
+    display: block;
+  }
+
+  /* Color/shape of burger icon bars */
+  .bm-burger-bars {
+    background: white;
+  }
+
+  /* Position and sizing of clickable cross button */
+  .bm-cross-button {
+    height: 24px;
+    width: 24px;
+  }
+
+  /* Color/shape of close button cross */
+  .bm-cross {
+    background: #bdc3c7;
+  }
+
+  /* General sidebar styles */
+  .bm-menu {
+    background: #3d2051;
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+  }
+
+  /* Morph shape necessary with bubble or elastic */
+  .bm-morph-shape {
+    fill: #373a47;
+  }
+
+  /* Wrapper for item list */
+  .bm-item-list {
+    color: #b8b7ad;
+    height: 80% !important;
+  }
+
+  /* Styling of overlay */
+  .bm-overlay {
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
 /*******************************************************************/
 /* ================= end of header layout ======================== */
 /*******************************************************************/
@@ -1006,6 +1114,91 @@ input:focus {
 
 h1 {
   color: #2f0945;
+}
+
+.form-page {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.form-page .form-div {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 8px;
+}
+.form-page .form-div a {
+  text-align: center;
+  color: #2f0945;
+}
+.form-page .form-div .meta-text {
+  text-align: center;
+}
+.form-page .form-div .text-tertiary {
+  line-height: 3rem;
+  font-size: 0.9rem;
+}
+.form-page .form-div h4, .form-page .form-div h3 {
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+.form-page .form-div .login-form {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.form-page .form-div .login-form label {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.form-page .form-div .login-form label span {
+  text-align: left;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 600px) {
+  .form-page .form-div .login-form label {
+    grid-template-columns: 1fr;
+  }
+}
+.form-page .form-div .login-form button {
+  border-radius: 10px;
+  background-color: #684388;
+  border: 0;
+  color: white;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.form-page .form-div .login-form button:hover {
+  background-color: #502b70;
+  color: #fff;
+  cursor: pointer;
+}
+.form-page .form-div .login-form input {
+  width: 200px;
+  border-radius: 10px;
+  border: 1px solid #2f0945;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  box-sizing: border-box;
 }
 
 /* Articles (accessed from carousel) */
