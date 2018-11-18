@@ -40,7 +40,11 @@ h3 {
     line-height: 1.25em;
     font-weight: 600;
 }
-
+h4{
+  font-size: 22px;
+  color: $primary-purple;
+  font-weight: 600;
+}
 code {
     font-family: $font__code;
 }

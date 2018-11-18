@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 class LoginForm extends Component {
@@ -45,7 +46,7 @@ this.updateUser = this.updateUser.bind(this)
         })
         // update the state to redirect to home
         this.setState({
-          redirectTo: '/'
+          redirectTo: '/get%20involved'
         })
       }
     }).catch(error => {
@@ -62,10 +63,9 @@ this.updateUser = this.updateUser.bind(this)
       return (
       <div class="form-page">
         <div class="form-div">
-          <h4>Login</h4>
+          <h3>Share your thoughts with others!</h3>
+          <h4>Be an active member of our community</h4>
           <form className="login-form ">
-          <div className="form-group">
-            <div className="col-1 col-ml-auto">
               <label>
                   <span>Username: </span>
                   <input className="form-input"
@@ -87,15 +87,16 @@ this.updateUser = this.updateUser.bind(this)
                   onChange={this.handleChange}
                   />
               </label>
-            </div>
-          </div>
 
           <button
           className="submit"
 
           onClick={this.handleSubmit}
           type="submit">Login</button>
-
+          <div className="meta-text">Don't have an account?</div>
+          <Link to="/get involved" className="btn btn-link">
+          <span className="text-secondary">Sign up</span>
+          </Link>
           </form>
         </div>
       </div>

@@ -4,59 +4,70 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-.form-div{
-  @include padding-x(10%);
-  @include padding-y(2%);
-  background-color: $color__white-075;
-  border-radius: 8px;
-}
-.login-form{
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  @include margin-y(10%);
-  @include margin-y(10%);
-  @include padding-x(10%);
-  @include padding-y(10%);
-}
-label {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    @include margin-y(1rem);
-
-    span {
-        text-align: left;
-        padding-right: 1rem;
-        padding-top: 0.5rem;
-        box-sizing: border-box;
+  .form-div{
+    @include padding-x(10%);
+    @include padding-y(2%);
+    background-color: $color__white-075;
+    border-radius: 8px;
+    a{
+      text-align: center;
+      color: $primary-purple;
     }
-    @media screen and (max-width:600px){
-      grid-template-columns: 1fr;
+    .meta-text{
+      text-align: center;
     }
-}
-button {
-    border-radius: 10px;
-    background-color: $color__button;
-    border: 0;
-    color: $color__white;
-    @include padding-x(1rem);
-    @include padding-y(.3rem);
-
-    &:hover {
-        background-color: $color__button_hover;
-        color: #fff;
-        cursor: pointer;
+    h4,h3{
+      text-align: center;
+      margin-bottom: 0;
+      margin-top: 20px;
     }
-}
-input{
-    width: 200px;
-    border-radius: 10px;
-    border: 1px solid #2f0945;
-    padding-left: 0.6rem;
-    padding-right: 0.6rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    box-sizing: border-box;
+    .login-form{
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      @include margin-x(10%);
+      @include padding-x(10%);
+      @include padding-y(10%);
+      label {
+          display: grid;
+          grid-template-columns: 1fr 2fr;
+          @include margin-y(1rem);
 
+          span {
+              text-align: left;
+              padding-right: 1rem;
+              padding-top: 0.5rem;
+              box-sizing: border-box;
+          }
+          @media screen and (max-width:600px){
+            grid-template-columns: 1fr;
+          }
+      }
+
+      button {
+          border-radius: 10px;
+          background-color: $color__button;
+          border: 0;
+          color: $color__white;
+          @include padding-x(.6rem);
+          @include padding-y(.5rem);
+          @include margin-y(1rem);
+          &:hover {
+              background-color: $color__button_hover;
+              color: #fff;
+              cursor: pointer;
+          }
+      }
+      input{
+          width: 200px;
+          border-radius: 10px;
+          border: 1px solid #2f0945;
+          padding-left: 0.6rem;
+          padding-right: 0.6rem;
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
+          box-sizing: border-box;
+      }
+    }
+  }
 }

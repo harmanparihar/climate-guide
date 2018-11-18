@@ -2,16 +2,17 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import Main from './Main';
+import Signup from "./Signup"
 
 
 class LoginSystem extends Component {
   constructor() {
     super()
-  
+
     this.logout = this.logout.bind(this)
-  
+
   }
- 
+
 
   logout(event) {
     event.preventDefault()
@@ -33,10 +34,9 @@ class LoginSystem extends Component {
     const loggedIn = this.props.loggedIn;
     console.log('navbar render, props: ')
     console.log(this.props);
-    
+
     return (
       <div>
-
       <div className="navbar App-header" id="nav-container">
       <div className="col-4" >
       {loggedIn ? (
@@ -47,16 +47,13 @@ class LoginSystem extends Component {
 
         </section>
         ) : (
-        <section className="navbar-section">
+        <section className="get-involved">
+        <Signup />        
         <Link to="/" className="btn btn-link text-secondary">
         <span className="text-secondary">home</span>
         </Link>
-        <Link to="/login" className="btn btn-link text-secondary">
-        <span className="text-secondary">login</span>
-        </Link>
-        <Link to="/signup" className="btn btn-link">
-        <span className="text-secondary">sign up</span>
-        </Link>
+
+
         </section>
         )}
         </div>

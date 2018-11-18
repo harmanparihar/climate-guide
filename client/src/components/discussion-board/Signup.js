@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
+
 
 class Signup extends Component {
 	constructor() {
@@ -50,14 +52,15 @@ render() {
 	return (
 		<div className="form-page">
 		<div className="form-div">
-			<h4>Sign up</h4>
+			<h3>Create a new account today! </h3>
+			<h4>Join Our Community</h4>
 			<form className="login-form ">
       <div className="form-group">
         <div className="col-1 col-ml-auto">
           <label>
-              <span>Username: </span>
+              <span>Email Id: </span>
 							<input className="form-input"
-								type="text"
+								type="email"
 								id="username"
 								name="username"
 								placeholder="Username"
@@ -82,6 +85,10 @@ render() {
 				onClick={this.handleSubmit}
 				type="submit"
 			>Sign up</button>
+			<div className="meta-text">Already have an account?</div>
+			<Link to="/login" className="btn btn-link text-secondary">
+			<span className="text-secondary">Login</span>
+			</Link>
     	</form>
 		</div>
 	</div>

@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 
 import { Route } from 'react-router-dom';
 import LoginSystem from './components/discussion-board/Loginsystem';
-import Signup from './components/discussion-board/Sign-up';
+import Signup from './components/discussion-board/Signup';
 import Login from './components/discussion-board/login-form';
 import CausesEffects from './components/causes/CausesEffects';
 import About from './components/about/About';
