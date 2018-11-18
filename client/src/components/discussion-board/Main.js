@@ -79,7 +79,7 @@ export default class Main extends React.Component{
   };
   componentWillUnmount(){
     // clearInterval(this.update)
-    this.serverRequest.abort();
+    // this.serverRequest.abort();
   }
   deletePost(index){
     var temp = this.state.data;
