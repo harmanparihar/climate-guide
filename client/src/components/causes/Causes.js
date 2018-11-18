@@ -12,6 +12,7 @@ class Causes extends Component {
                 <p></p>
                 <CarbonChart />
                 <Co2Chart />
+                <p>Updated from <a href="https://www.noaa.gov/">NOAA</a> at {new Date().toUTCString()}</p>
             </section>
         );
     }

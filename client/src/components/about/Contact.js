@@ -2,7 +2,7 @@
 
 import React, { Component } from "react";
 
-class Form extends Component {
+class Contact extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -38,6 +38,7 @@ class Form extends Component {
     renderForm() {
         return (
             <form className="contact-form" onSubmit={this.handleSubmit}>
+                <h2>Contact Us</h2>
                 <label>
                     <span>Name: </span>
                     <input
@@ -110,4 +111,4 @@ class Form extends Component {
     }
 }
 
-export default Form;
+export default Contact;

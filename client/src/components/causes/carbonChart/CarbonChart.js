@@ -74,12 +74,14 @@ const dataSource = {
 class CarbonChart extends Component {
    render() {
       return (
-      <ReactFusioncharts className="causes-chart"
-         type = "zoomscatter"
-         width = '1000'
-         height = '500'
-         dataFormat = "json"
-         dataSource = {dataSource} />
+          <ReactFusioncharts
+              className="causes-chart"
+              type = "zoomscatter"
+              width = '1000'
+              height = '500'
+              dataFormat = "json"
+              dataSource = {dataSource}
+          />
       );
    }
 }

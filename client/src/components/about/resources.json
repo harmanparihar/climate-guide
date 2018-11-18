@@ -1,0 +1,42 @@
+[
+    {
+        "name": "NASA",
+        "url": "https://data.nasa.gov/"
+    },
+    {
+        "name": "NOAA",
+        "url": "https://www.noaa.gov/"
+    },
+    {
+        "name": "Earth Now app by NASA",
+        "url": "https://itunes.apple.com/us/app/earth-now/id494633346?mt=8"
+    },
+    {
+        "name": "Climate Change website - by the Government of Canada",
+        "url": "https://www.canada.ca/en/services/environment/weather/climatechange.html"
+    },
+    {
+        "name": "Climate Change website - by the National Geographic",
+        "url": "https://www.nationalgeographic.com/environment/climate-change/"
+    },
+    {
+        "name": "Statista",
+        "url": "https://www.statista.com/topics/1148/global-climate-change/ "
+    },
+    {
+        "name": "ProgrammableWeb APIs",
+        "url": "https://www.programmableweb.com/category/climate/api"
+    },
+    {
+        "name": "The World Bank - Renewable Energy",
+        "url": "http://ppi-re.worldbank.org/data"
+    },
+    {
+        "name": "Aeris Weather",
+        "url": "https://www.aerisweather.com/develop/"
+    },
+    {
+        "name": "DataBC",
+        "url": "https://catalogue.data.gov.bc.ca/dataset?sector=Natural+Resources&download_audience=Public"
+    }
+]

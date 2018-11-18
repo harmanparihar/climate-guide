@@ -11,6 +11,7 @@ class Effects extends Component {
                 <h2>Effects</h2>
                 <p></p>
                 <TempChart />
+                <p>Updated from <a href="https://www.nasa.gov/">NASA</a> at {new Date().toUTCString()}</p>
             </section>
         );
     }

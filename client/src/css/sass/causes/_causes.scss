@@ -1,8 +1,14 @@
-
 /*--------------------------------------------------------------
-## Charts
+## Causes & Effects Layout
 --------------------------------------------------------------*/
 
-.causes-chart {
-    @include margin-y(1rem);
+.causes-effects {
+    img + h2 {
+        display: inline-block;
+        margin-left: .5rem;
+    }
+
+    .causes-chart {
+        @include margin-y(1rem);
+    }
 }
