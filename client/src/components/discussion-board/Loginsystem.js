@@ -49,11 +49,6 @@ class LoginSystem extends Component {
         ) : (
         <section className="get-involved">
         <Signup />        
-        <Link to="/" className="btn btn-link text-secondary">
-        <span className="text-secondary">home</span>
-        </Link>
-
-
         </section>
         )}
         </div>

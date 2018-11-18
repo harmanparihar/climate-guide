@@ -86,8 +86,11 @@ render() {
 				type="submit"
 			>Sign up</button>
 			<div className="meta-text">Already have an account?</div>
-			<Link to="/login" className="btn btn-link text-secondary">
+			<Link to="/login">
 			<span className="text-secondary">Login</span>
+			</Link>
+			<Link to="/">
+			<span className="text-tertiary">Back to Home</span>
 			</Link>
     	</form>
 		</div>

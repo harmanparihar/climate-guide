@@ -97,6 +97,9 @@ this.updateUser = this.updateUser.bind(this)
           <Link to="/get involved" className="btn btn-link">
           <span className="text-secondary">Sign up</span>
           </Link>
+          <Link to="/" className="btn btn-link text-secondary">
+          <span className="text-tertiary">Back to Home</span>
+          </Link>
           </form>
         </div>
       </div>

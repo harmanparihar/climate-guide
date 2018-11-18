@@ -6,7 +6,7 @@
   flex-direction: column;
   .form-div{
     @include padding-x(10%);
-    @include padding-y(2%);
+    @include padding-y(1%);
     background-color: $color__white-075;
     border-radius: 8px;
     a{
@@ -15,6 +15,10 @@
     }
     .meta-text{
       text-align: center;
+    }
+    .text-tertiary{
+      line-height: 3rem;
+      font-size: 0.9rem;
     }
     h4,h3{
       text-align: center;
@@ -25,9 +29,8 @@
       display: grid;
       align-items: center;
       justify-content: center;
-      @include margin-x(10%);
       @include padding-x(10%);
-      @include padding-y(10%);
+      @include padding-y(5%);
       label {
           display: grid;
           grid-template-columns: 1fr 2fr;
