@@ -1,0 +1,34 @@
+.sidebar{
+  border-radius: 4px;
+  background-color: $color__white-075;
+  height: 71.3vh;
+  position: fixed;
+  z-index: -1;
+  max-width: 400px;
+  box-sizing: border-box;
+  @include padding-y(2%);
+  @include padding-x(2%);
+  @media screen and (max-width: 800px){
+    display: none;
+  }
+  a{
+    display: block;
+  }
+  h4{
+    margin-bottom: 5px;
+  }
+  button {
+      border-radius: 10px;
+      background-color: $color__button;
+      border: 0;
+      color: $color__white;
+      @include padding-x(.6rem);
+      @include padding-y(.5rem);
+      @include margin-y(1rem);
+      &:hover {
+          background-color: $color__button_hover;
+          color: #fff;
+          cursor: pointer;
+      }
+  }
+}

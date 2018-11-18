@@ -1,17 +1,22 @@
-// @import url('https://fonts.googleapis.com/css?family=Open+Sans');
-body{
-  margin:0;
-  // font-family: 'Open Sans', sans-serif;
-  padding: 0;
-}
 main{
+  margin-top: 10vh;
+  @include padding-x(20px);
+  @include padding-y(20px);
+}
+.wrap{
   min-height: 80vh;
-
   margin: auto;
+  margin-left: 420px;
+  @include padding-y(5%);
+  @media screen and (max-width: 800px){
+    margin-left: auto;
+  }
+  background-color: $color__white-075;
+  border-radius: 4px;
   .add_post{
+    @include margin-x(10%);
     border-radius: 4px;
         background: rgba($color__white, $alpha75);
-
     -webkit-box-shadow: 7px 5px 30px -9px rgba(0,0,0,0.75);
     -moz-box-shadow: 7px 5px 30px -9px rgba(0,0,0,0.75);
     box-shadow: 7px 5px 30px -9px rgba(0,0,0,0.75);
@@ -32,9 +37,8 @@ main{
   .post_section{
     // border: 1px solid #666;
     border-radius: 4px;
-    padding: 10%;
+    @include padding-x(10%);
     margin: 20px auto;
-    background: rgba($color__white, $alpha75);
     form.reply{
       display: block;
       margin-top: 20px;

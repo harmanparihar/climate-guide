@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Header from './components/Header';
 import Home from './components//home/Home';
 // import HomeMenu from './components/navigation/HomeMenu';
-import Sidebar from './components/discussion-board/Sidebar';
 import Footer from './components/Footer';
 
 import { Route } from 'react-router-dom';
@@ -89,10 +88,6 @@ class App extends Component {
                 path="/"
                 render={() => <Home />}
             />
-            <Sidebar />
-
-
-
             <Route
                 path="/login"
                 render={() => <Login updateUser={this.updateUser} />}

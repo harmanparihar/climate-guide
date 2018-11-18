@@ -2,6 +2,7 @@ import React from 'react';
 import Posts from './Posts';
 import axios from 'axios';
 import Form from './Form';
+import Sidebar from './Sidebar';
 export default class Main extends React.Component{
   constructor(){
     super();
@@ -100,13 +101,15 @@ export default class Main extends React.Component{
   }
   render(){
     return(
-        <main className="wrapper container">
-          <h1>Get Involved</h1>
-          <div className="add_post">
-          <button id="new_post" onClick={this.clickHandler.bind(this)}><span className="add_symbol">+ </span>Add New Post</button>
-          {this.state.show_form ? <Form data={this.state.data} updatedb={this.updateData.bind(this)} placeholder_text="Share your thoughts"/> : null}
+        <main>
+          <Sidebar />
+          <div className="wrap">
+            <div className="add_post">
+            <button id="new_post" onClick={this.clickHandler.bind(this)}><span className="add_symbol">+ </span>Add New Post</button>
+            {this.state.show_form ? <Form data={this.state.data} updatedb={this.updateData.bind(this)} placeholder_text="Share your thoughts"/> : null}
+            </div>
+            <Posts data={this.state.data} deletePost={this.deletePost.bind(this)} incrementUps={this.incrementUpvotes.bind(this)}/>
           </div>
-          <Posts data={this.state.data} deletePost={this.deletePost.bind(this)} incrementUps={this.incrementUpvotes.bind(this)}/>
         </main>
     );
   }

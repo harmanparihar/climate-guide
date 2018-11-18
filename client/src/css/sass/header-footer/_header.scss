@@ -6,7 +6,9 @@
 
 header {
   width: 100%;
-  position: relative;
+  position: fixed;
+  top:0;
+  z-index: 1;
   background: $bg_topnav;
   display: flex;
   flex-flow: row wrap;
@@ -16,8 +18,9 @@ header {
   border-bottom: 1px solid $color__skyblue;
   @include padding-y(.5rem);
   @include padding-x(2rem);
-
-
+  @media screen and (max-width: 600px){
+    position: relative;
+  }
 
 
   .site-title {
@@ -98,7 +101,7 @@ header {
        z-index:9999;
      }
 
-   
+
     }
 
     .search-submit {
@@ -108,7 +111,7 @@ header {
       background-color: initial;
       top: 10px;
 
-     
+
     }
   }
 

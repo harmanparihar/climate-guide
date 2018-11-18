@@ -37,18 +37,17 @@ class LoginSystem extends Component {
 
     return (
       <div>
-      <div className="navbar App-header" id="nav-container">
+      <div>
       <div className="col-4" >
       {loggedIn ? (
         <section className="navbar-section">
         <Link to="#" className="btn btn-link text-secondary" onClick={this.logout}>
         <span className="text-secondary">logout</span></Link>
         <Main />
-
         </section>
         ) : (
         <section className="get-involved">
-        <Signup />        
+        <Signup />
         </section>
         )}
         </div>
