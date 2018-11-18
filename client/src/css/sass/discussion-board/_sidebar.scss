@@ -21,10 +21,12 @@
       border-radius: 10px;
       background-color: $color__button;
       border: 0;
+      width: 100px;
       color: $color__white;
       @include padding-x(.6rem);
       @include padding-y(.5rem);
       @include margin-y(1rem);
+      margin-left: 250px;
       &:hover {
           background-color: $color__button_hover;
           color: #fff;
