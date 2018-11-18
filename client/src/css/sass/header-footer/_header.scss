@@ -83,6 +83,13 @@ header {
       font-size:1.5rem;
 
     }
+    .search-submit {
+     position: absolute;
+     right: 5px;
+     border: none;
+     background-color: initial;
+     top: 10px;
+     }
     .search-field {
       background: transparent;
       width: 30px;
@@ -111,15 +118,6 @@ header {
     }
    }
 
-   .search-submit {
-    position: absolute;
-    right: 5px;
-    border: none;
-    background-color: initial;
-    top: 10px;
-    }
-  }
-}
 
 .support-us{
   background: $color__skyblue;
