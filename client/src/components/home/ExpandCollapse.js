@@ -1,7 +1,7 @@
 import React from 'react';
 import AnimateHeight from 'react-animate-height';
 import book from '../assets/images/book-collection.jpg';
-
+import PaperPlane from '../assets/icons/paper-plane.svg';
 class ExpandCollapse extends React.Component{
 
   state = {
@@ -22,9 +22,10 @@ class ExpandCollapse extends React.Component{
 
     return(
 
-      <div className="expand-collapse-container">
+      <div className="expand-collapse-container container">
 
         <div className="container-head">
+                <img src={PaperPlane} alt='Causes' className="icon" />
 
           <h2>Paper</h2>
           <p>Some crazy facts about paper !!</p>

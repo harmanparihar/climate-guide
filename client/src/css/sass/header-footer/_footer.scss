@@ -5,30 +5,60 @@
 /*******************************************************************/
 
 .site-footer {
-    box-sizing: border-box;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    margin-top: 5rem;
-    // position: relative;
-    width: 100%;
-    margin: auto;
-    background: $bg_footer;
-    border-top: 1px solid $color__skyblue;
-    // @include padding-x(2rem);
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 100%;
+  background: $bg_footer;
+  border-top: 1px solid $color__skyblue;
+  padding-top:.5rem;
+  @include padding-x(2rem);
+
+  .site-title {
+    flex-grow: 0;
+
+    .site-logo {
+      font-size: 12px;
+      display: block;
+      width: 50px;
+
+      margin-right: .5rem;
+      vertical-align: super;
+    }
+  }
+  .footer-nav{
+    flex-grow: 1;
+    font-family: $font__heading;
+    font-weight: 700;
 
     ul {
-        list-style: none;
-        @include margin-y(0);
-        @include padding-y(1rem);
-        display: flex;
-        flex-flow: row nowrap;
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      flex-grow: 1;
 
-        li {
-            @include padding-x(.5rem);
-        }
+      li {
+        @include padding-x(.5rem);
+      }
     }
+  }
+  .footer-social {
 
+    ul{
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      flex-grow: 1;
+      li {
+        @include padding-x(.5rem);
+      }
+    }
+  }
 }
 
 

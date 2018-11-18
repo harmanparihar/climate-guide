@@ -100,7 +100,7 @@ export default class Main extends React.Component{
   }
   render(){
     return(
-        <main>
+        <main className="wrapper container">
           <h1>Get Involved</h1>
           <div className="add_post">
           <button id="new_post" onClick={this.clickHandler.bind(this)}><span className="add_symbol">+ </span>Add New Post</button>

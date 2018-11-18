@@ -6,7 +6,7 @@ import Effects from './Effects';
 class CausesEffects extends Component {
     render() {
         return (
-            <div className="causes-effects">
+            <div className="causes-effects causes wrapper container">
                 <GlobalWarming />
                 <Causes />
                 <Effects />

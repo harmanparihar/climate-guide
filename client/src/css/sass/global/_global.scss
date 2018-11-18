@@ -1,3 +1,25 @@
 body{
 	background: $bg_body no-repeat;
+	font-size: 16px;
+}
+.wrapper{
+	max-width: 1200px;
+	margin: 0 auto;
+	min-height: 100vh;
+}
+.container{
+	background: rgba($color__white, $alpha75);
+	border-radius:8px;
+	@include padding-y(2%);
+	@include padding-x(2%);
+	@include margin-y(2rem);
+	
+	h2{
+		margin:0;
+		color:$primary_purple;
+	}
+}
+
+.icon{
+	width: 50px;
 }

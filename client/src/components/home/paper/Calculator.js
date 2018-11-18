@@ -45,7 +45,7 @@ class Calculator extends Component {
 
     render() {
         return (
-            <div>
+            <div className="calculator wrapper container">
                 <h3>Paper Use Calculator</h3>
                 <form>
                     <label>

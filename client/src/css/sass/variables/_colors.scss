@@ -7,6 +7,8 @@ $primary_purple: rgba(47, 9, 69, 1);
 $primary-purple: rgba(47, 9, 69, 1);
 // #2f0945
 
+
+
 $color__topnav: rgba(102, 46, 85, 1);
 $bg_topnav: rgba(102,46,85,1);
 // #662e55
@@ -16,6 +18,9 @@ $color__skyblue: rgba(144, 241, 249, 1);
 
 $color__button: rgba(104, 67, 136, 1);
 // #684488
+
+$color__button_hover: rgba(0, 0, 0, 1);
+//#000
 
 $color__menu-mobile: rgba(61, 32, 82, 1);
 // #3d2052
@@ -50,3 +55,11 @@ $background_gradient : linear-gradient(to left, rgba(24, 32, 87,1),rgba(117, 48,
 
 
 $bg_body: linear-gradient(to bottom left, rgba(255, 103, 89,1),rgba(173, 47, 35,.7),rgba(135, 71, 209,1),rgba(25, 32, 87,1));
+
+/*--------------------------------------------------------------
+## opacity background
+--------------------------------------------------------------*/
+$alpha75: .75;
+$alpha7: .7;
+$alpha8: .8;
+$alpha9: .9;
