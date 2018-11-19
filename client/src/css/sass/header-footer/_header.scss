@@ -7,7 +7,7 @@
 header {
   width: 100%;
   position: fixed;
-  top:0;
+  top:-150px;
   z-index: 1;
   background: $bg_topnav;
   display: flex;
@@ -16,6 +16,8 @@ header {
   align-items: center;
   box-sizing: border-box;
   border-bottom: 1px solid $color__skyblue;
+    transition: top 0.7s;
+
   @include padding-y(.5rem);
   @include padding-x(2rem);
   @media screen and (max-width: 600px){
@@ -158,8 +160,8 @@ a {
 
 /*test for sliding from top menu*/
 .slide {
-  position: relative;
-  top: -150px;
+  position: fixed;
+  top: 0px;
   width: 100%;
   transition: top 0.7s;
 }
