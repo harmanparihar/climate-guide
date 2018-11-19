@@ -102,7 +102,7 @@ export default class Main extends React.Component{
   render(){
     return(
         <main>
-          <Sidebar />
+          <Sidebar logout={this.props.logout}/>
           <div className="wrap">
             <div className="add_post">
             <button id="new_post" onClick={this.clickHandler.bind(this)}><span className="add_symbol">+ </span>Add New Post</button>

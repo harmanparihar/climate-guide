@@ -61,8 +61,8 @@ this.updateUser = this.updateUser.bind(this)
       return <Redirect to={{ pathname: this.state.redirectTo }} />
     } else {
       return (
-      <div class="form-page">
-        <div class="form-div">
+      <div className="form-page">
+        <div className="form-div">
           <h3>Share your thoughts with others!</h3>
           <h4>Be an active member of our community</h4>
           <form className="login-form ">
