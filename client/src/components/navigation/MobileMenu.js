@@ -1,8 +1,7 @@
-    
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 import { slide as Menu } from 'react-burger-menu'
-
+import SupportButton from './SupportButton';
 
 class MobileMenu extends Component {
 	render() {
@@ -23,7 +22,8 @@ class MobileMenu extends Component {
         	
         	<Menu right className="responsive_menu">
         	<nav className={this.props.className}>
-        	<ul>{navLinks}</ul>
+        	<SupportButton />
+            <ul>{navLinks}</ul>
         	</nav>
         	</Menu>
 

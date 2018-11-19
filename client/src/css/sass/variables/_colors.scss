@@ -16,6 +16,9 @@ $bg_topnav: rgba(102,46,85,1);
 $color__skyblue: rgba(144, 241, 249, 1);
 // #90f1f9
 
+
+$color__border_input: rgba(0,113,187,1);
+//0071BB
 $color__button: rgba(104, 67, 136, 1);
 // #684488
 
@@ -24,6 +27,9 @@ $color__button_hover: rgba(80, 43, 112, 1);
 
 $color__menu-mobile: rgba(61, 32, 82, 1);
 // #3d2052
+
+$color__menu_mobile_hover: rgba(114,77,153,1);
+//724D99
 
 $color__footer-bg: rgba(19, 23, 40, 1);
 $bg_footer: rgba(19,23,40,1);
@@ -49,6 +55,14 @@ $color__black: rgba(0, 0, 0, 1);
 
 
 
+/*--------------------------------------------------------------
+## opacity background
+--------------------------------------------------------------*/
+$alpha75: .75;
+$alpha7: .7;
+$alpha8: .8;
+$alpha9: .9;
+
 
 /*--------------------------------------------------------------
 ## Define the gradients
@@ -58,11 +72,4 @@ $background_gradient : linear-gradient(to left, rgba(24, 32, 87,1),rgba(117, 48,
 
 
 $bg_body: linear-gradient(to bottom left, rgba(255, 103, 89,1),rgba(173, 47, 35,.7),rgba(135, 71, 209,1),rgba(25, 32, 87,1));
-
-/*--------------------------------------------------------------
-## opacity background
---------------------------------------------------------------*/
-$alpha75: .75;
-$alpha7: .7;
-$alpha8: .8;
-$alpha9: .9;
+$bg_home: radial-gradient(150% 80em at 50% 100%, transparent 50%, rgba($color__white, $alpha9) 50%);

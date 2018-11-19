@@ -16,7 +16,7 @@ header {
   align-items: center;
   box-sizing: border-box;
   border-bottom: 1px solid $color__skyblue;
-    transition: top 0.7s;
+  transition: top 0.7s;
 
   @include padding-y(.5rem);
   @include padding-x(2rem);
@@ -91,34 +91,34 @@ header {
      border: none;
      background-color: initial;
      top: 10px;
-     }
-    .search-field {
-      background: transparent;
-      width: 30px;
-      color: #000;
-      cursor: pointer;
-      outline: none;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 8px;
-      transition: all .5s;
-      float: right;
-      position: relative;
-      z-index: 99;
-
-      &:focus{
-        width: 130px;
-        background-color: #fff;
-        cursor: auto;
-        padding-right:30px;
-        box-shadow: 3px 1px 10px rgba($color__black, $alpha7);
-      }
-      &:focus + i{
-       color:#000;
-       z-index:9999;
-     }
-    }
    }
+   .search-field {
+    background: transparent;
+    width: 30px;
+    color: #000;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all .5s;
+    float: right;
+    position: relative;
+    z-index: 99;
+
+    &:focus{
+      width: 130px;
+      background-color: #fff;
+      cursor: auto;
+      padding-right:30px;
+      box-shadow: 3px 1px 10px rgba($color__black, $alpha7);
+    }
+    &:focus + i{
+     color:#000;
+     z-index:9999;
+   }
+ }
+}
 
 
 .support-us{
@@ -223,8 +223,15 @@ a {
   /* General sidebar styles */
   .bm-menu {
     background: $color__mobilemenu;
-    padding: 2.5em 1.5em 0;
+    padding: 2.5em 0;
     font-size: 1.15em;
+    border-left:1px solid $color__skyblue;
+    text-align: center;
+
+    .support-us{
+      display: block;
+      margin: 0 auto;
+    }
   }
 
   /* Morph shape necessary with bubble or elastic */
@@ -236,6 +243,22 @@ a {
   .bm-item-list {
     color: #b8b7ad;
     height: 80%!important;
+    ul{
+      list-style-type:none;
+      margin: 0;
+      padding: 0;
+      li{
+        margin:4rem 0;
+        a{
+          display: block;
+          padding:.5rem;
+          &:hover{
+            box-shadow: none;
+            background:$color__menu_mobile_hover;
+          }
+        }
+      }
+    }
   }
 
   /* Styling of overlay */

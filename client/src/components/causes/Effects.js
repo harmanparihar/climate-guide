@@ -7,13 +7,16 @@ class Effects extends Component {
     render() {
         return (
             <section>
-                <img src={weather} alt='Effects' />
-                <h2>Effects</h2>
-                <p></p>
-                <TempChart />
-                <p>Updated from <a href="https://www.nasa.gov/">NASA</a> at {new Date().toUTCString()}</p>
+            <img src={weather} alt='Effects' />
+            <h2>Effects</h2>
+            <p></p>
+            <div className="container">
+
+            <TempChart />
+            <p>Updated from <a href="https://www.nasa.gov/">NASA</a> at {new Date().toUTCString()}</p>
+            </div>
             </section>
-        );
+            );
     }
 }
 

@@ -10,5 +10,13 @@
 
     .causes-chart {
         @include margin-y(1rem);
+        text-align: center;
+    }
+
+    h2{
+    	color:$color__white;
+    }
+    .GlobalWarming p{
+    	color:$color__white;
     }
 }
