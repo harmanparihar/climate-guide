@@ -74,7 +74,7 @@ header {
 
     @media (max-width: 768px){
       border-left:none;
-      margin-right: 4rem;
+      margin-right: 1rem;
     }
     i {
       position: absolute;
@@ -196,11 +196,11 @@ a {
 
   /* Position and sizing of burger button */
   .bm-burger-button {
-    position: fixed;
+    position: relative;
     width: 36px;
     height: 30px;
-    right:36px;
-    top: 20px;
+    right:0;
+    top: 0;
     display: block;
   }
 
