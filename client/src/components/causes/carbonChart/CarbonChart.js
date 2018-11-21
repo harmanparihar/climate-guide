@@ -38,7 +38,7 @@ const dataSource = {
         {
             "seriesname": "Land-use Change",
             "drawLine": true,
-            "color": "#779100",
+            "color": "#07ad5d",
             "anchorsides": "3",
             "anchorBorderThickness": "0.1",
             "anchorradius": "3",

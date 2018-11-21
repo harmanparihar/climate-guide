@@ -26,6 +26,10 @@
     "animation": true,
     "animationDuration": 1,
 
+    "baseChartMessageFont": "Rubik",
+
+    "toolbarButtonColor": "#ff0000",
+
 
     "usePlotGradientColor": "0",
     "showPlotBorder": "0",
