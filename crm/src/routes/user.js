@@ -1,12 +1,12 @@
 const express = require('express')
+const mongoose = require('mongoose');
 const router = express.Router()
 const User = require('../models/user')
 const passport = require('../passport')
-
 router.post('/', (req, res) => {
   console.log('user signup');
 
-  const { username, password } = req.body
+  const {name, username, password } = req.body;
     // ADD VALIDATION
     User.findOne({ username: username }, (err, user) => {
       if (err) {
@@ -18,6 +18,7 @@ router.post('/', (req, res) => {
       }
       else {
         const newUser = new User({
+          name:     name,
           username: username,
           password: password
         })
@@ -68,4 +69,22 @@ router.post('/logout', (req, res) => {
   }
 })
 
+// GET request : http://localhost:8080/user/getusers
+// Gives you a json object of all the users and their data
+router.get('/getusers', (req, res) => {
+  User.find({}, (err, userdata) => {
+      if (err) {
+          res.send({msg:'Could not fetch user data'});
+      }
+      res.json(userdata);
+  });
+})
+router.delete('/delete', (req, res) => {
+  User.remove({}, (err, userdata) => {
+      if (err) {
+          res.send({msg:'Could not delete user data'});
+      }
+      res.send({msg:'Users deleted successfully'});
+  });
+})
 module.exports = router

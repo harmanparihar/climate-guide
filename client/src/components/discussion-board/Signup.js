@@ -8,6 +8,7 @@ class Signup extends Component {
 	constructor() {
 		super()
 		this.state = {
+			name: '',
 			username: '',
 			password: '',
 			confirmPassword: '',
@@ -28,6 +29,7 @@ class Signup extends Component {
 
 		//request to server to add a new username/password
 		axios.post('http://localhost:8080/user/', {
+			name:			this.state.name,
 			username: this.state.username,
 			password: this.state.password
 		})
@@ -62,6 +64,17 @@ class Signup extends Component {
 				<div className="form-group">
 				<div className="col-1 col-ml-auto">
 				<label>
+				<span>Full Name: </span>
+				<input className="form-input"
+				type="text"
+				id="name"
+				name="name"
+				placeholder="Full Name"
+				value={this.state.name}
+				onChange={this.handleChange}
+				/>
+				</label>
+				<label>
 				<span>Email Id: </span>
 				<input className="form-input"
 				type="email"
@@ -75,7 +88,7 @@ class Signup extends Component {
 				<label>
 				<span>Password: </span>
 				<input className="form-input"
-				placeholder="password"
+				placeholder="Password"
 				type="password"
 				name="password"
 				value={this.state.password}
