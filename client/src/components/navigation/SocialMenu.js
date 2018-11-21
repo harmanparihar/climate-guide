@@ -6,7 +6,7 @@ class SocialMenu extends Component {
         const navLinks = pages.map((page, i) => {
             return (
                 <li key={i}>
-                    <a href={"www." + page + '.com'}>
+                    <a href={"https://www." + page + '.com'}>
                         <span className={'fab fa-' + page}></span>
                     </a>
                 </li>

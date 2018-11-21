@@ -8,15 +8,14 @@ class About extends Component {
 	render() {
 		return (
 			<div className="fixed-header">
-			<Header/>
-			<div className="wrapper container">
+				<Header/>
 
-			<Team />
+				<div className="wrapper container">
+					<Team />
+					<Contact />
+					<Resources />
+				</div>
 
-			<Contact />
-			<Resources />
-
-			</div>
 			</div>
 			);
 	}

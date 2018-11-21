@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Rubik:400,400i,700,700i|Fira+Sans:400,400i,700,700i|Proza+Libre:400,400i,600,700,700i,800');
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,400i,500,600,700,700i|Proza+Libre:400,400i,600,700,700i,800');
 
 $font__heading: "Proza Libre", helvetica, verdana, arial, sans-serif;
 $font__main: "Rubik", helvetica, verdana, arial, sans-serif;
@@ -21,14 +21,15 @@ body, input, button {
 h1, h2, h3, h4, h5, h6 {
     font-family: $font__heading;
 }
-h1{
+
+h1 {
     font-size: 48px;
     line-height: 1em;
     font-weight: 800;
 }
 h2 {
     // text-transform: uppercase;
-    font-size:36px;
+    font-size: 36px;
     line-height: 1.25em;
     font-weight: 700;
 
@@ -40,13 +41,17 @@ h3 {
     line-height: 1.25em;
     font-weight: 600;
 }
-h4{
+
+h4 {
   font-size: 22px;
   color: $primary-purple;
   font-weight: 600;
 }
+
 code {
     font-family: $font__code;
 }
 
-$font_color_button: white;
+.font-weight-medium {
+    font-weight: 500;
+}

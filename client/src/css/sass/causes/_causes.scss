@@ -3,23 +3,43 @@
 --------------------------------------------------------------*/
 
 .causes-effects {
-    h2 {
+
+    .icon {
+        fill: $color__white;
+        width: 35px;
+    }
+
+    .icon + h2 {
         display: inline-block;
         margin-left: 1rem;
+        margin-top: 4rem;
+    }
+
+    h2, p {
+        color: $color__white;
+    }
+
+    p {
+        max-width: 700px;
     }
 
     .causes-chart {
         @include margin-y(1rem);
         text-align: center;
+
+        svg {
+            background-color: transparent !important;
+        }
+
     }
 
-    h2{
-    	color:$color__white;
+    p.caption {
+        font-size: .85rem;
+        font-style: italic;
+        color: #444;
+        margin-bottom: 0;
+
+        a { color: #444; }
     }
-    .GlobalWarming p{
-    	color:$color__white;
-    }
-    .icon{
-        fill:$color__white;
-    }
+
 }

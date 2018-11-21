@@ -19,9 +19,9 @@ const dataSource = {
     // "categories": dataCategories,
     "dataset": [
         {
-            "seriesname": "CO2 Measurements",
+            "seriesname": "CO2 Emissions",
             "drawLine": true,
-            "color": "ff6600",
+            "color": "90f1f9",
             "anchorsides": "3",
             "anchorBorderThickness": "0.1",
             "anchorradius": "3",
@@ -37,8 +37,8 @@ class CO2Chart extends Component {
       return (
       <ReactFusioncharts className="causes-chart"
          type = "zoomscatter"
-         width = '1000'
-         height = '500'
+         width = '100%'
+         height = '35%'
          dataFormat = "json"
          dataSource = {dataSource} />
       );

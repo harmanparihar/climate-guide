@@ -16,7 +16,7 @@ const dataSource = {
         {
             "seriesname": "Fossil Fuel & Industry",
             "drawLine": true,
-            "color": "91f1f9",
+            "color": "9540BD",
             "anchorsides": "3",
             "anchorBorderThickness": "0.1",
             "anchorradius": "3",
@@ -27,7 +27,8 @@ const dataSource = {
         {
             "seriesname": "Atmospheric Growth",
             "drawLine": true,
-            "color": "ff6759",
+            // "color": "ff6759",
+            "color": "ff7c70",
             "anchorsides": "3",
             "anchorBorderThickness": "0.1",
             "anchorradius": "3",
@@ -38,7 +39,7 @@ const dataSource = {
         {
             "seriesname": "Land-use Change",
             "drawLine": true,
-            "color": "8747d1",
+            "color": "ff0000",
             "anchorsides": "3",
             "anchorBorderThickness": "0.1",
             "anchorradius": "3",
@@ -49,7 +50,7 @@ const dataSource = {
         {
             "seriesname": "Land Sink",
             "drawLine": true,
-            "color": "670800",
+            "color": "90f1f9",
             "anchorsides": "3",
             "anchorBorderThickness": "0.1",
             "anchorradius": "3",
@@ -60,7 +61,7 @@ const dataSource = {
         {
             "seriesname": "Ocean Sink",
             "drawLine": true,
-            "color": "182057",
+            "color": "3a38d4",
             "anchorsides": "3",
             "anchorBorderThickness": "0.1",
             "anchorradius": "3",
@@ -77,8 +78,8 @@ class CarbonChart extends Component {
           <ReactFusioncharts
               className="causes-chart"
               type = "zoomscatter"
-              width = '1000'
-              height = '500'
+              width = '100%'
+              height = '60%'
               dataFormat = "json"
               dataSource = {dataSource}
           />
