@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Member from './Member';
+
+import team from '../assets/images/team.jpeg';
 import maggie from '../assets/images/maggie.png';
 import harman from '../assets/images/harman.png';
 import julia from '../assets/images/julia.png';
@@ -11,7 +13,8 @@ class Team extends Component {
         return (
             <section>
                 <h2>Our Team</h2>
-                <img src alt="Team 1" />
+                <p>Our team is very collaborative and driven. We’re comprised of 5 members: 2 computer science graduates, an experienced web designer, a talented graphic designer and a proficient project manager. Most importantly, we share the same level of passion, devotion and commitment to environmental causes.</p>
+                <img src={team} alt="Climate Guide Team" />
                 <Member
                     memberName="Harmanpreet Kaur"
                     memberImg={harman}
