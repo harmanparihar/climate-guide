@@ -2,6 +2,9 @@ main{
   margin-top: 10vh;
   @include padding-x(20px);
   @include padding-y(20px);
+  @media (max-width: 768px){
+    margin-top:0;
+  }
 }
 .wrap{
   min-height: 80vh;
