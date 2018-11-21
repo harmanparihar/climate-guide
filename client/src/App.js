@@ -61,66 +61,53 @@ class App extends Component {
     }
     render() {
 
-        /*
+       
 
-        //not working, and I don't know react enough to fix this problem
-       window.onscroll = function() {myFunction()};
+        return (
+            <div className="App">
+            <Route
+            exact
+            path="/"
+            render={() => <Header />}
+            />
+            <Route
+            exact
+            path="/"
+            render={() => <Home />}
+            />
+            <Route
+            path="/login"
+            render={() => <Login updateUser={this.updateUser} />}
+            />
+            <Route
+            path="/tips"
+            render={() => <Home />}
+            />
+            <Route
+            path="/causes & effects"
+            render={() => <CausesEffects />}
+            />
+            <Route
+            path="/signup"
+            render={() => <Signup />}
+            />
+            <Route
+            path="/about"
+            render={() => <About />}
+            />
 
-       var header = document.getElementsByClassName("site-header");
-       var sticky = header.offsetTop;
+            <Route
+            path="/get involved"
+            render={() => <LoginSystem updateUser={this.updateUser} loggedIn={this.state.loggedIn} />}
+            />
+            <Route
+            path="/"
+            render={() => <Footer />}
+            />
 
-       function myFunction() {
-          if (window.pageYOffset > sticky) {
-            header.classList.add("slide");
-        } else {
-            header.classList.remove("slide");
+            </div>
+            );
         }
     }
-    */
-    return (
-        <div className="App">
-            <Route
-                path="/"
-                render={() => <Header />}
-            />
-            <Route
-                exact
-                path="/"
-                render={() => <Home />}
-            />
-            <Route
-                path="/login"
-                render={() => <Login updateUser={this.updateUser} />}
-            />
-            <Route
-                path="/tips"
-                render={() => <Home />}
-            />
-            <Route
-                path="/causes & effects"
-                render={() => <CausesEffects />}
-            />
-            <Route
-                path="/signup"
-                render={() => <Signup />}
-            />
-            <Route
-                path="/about"
-                render={() => <About />}
-            />
 
-            <Route
-                path="/get involved"
-                render={() => <LoginSystem updateUser={this.updateUser} loggedIn={this.state.loggedIn} />}
-            />
-            <Route
-                path="/"
-                render={() => <Footer />}
-            />
-
-        </div>
-        );
-    }
-}
-
-export default App;
+    export default App;

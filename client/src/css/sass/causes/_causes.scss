@@ -3,9 +3,9 @@
 --------------------------------------------------------------*/
 
 .causes-effects {
-    img + h2 {
+    h2 {
         display: inline-block;
-        margin-left: .5rem;
+        margin-left: 1rem;
     }
 
     .causes-chart {
@@ -18,5 +18,8 @@
     }
     .GlobalWarming p{
     	color:$color__white;
+    }
+    .icon{
+        fill:$color__white;
     }
 }

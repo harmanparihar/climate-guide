@@ -1,42 +1,47 @@
 .container-head{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-
-
-
+  // display: grid;
+  // grid-template-columns: repeat(2, 1fr);
+  @include clearfix;
+  width: 100%;
   h2{
     color:$primary_purple;
     margin-top:0;
-        grid-column: 1;
-    grid-row: 1;
+    float: left;
+    // grid-column: 1;
+    // grid-row: 1;
   }
   .icon{
-    grid-column: 1;
-    grid-row: 1;
+    float: left;
+    margin-right:1rem;
   }
+
 
   .btn{
-    grid-column: 2;
-    grid-row: 1;
+    // grid-column: 2;
+    // grid-row: 1;
+    float: right;
+    background:$color__button;
+    color: $color__white;
+    border-radius: 8px;
+    font-weight: bold;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border:none;
+    transition: all .5s;
+  }
+  h3{
+    margin: 1rem 0 0;
+    padding: 0;
+    float:left;
+    clear: both;
+    font-size:1.5rem;
   }
 }
 
-.container-head p{
-  margin: 0;
-  padding: 0;
-}
+
 
 .container-head .btn{
-  align-self: flex-start;
-  justify-self: flex-end;
-  background:$color__button;
-  color: $color__white;
-  border-radius: 8px;
-  font-weight: bold;
-  padding: 10px 15px;
-  font-size: 1rem;
-border:none;
-  transition: all .5s;
+
 }
 
 .container-head .btn:hover{

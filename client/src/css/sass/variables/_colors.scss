@@ -71,5 +71,7 @@ $alpha9: .9;
 $background_gradient : linear-gradient(to left, rgba(24, 32, 87,1),rgba(117, 48, 42,1));
 
 
-$bg_body: linear-gradient(to bottom left, rgba(255, 103, 89,1),rgba(173, 47, 35,.7),rgba(135, 71, 209,1),rgba(25, 32, 87,1));
-$bg_home: radial-gradient(200% 70em at 50% 100%, transparent 50%, transparent 50%, rgba($color__white, $alpha9) 50%);
+$bg_app: linear-gradient(to bottom left, rgba(255, 103, 89,1),rgba(173, 47, 35,0));
+// $bg_body: linear-gradient(to bottom left, rgba(255, 103, 89,1),rgba(173, 47, 35,.7));
+
+$bg_body: linear-gradient(to bottom left, rgba(135, 71, 209,1),rgba(24, 32, 87,1));

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import weather from '../assets/icons/weather.svg';
+import { ReactComponent as Factory } from '../assets/icons/factory.svg';
 import CarbonChart from './carbonChart/CarbonChart';
 import Co2Chart from './co2Chart/Co2Chart';
 
@@ -7,7 +7,8 @@ class Causes extends Component {
     render() {
         return (
             <section>
-                <img src={weather} alt='Causes' />
+                <Factory className='icon' ariaLabel='logo' />
+
                 <h2>Causes</h2>
                 <p></p>
                 <div className="container">

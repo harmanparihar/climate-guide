@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 import Main from './Main';
 import Signup from "./Signup"
+import Header from '../Header';
 
 
 class LoginSystem extends Component {
@@ -36,9 +37,10 @@ class LoginSystem extends Component {
     console.log(this.props);
 
     return (
-      <div>
-      <div>
-      <div className="col-4" >
+      
+      <div className="get-involved">
+    
+     
       {loggedIn ? (
         <section className="navbar-section">
         <Main logout={this.logout}/>
@@ -50,9 +52,8 @@ class LoginSystem extends Component {
         )}
         </div>
 
-        </div>
-
-        </div>
+     
+       
 
         );
 

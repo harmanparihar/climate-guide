@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import Header from '../Header';
 
 class LoginForm extends Component {
   constructor() {
@@ -61,6 +62,10 @@ this.updateUser = this.updateUser.bind(this)
       return <Redirect to={{ pathname: this.state.redirectTo }} />
     } else {
       return (
+            <div className="get-involved">
+
+      <div className="fixed-header">
+      <Header/>
       <div className="form-page">
         <div className="form-div">
           <h3>Share your thoughts with others!</h3>
@@ -102,6 +107,8 @@ this.updateUser = this.updateUser.bind(this)
           </Link>
           </form>
         </div>
+      </div>
+      </div>
       </div>
       )
     }

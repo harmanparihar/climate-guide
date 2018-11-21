@@ -20,9 +20,7 @@ header {
 
   @include padding-y(.5rem);
   @include padding-x(2rem);
-  @media screen and (max-width: 600px){
-    position: relative;
-  }
+  
 
 
   .site-title {
@@ -159,6 +157,18 @@ a {
 
 
 /*test for sliding from top menu*/
+
+.fixed-header{  
+  padding-top:70px;
+
+  .site-header{
+    top:0px!important;  
+  }
+  @media (max-width: 768px){
+    padding-top:0;
+  }
+}
+
 .slide {
   position: fixed;
   top: 0px;

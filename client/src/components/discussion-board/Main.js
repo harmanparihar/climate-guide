@@ -3,6 +3,8 @@ import Posts from './Posts';
 import axios from 'axios';
 import Form from './Form';
 import Sidebar from './Sidebar';
+import Header from '../Header';
+
 export default class Main extends React.Component{
   constructor(){
     super();
@@ -101,6 +103,8 @@ export default class Main extends React.Component{
   }
   render(){
     return(
+       <div className="fixed-header">
+      <Header/>
         <main>
           <Sidebar logout={this.props.logout}/>
           <div className="wrap">
@@ -111,6 +115,7 @@ export default class Main extends React.Component{
             <Posts data={this.state.data} deletePost={this.deletePost.bind(this)} incrementUps={this.incrementUpvotes.bind(this)}/>
           </div>
         </main>
+        </div>
     );
   }
 }

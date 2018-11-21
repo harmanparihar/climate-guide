@@ -7,35 +7,35 @@ import Search from './navigation/Search'
 import MobileMenu from './navigation/MobileMenu'
 class Header extends Component {
  state = {
-    isTop: true,
+  isTop: true,
 };
 
 componentDidMount() {
-    document.addEventListener('scroll', () => {
-      const isTop = window.scrollY < 100;
-      if (isTop !== this.state.isTop) {
-          this.setState({ isTop })
-      }
+  document.addEventListener('scroll', () => {
+    const isTop = window.scrollY < 700;
+    if (isTop !== this.state.isTop) {
+      this.setState({ isTop })
+    }
   })
 
 }
 render() {
-    return (
-        <header className={this.state.isTop ? 'site-header' : 'site-header slide'}>
-        <div className="site-title">
-        <Link to="/">
-    {/* <img className="site-logo" /> */}
-    <span className="site-logo"><img src={logoSymbol} alt="ClimateGuide" className="hor_logo"/></span>
-    </Link>
-    </div>
+  return (
+    <header className={this.state.isTop ? 'site-header' : 'site-header slide'}>
+    <div className="site-title">
+    <Link to="/">
+  {/* <img className="site-logo" /> */}
+  <span className="site-logo"><img src={logoSymbol} alt="ClimateGuide" className="hor_logo"/></span>
+  </Link>
+  </div>
 
-    <NavMenu className="header-nav" />
+  <NavMenu className="header-nav" />
 
-    <Search />
-        <MobileMenu /> 
-    <SupportButton />
-    </header>
-    );
+  <Search />
+  <MobileMenu /> 
+  <SupportButton />
+  </header>
+  );
 }
 }
 
