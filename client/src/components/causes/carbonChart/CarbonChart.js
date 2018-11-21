@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import FusionCharts from 'fusioncharts';
 import ReactFusioncharts from 'react-fusioncharts';
 import Chart from 'fusioncharts/fusioncharts.zoomscatter';
-// import CandyTheme from 'fusioncharts/themes/fusioncharts.theme.candy';
 
 import chartConfig from './dataSource/chartConfig.json';
 import dataSet from './dataSource/dataset.json';
@@ -16,7 +15,7 @@ const dataSource = {
         {
             "seriesname": "Fossil Fuel & Industry",
             "drawLine": true,
-            "color": "9540BD",
+            "color": "#90f1f9",
             "anchorsides": "3",
             "anchorBorderThickness": "0.1",
             "anchorradius": "3",
@@ -28,7 +27,7 @@ const dataSource = {
             "seriesname": "Atmospheric Growth",
             "drawLine": true,
             // "color": "ff6759",
-            "color": "ff7c70",
+            "color": "#ff7c70",
             "anchorsides": "3",
             "anchorBorderThickness": "0.1",
             "anchorradius": "3",
@@ -39,7 +38,7 @@ const dataSource = {
         {
             "seriesname": "Land-use Change",
             "drawLine": true,
-            "color": "ff0000",
+            "color": "#779100",
             "anchorsides": "3",
             "anchorBorderThickness": "0.1",
             "anchorradius": "3",
@@ -50,7 +49,7 @@ const dataSource = {
         {
             "seriesname": "Land Sink",
             "drawLine": true,
-            "color": "90f1f9",
+            "color": "#ff0000",
             "anchorsides": "3",
             "anchorBorderThickness": "0.1",
             "anchorradius": "3",
@@ -61,7 +60,7 @@ const dataSource = {
         {
             "seriesname": "Ocean Sink",
             "drawLine": true,
-            "color": "3a38d4",
+            "color": "#0D3AFF",
             "anchorsides": "3",
             "anchorBorderThickness": "0.1",
             "anchorradius": "3",
@@ -79,7 +78,7 @@ class CarbonChart extends Component {
               className="causes-chart"
               type = "zoomscatter"
               width = '100%'
-              height = '60%'
+              height = '45%'
               dataFormat = "json"
               dataSource = {dataSource}
           />

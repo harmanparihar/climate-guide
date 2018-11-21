@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import FusionCharts from 'fusioncharts';
 import ReactFusioncharts from 'react-fusioncharts';
 import Chart from 'fusioncharts/fusioncharts.zoomscatter';
-// import CandyTheme from 'fusioncharts/themes/fusioncharts.theme.candy';
 
 // import dataCategories from './dataSource/categories.json';
 import chartConfig from './dataSource/chartConfig.json';
@@ -36,11 +35,11 @@ class CO2Chart extends Component {
    render() {
       return (
       <ReactFusioncharts className="causes-chart"
-         type = "zoomscatter"
-         width = '100%'
-         height = '35%'
-         dataFormat = "json"
-         dataSource = {dataSource} />
+          type = "zoomscatter"
+          width = '100%'
+          height = '25%'
+          dataFormat = "json"
+          dataSource = {dataSource} />
       );
    }
 }

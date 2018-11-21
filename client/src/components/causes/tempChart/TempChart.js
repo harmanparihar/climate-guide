@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import FusionCharts from 'fusioncharts';
 import ReactFusioncharts from 'react-fusioncharts';
 import Chart from 'fusioncharts/fusioncharts.zoomscatter';
-// import CandyTheme from 'fusioncharts/themes/fusioncharts.theme.candy';
 
 // import dataCategories from './dataSource/categories.json';
 import chartConfig from './dataSource/chartConfig.json';
@@ -18,7 +17,7 @@ const dataSource = {
             "seriesname": "Annual Mean",
             "drawLine": true,
             "color": "FF7C70",
-            "alpha": 70,
+            // "alpha": 70,
             "anchorsides": "1",
             "anchorAlpha": 0,
             "anchorBorderThickness": "0",
@@ -30,7 +29,7 @@ const dataSource = {
         {
             "seriesname": "Lowess smoothing",
             "drawLine": true,
-            "color": "ff0000",
+            "color": "90f1f9",
             "anchorsides": "3",
             "anchorBorderThickness": "0.1",
             "anchorradius": "3",
@@ -70,7 +69,7 @@ class TemperatureChart extends Component {
       <ReactFusioncharts className="causes-chart"
           type = "zoomscatter"
           width = '100%'
-          height = '25%'
+          height = '20%'
           dataFormat = "json"
           dataSource = {dataSource} />
       );
