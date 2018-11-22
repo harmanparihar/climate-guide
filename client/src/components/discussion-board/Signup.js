@@ -48,6 +48,12 @@ class Signup extends Component {
 				console.log(error)
 
 			})
+			this.setState({
+				name: '',
+				username: '',
+				password: '',
+			});
+			alert("Your account has been created");
 		}
 
 

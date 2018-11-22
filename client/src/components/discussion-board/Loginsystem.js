@@ -17,13 +17,14 @@ class LoginSystem extends Component {
 
   logout(event) {
     event.preventDefault()
-    console.log('logging out')
     axios.post('http://localhost:8080/user/logout').then(response => {
       console.log(response.data)
       if (response.status === 200) {
+        console.log("logout successful")
         this.props.updateUser({
           loggedIn: false,
-          username: null
+          username: null,
+          name:null
         })
       }
     }).catch(error => {
@@ -37,13 +38,13 @@ class LoginSystem extends Component {
     console.log(this.props);
 
     return (
-      
+
       <div className="get-involved">
-    
-     
+
+
       {loggedIn ? (
         <section className="navbar-section">
-        <Main logout={this.logout}/>
+        <Main userObj={this.props.userObj} logout={this.logout}/>
         </section>
         ) : (
         <section className="get-involved">
@@ -52,8 +53,8 @@ class LoginSystem extends Component {
         )}
         </div>
 
-     
-       
+
+
 
         );
 

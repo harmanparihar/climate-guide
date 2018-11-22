@@ -10,7 +10,10 @@ export default class Main extends React.Component{
     super();
     this.state = {
       show_form : false,
-      data : []
+      data : [],
+      name: "hola",
+      username: "hola123",
+      loggedIn: false
     }
   }
   clickHandler(){
@@ -31,13 +34,15 @@ export default class Main extends React.Component{
 
         this.setState({
           loggedIn: true,
-          username: response.data.user.username
+          username: this.props.userObj.username,
+          name: this.props.userObj.name
         })
       } else {
         console.log('Get user: no user');
         this.setState({
           loggedIn: false,
-          username: null
+          username: null,
+          name: null
         })
       }
     })
@@ -53,6 +58,10 @@ export default class Main extends React.Component{
         data:tempposts
       });
     }.bind(this));
+    this.setState({
+      name: this.props.userObj.name,
+      username: this.props.username,
+    })
   }
   updateData(temp){
     this.setState(temp);
@@ -106,7 +115,7 @@ export default class Main extends React.Component{
        <div className="fixed-header">
       <Header/>
         <main>
-          <Sidebar logout={this.props.logout}/>
+          <Sidebar name={this.state.name} logout={this.props.logout}/>
           <div className="wrap">
             <div className="add_post">
             <button id="new_post" onClick={this.clickHandler.bind(this)}><span className="add_symbol">+ </span>Add New Post</button>

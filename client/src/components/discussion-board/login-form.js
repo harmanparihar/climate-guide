@@ -8,18 +8,23 @@ class LoginForm extends Component {
   constructor() {
     super()
     this.state = {
+      name: '',
       username: '',
       password: '',
       redirectTo: null
     }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
-this.updateUser = this.updateUser.bind(this)
+    this.updateUser = this.updateUser.bind(this)
   }
 
 
    updateUser (userObject) {
-    this.setState(userObject)
+    this.props.updateUser(userObject);
+    this.setState({
+      name: userObject.name,
+      username: userObject.username,
+    })
   }
 
   handleChange(event) {
@@ -43,7 +48,8 @@ this.updateUser = this.updateUser.bind(this)
         // update loginsystem.js state
         this.props.updateUser({
           loggedIn: true,
-          username: response.data.username
+          username: response.data.username,
+          name: response.data.name,
         })
         // update the state to redirect to home
         this.setState({
@@ -63,7 +69,6 @@ this.updateUser = this.updateUser.bind(this)
     } else {
       return (
             <div className="get-involved">
-
       <div className="fixed-header">
       <Header/>
       <div className="form-page">
@@ -92,10 +97,8 @@ this.updateUser = this.updateUser.bind(this)
                   onChange={this.handleChange}
                   />
               </label>
-
           <button
           className="submit"
-
           onClick={this.handleSubmit}
           type="submit">Login</button>
           <div className="meta-text">Don't have an account?</div>

@@ -11,7 +11,7 @@ export default class Sidebar extends React.Component{
     return(
         <div className="sidebar">
         <div>
-        <h4>Welcome Username!</h4>
+        <h4>Welcome {this.props.name}</h4>
         </div>
 
         <h4>Get Involved</h4>

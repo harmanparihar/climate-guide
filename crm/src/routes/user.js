@@ -39,9 +39,10 @@ router.post(
   },
   passport.authenticate('local'),
   (req, res) => {
-    console.log('logged in', req.user);
+    console.log('logged in here are details', req.user);
     var userInfo = {
-      username: req.user.username
+      username: req.user.username,
+      name: req.user.name,
     };
     res.send(userInfo);
   }
@@ -78,11 +79,14 @@ router.get('/getusers', (req, res) => {
       }
       res.json(userdata);
   });
-})
-router.delete('/delete', (req, res) => {
-  User.remove({}, (err, userdata) => {
+});
+
+// DELTE request : http://localhost:8080/user/userId
+// Deletes the record of user with given user id
+router.delete('/:userId', (req, res) => {
+  User.remove({ _id: req.params.userId}, (err, userdata) => {
       if (err) {
-          res.send({msg:'Could not delete user data'});
+          res.send(err);
       }
       res.send({msg:'Users deleted successfully'});
   });

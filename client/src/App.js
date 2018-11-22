@@ -22,9 +22,9 @@ class App extends Component {
         super();
         this.state = {
             loggedIn: false,
-            username: null
+            username: null,
+            name: null
         };
-
         this.getUser = this.getUser.bind(this);
         this.componentDidMount = this.componentDidMount.bind(this);
         this.updateUser = this.updateUser.bind(this);
@@ -48,20 +48,22 @@ class App extends Component {
 
                 this.setState({
                     loggedIn: true,
-                    username: response.data.user.username
+                    username: response.data.user.username,
+                    name: response.data.user.name
                 });
             } else {
                 console.log('Get user: no user');
                 this.setState({
                     loggedIn: false,
-                    username: null
+                    username: null,
+                    name: null
                 });
             }
         });
     }
     render() {
 
-       
+
 
         return (
             <div className="App">
@@ -98,7 +100,7 @@ class App extends Component {
 
             <Route
             path="/get involved"
-            render={() => <LoginSystem updateUser={this.updateUser} loggedIn={this.state.loggedIn} />}
+            render={() => <LoginSystem userObj={this.state} updateUser={this.updateUser} loggedIn={this.state.loggedIn} />}
             />
             <Route
             path="/"
