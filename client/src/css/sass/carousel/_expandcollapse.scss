@@ -1,14 +1,13 @@
 .container-head{
-  // display: grid;
-  // grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   @include clearfix;
   width: 100%;
   h2{
     color:$primary_purple;
     margin-top:0;
-    float: left;
-    // grid-column: 1;
-    // grid-row: 1;
+    grid-column: 1;
+    grid-row: 1;
   }
   .icon{
     float: left;
@@ -17,8 +16,8 @@
 
 
   .btn{
-    // grid-column: 2;
-    // grid-row: 1;
+    grid-column: 2;
+    grid-row: 1;
     float: right;
     background:$color__button;
     color: $color__white;

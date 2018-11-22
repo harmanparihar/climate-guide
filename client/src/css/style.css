@@ -472,6 +472,8 @@ body {
     display: none; } }
 
 .container-head {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   content: "";
   display: table;
   table-layout: fixed;
@@ -479,11 +481,14 @@ body {
   .container-head h2 {
     color: #2f0945;
     margin-top: 0;
-    float: left; }
+    grid-column: 1;
+    grid-row: 1; }
   .container-head .icon {
     float: left;
     margin-right: 1rem; }
   .container-head .btn {
+    grid-column: 2;
+    grid-row: 1;
     float: right;
     background: #684388;
     color: white;
