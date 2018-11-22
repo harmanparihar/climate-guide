@@ -33,15 +33,28 @@
     padding: 0;
     // float:left;
     // clear: both;
-    // grid-column: 1;
-    // grid-row: 2;
+    grid-column: 1;
+    grid-row: 2;
     font-size:1.5rem;
-  }
+
+    @media screen and (max-width: 715px){
+
+    }
+
+  }//end of h3
 }
 
 .container-head .heading{
   grid-column: 1;
   grid-row: 1;
+
+  h3{
+    grid-row: 1 / -1;
+  }
+}
+
+.container-head .plastic-bottle{
+  height: 55px !important;
 }
 
 .container-head .btn{

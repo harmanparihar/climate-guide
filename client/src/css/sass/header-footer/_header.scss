@@ -146,16 +146,39 @@ a {
   }
 }
 
-.site-header, .site-footer {
-  nav a {
-    color: $color__white;
-    text-transform: capitalize;
+// .site-header, .site-footer {
+//   nav a {
+//     color: $color__white;
+//     text-transform: capitalize;
+//
+//     &:hover {
+//       box-shadow: 0 -2px inset $color__white;
+//     }
+//   }
+// }
 
-    &:hover {
-      box-shadow: 0 -2px inset $color__white;
-    }
+
+//new animation for site header and site-footer
+
+.site-header, .site-footer{
+
+  nav a{
+    transition: all .5s;
   }
+
+  nav a:hover{
+    box-shadow: none;
+    color: $color__black;
+    background-color: $color__skyblue;
+    padding: 5px 15px;
+
+    border-radius: 8px;
+  }
+
 }
+
+//end
+
 
 
 /*test for sliding from top menu*/

@@ -1,7 +1,7 @@
 import React from 'react'
 import AnimateHeight from 'react-animate-height'
 import Electric from '../assets/images/Electric.png'
-import Electricity from '../assets/icons/electricity.svg'
+import Electricity from '../assets/icons/energy-colour.svg'
 
 class ExpandCollapseElectricity extends React.Component{
 

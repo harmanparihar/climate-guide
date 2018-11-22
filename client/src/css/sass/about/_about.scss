@@ -1,0 +1,46 @@
+.team-members-container{
+
+  margin: 20px 0;
+
+  display: flex;
+  flex-direction: row;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  .about-member{
+    padding: 10px;
+    box-sizing: border-box;
+
+    transition: all .5s;
+
+    flex-basis: 380px;
+    margin: 10px;
+
+    flex-shrink: 1;
+    display: grid;
+
+    img{
+      width: 60%;
+      height: auto;
+
+      justify-self: center;
+    }
+
+    p:first-of-type{
+      font-weight: 500;
+    }
+
+    h3, p{
+      margin: 5px 0;
+      justify-self: flex-start;
+    }
+  }
+
+  .about-member:hover{
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+  }
+
+}

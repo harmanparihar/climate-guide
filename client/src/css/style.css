@@ -394,6 +394,33 @@ code {
   padding-left: 1rem;
   padding-right: 1rem; }
 
+.team-members-container {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .team-members-container .about-member {
+    padding: 10px;
+    box-sizing: border-box;
+    transition: all .5s;
+    flex-basis: 380px;
+    margin: 10px;
+    flex-shrink: 1;
+    display: grid; }
+    .team-members-container .about-member img {
+      width: 60%;
+      height: auto;
+      justify-self: center; }
+    .team-members-container .about-member p:first-of-type {
+      font-weight: 500; }
+    .team-members-container .about-member h3, .team-members-container .about-member p {
+      margin: 5px 0;
+      justify-self: flex-start; }
+  .team-members-container .about-member:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px; }
+
 a {
   text-decoration: none;
   color: black; }
@@ -501,11 +528,18 @@ body {
   .container-head h3 {
     margin: 1rem 0 0;
     padding: 0;
+    grid-column: 1;
+    grid-row: 2;
     font-size: 1.5rem; }
 
 .container-head .heading {
   grid-column: 1;
   grid-row: 1; }
+  .container-head .heading h3 {
+    grid-row: 1 / -1; }
+
+.container-head .plastic-bottle {
+  height: 55px !important; }
 
 .container-head .btn {
   grid-column: 2;
@@ -760,10 +794,13 @@ a {
   color: white; }
 
 .site-header nav a, .site-footer nav a {
-  color: white;
-  text-transform: capitalize; }
-  .site-header nav a:hover, .site-footer nav a:hover {
-    box-shadow: 0 -2px inset white; }
+  transition: all .5s; }
+.site-header nav a:hover, .site-footer nav a:hover {
+  box-shadow: none;
+  color: black;
+  background-color: #90f1f9;
+  padding: 5px 15px;
+  border-radius: 8px; }
 
 /*test for sliding from top menu*/
 .fixed-header {

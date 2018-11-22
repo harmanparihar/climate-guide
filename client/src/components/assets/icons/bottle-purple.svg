@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 23.57 62.34">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="12.01" y1="6.35" x2="12.01" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#243082"/>
+      <stop offset="0.17" stop-color="#493785"/>
+      <stop offset="0.45" stop-color="#82428a"/>
+      <stop offset="0.69" stop-color="#ac4a8e"/>
+      <stop offset="0.89" stop-color="#c64f90"/>
+      <stop offset="1" stop-color="#cf5191"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="11.78" y1="62.34" x2="11.78" y2="7.04" xlink:href="#linear-gradient"/>
+  </defs>
+  <title>bottle purple</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Iconography_Board" data-name="Iconography Board">
+      <g id="bottle_purple" data-name="bottle purple">
+        <path class="cls-1" d="M15.29,6.35H8.74A2.32,2.32,0,0,1,6.43,4h0a4,4,0,0,1,4-4h3.09a4.05,4.05,0,0,1,4,4h0A2.32,2.32,0,0,1,15.29,6.35Z"/>
+        <path class="cls-2" d="M23.56,55.69,21.9,35.41h-.14a6.17,6.17,0,0,0,1.12-3.5V17.47a5.26,5.26,0,0,0,.08-.89c0-3.07-2.6-5.72-6.35-6.95V7H7.27V9.63C3.52,10.86.92,13.51.92,16.58a6.54,6.54,0,0,0,.07.89V31.91a6.17,6.17,0,0,0,1.12,3.5H2L0,55.73H0a.62.62,0,0,0,0,.13v2.89c0,2,2,3.59,4.4,3.59H19.16c2.43,0,4.41-1.61,4.41-3.59V55.86C23.57,55.8,23.56,55.75,23.56,55.69Z"/>
+        <path class="cls-3" d="M6,22.31l-.86-.55,3-.34,1.08,2.81-.85-.54C7.53,25,6.77,26.61,7.25,28.12,5.85,26.93,5.06,26,5.06,24.91A6.54,6.54,0,0,1,6,22.31Zm2.27,3.16a3.16,3.16,0,0,0-.42,2.28.65.65,0,0,0,.64.52h2.76v-2.8Zm6,2.9v1L12.35,27l1.89-2.4v1c1.58,0,3.25-.19,4.27-1.39-.27,1.82-.64,3-1.57,3.55A6.75,6.75,0,0,1,14.24,28.37Zm1.49-3.6a3.2,3.2,0,0,0,2.17-.84.67.67,0,0,0,.1-.82l-1.46-2.35-2.38,1.48Zm-.52-6.47.9-.49-1.17,2.81-3-.43.89-.48c-.77-1.38-1.77-2.82-3.32-3.13a8.28,8.28,0,0,1,2.65-.64C13.43,15.94,14.16,16.65,15.21,18.3Zm-3.86.44a3.18,3.18,0,0,0-1.79-1.48.64.64,0,0,0-.76.31L7.45,20l2.44,1.37Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

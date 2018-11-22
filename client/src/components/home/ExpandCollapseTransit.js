@@ -1,7 +1,7 @@
 import React from 'react'
 import AnimateHeight from 'react-animate-height'
 import Transit from '../assets/images/Transit.png'
-import CarSmoke from '../assets/icons/car-smoke.svg'
+import CarSmoke from '../assets/icons/transit-colour.svg'
 
 class ExpandCollapseTransit extends React.Component{
 
