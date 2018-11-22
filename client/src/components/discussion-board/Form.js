@@ -42,7 +42,6 @@ export default class Form extends React.Component{
 
     return(
       <form className="add_post_form" onSubmit={this.handleSubmit.bind(this)}>
-        <label>What's on your mind!</label>
         <textarea onChange={this.handleChangecomment.bind(this)} value={this.state.comment} id="post_text" name="post" rows="4" cols="50"  placeholder={this.props.placeholder_text}></textarea>
       <button id="submit">Post</button>
       </form>
