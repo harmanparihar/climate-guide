@@ -26,10 +26,14 @@ class ExpandCollapsePaper extends React.Component{
       <div className="expand-collapse-container container">
 
           <div className="container-head">
-                  <img src={PaperPlane} alt='Causes' className="icon" />
 
-            <h2>Paper</h2>
-            <p>Some crazy facts about paper !!</p>
+            <div className="heading">
+              <img src={PaperPlane} alt='Causes' className="icon" />
+
+              <h2>Paper</h2>
+              <h3>Paper Recycling Facts!</h3>
+            </div>
+
             <button className="btn" onClick={this.toggle}>
               { height === 0 ? 'Expand' : 'Collapse' }
             </button>
@@ -43,7 +47,7 @@ class ExpandCollapsePaper extends React.Component{
               height={height}
             >
               <p>
-                Recycling one ton of officer papers save 17 <b>trees</b>, 7,000 gallon of <b>water</b>, 463 gallon <b>oil</b>, 3 cubic yard of <b>landfil space</b> and enough energy to to heat an average home for six months.
+                Recycling one ton of office paper, will save 17 trees, 7000 gallons of water and prevent 60 pounds of pollution.
               </p>
 
               <img src={Paper} alt="paper-image" />
@@ -52,17 +56,35 @@ class ExpandCollapsePaper extends React.Component{
 
                 <h3>Tips! How you can make a difference</h3>
 
-                <ul className="tips-list">
+                <ol className="tips-list">
                   <li>
-                    <b>Coffee Mugs and Water Bottle -</b> Get a reusable coffee mug and water bottle. If possible purchase recyclable coffee mugs when you go next time in your favourite coffee shop.
+                    Prepare a container for all your paper waste (unheeded documents, cardboard boxes and such). It will make it easier to throw away into the paper recycling bin.
                   </li>
                   <li>
-                    <b>Digital Options -</b> Whenever it's possible, go for the digital option. If you can get a receipt or document by email, choose that option.
+                  To reduce paper cups use – get a reusable mug and water bottle. Below are some affordable and easy to find products of decent quality:
+
+                  <ul className="shopping-list-container">
+
+                    <li>
+                      <a href="https://www.londondrugs.com/thermocafe-travel-mug---470ml/L7857121.html?cgid=brand-thermos-hydration">ThermoCafe Travel Mug</a>
+                    </li>
+                    <li>
+                      <a href="https://www.londondrugs.com/thermos-vacuum-insulated-bottle---stainless-steel---500ml/L8781056.html?cgid=brand-thermos-hydration">Thermos Vacuum Insulated Bottle - Stainless Steel - 500ml</a>
+                    </li>
+                    <li>
+                      <a href="https://www.londondrugs.com/london-drugs-double-wall-bottle---stainless-steel---490ml/L6352835.html">Double Wall Bottle - Stainless Steel - 490ml</a>
+                    </li>
+                    <li>
+                      <a href="https://www.londondrugs.com/lab-o-glass-water-bottle-with-silicone-sleeve---assorted---500ml/L5520747.html">Glass Water Bottle with Silicone Sleeve</a>
+                    </li>
+
+                  </ul>
+
                   </li>
                   <li>
-                    <b>Prevent Contamination -</b> To prevent contamination of the paper recycling bins, avoid placing any paper that have food leftovers or laminated coating.
+                    Whenever it is possible, go for the digital option. Many services offer a digital form of receipts and documents
                   </li>
-                </ul>
+                </ol>
 
               </div>
             </AnimateHeight>

@@ -1,5 +1,5 @@
 .container-head{
-  display: grid;
+  display: grid !important;
   grid-template-columns: repeat(2, 1fr);
   @include clearfix;
   width: 100%;
@@ -31,22 +31,39 @@
   h3{
     margin: 1rem 0 0;
     padding: 0;
-    float:left;
-    clear: both;
+    // float:left;
+    // clear: both;
+    // grid-column: 1;
+    // grid-row: 2;
     font-size:1.5rem;
   }
 }
 
-
+.container-head .heading{
+  grid-column: 1;
+  grid-row: 1;
+}
 
 .container-head .btn{
+  grid-column: 2;
+  grid-row: 1;
 
+  align-self: flex-start;
+  justify-self: flex-end;
 }
 
 .container-head .btn:hover{
   cursor: pointer;
   color: $color__white;
   background:$color__button_hover;
+}
+
+.tips-container .tips-list{
+
+  li{
+    margin: 10px 0;
+  }
+
 }
 
 .container-body{

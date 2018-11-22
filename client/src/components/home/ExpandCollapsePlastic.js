@@ -26,10 +26,14 @@ class ExpandCollapsePlastic extends React.Component{
       <div className="expand-collapse-container container">
 
           <div className="container-head">
-                  <img src={PlasticBottle} alt='Causes' className="icon" />
 
-            <h2>Plastic</h2>
-            <p>Some crazy facts about plastic !!</p>
+            <div className="heading">
+              <img src={PlasticBottle} className="plastic-bottle" alt='Causes' className="icon" />
+
+              <h2>Plastic</h2>
+              <h3>Plastic Recyling Facts!</h3>
+            </div>
+
             <button className="btn" onClick={this.toggle}>
               { height === 0 ? 'Expand' : 'Collapse' }
             </button>
@@ -43,7 +47,7 @@ class ExpandCollapsePlastic extends React.Component{
               height={height}
             >
               <p>
-                Recycling one ton of plastic saves 5,774 kWh of <b>electricity</b>, 685 gallon of <b>oil</b>, 30 cubic yard of <b>landfil space</b> and enough energy to to heat an average home for six months.
+                By recycling plastic waste and using a reusable mug and bottle, ONE person can prevent 340 pounds of pollution a year, prevent the need for at least 100 plastic bottles, and reduce 50% of the energy it would take to burn it.
               </p>
 
               <img src={Plastic} alt="plastic-image" />
@@ -52,17 +56,33 @@ class ExpandCollapsePlastic extends React.Component{
 
                 <h3>Tips! How you can make a difference</h3>
 
-                <ul className="tips-list">
+                <ol className="tips-list">
                   <li>
-                    <b>Twist on the Cap -</b> Recyclers want your plastic bottle and and container lids. Twist on the bottle caps before tossing in the bin to make it easier for recyclers.
+                    Use reusable bags for groceries. Most stores now charge for plastic bags, so it is worth buying a few fabric bags. When getting rid of your plastic bags, take them to your supermarket, most stores collect plastic bags for recycling.
+
                   </li>
                   <li>
-                    <b>Recycle on the Go -</b> Seek out public recycling bins at sport stadiums, public parks and beaches. Can't find one? Stash your recyclables in a plastic bag and bring them back to your home bin. This will not only increase recycling,  but it can help cut down on litter, too.
+                    Be sure to recycle any plastic containers you might have (Shampoo bottles, detergent bottles, food boxed and so on)
                   </li>
                   <li>
-                    <b>To the Store with Bag and Wraps -</b> Did you know more than 18,000 grocery and retail stores collect plastic grocery bags for recycling? Plus bags for dry-cleaning, bread, produce, newspaper - and even zipper bags.
+                    Get a reusable water bottle. Below are some affordable options:
+
+                    <ul className="shopping-list-container">
+
+                      <li>
+                        <a href="https://www.londondrugs.com/london-drugs-double-wall-bottle---stainless-steel---490ml/L6352835.html">Double Wall Bottle - Stainless Steel - 490ml</a>
+                      </li>
+                      <li>
+                        <a href="https://www.londondrugs.com/lab-o-glass-water-bottle-with-silicone-sleeve---assorted---500ml/L5520747.html">Glass Water Bottle with Silicone Sleeve</a>
+                      </li>
+                      <li>
+                        <a href="https://www.londondrugs.com/london-drugs-water-bottle-with-stainless-steel-lid---1000ml/L8899585.html">Water Bottle with Stainless Steel Lid - 1000ml</a>
+                      </li>
+
+                    </ul>
+
                   </li>
-                </ul>
+                </ol>
 
               </div>
             </AnimateHeight>

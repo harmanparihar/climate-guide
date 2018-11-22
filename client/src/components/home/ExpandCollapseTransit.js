@@ -26,10 +26,14 @@ class ExpandCollapseTransit extends React.Component{
       <div className="expand-collapse-container container">
 
           <div className="container-head">
-                  <img src={CarSmoke} alt='Causes' className="icon" />
 
-            <h2>Transit</h2>
-            <p>Some crazy facts about transit !!</p>
+            <div className="heading">
+              <img src={CarSmoke} alt='Causes' className="icon" />
+
+              <h2>Transit</h2>
+              <h3>Transit Facts!</h3>
+            </div>
+
             <button className="btn" onClick={this.toggle}>
               { height === 0 ? 'Expand' : 'Collapse' }
             </button>
@@ -43,7 +47,7 @@ class ExpandCollapseTransit extends React.Component{
               height={height}
             >
               <p>
-                A bus with as few as <b>seven passengers</b> is more fuel-efficient than the average <b>single-occupant auto</b> used for coming. <b>Public transit</b> moves people efficiently while producing signifiantly <b>less air pollution</b> to move one passenger one mile -- compared to moving a person one mile in a <b>single-occupant auto.</b>
+                By taking the bus to work for a year, ONE person, can prevent 4800 pounds of pollution (That’s over 2 TONS!), and saves an average of $6200.
               </p>
 
               <img src={Transit} alt="transit-image" />
@@ -52,17 +56,17 @@ class ExpandCollapseTransit extends React.Component{
 
                 <h3>Tips! How you can make a difference</h3>
 
-                <ul className="tips-list">
+                <ol className="tips-list">
                   <li>
-                    <b>Improve Air Quality -</b> Public transpotation can help metropolitan areas to meet national air quality standards by reducing overall vehicle emmision and the pollutants that create smog.
+                    If you’re not going far, take the bus or the train. It might take a little longer, but it will prevent a lot of air pollution.
                   </li>
                   <li>
-                    <b>Reduce Greenhouse Gas Emmision -</b> By moving more poeple with fewer vehicles, public transpotation can reduce greenhouse gas emmision. National averages demonstrate that public transpotation produces signifiantly lower greenhouse gas emmision per passenger mile than private vehicle.
+                    Car share is a great way of still having a vehicle to your disposal, while reducing the amount of cars in use on the road.
                   </li>
                   <li>
-                    <b>Save Energy -</b> Sharing rides through public transpotation can save fuel. It also decreases the need for constructing more transpotation infrastructure, manufracturing new vehicles and extracting more fossil fuels, meaning further energy savings and fewer environment impacts.
+                    If you still need a car to your immediate disposal, try using fuel efficient vehicles and cleaner burning fuel.
                   </li>
-                </ul>
+                </ol>
 
               </div>
             </AnimateHeight>
