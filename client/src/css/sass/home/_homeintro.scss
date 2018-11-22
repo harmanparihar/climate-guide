@@ -1,0 +1,40 @@
+.home-intro-container{
+
+  margin-bottom: 50px;
+  padding: 0 10px;
+  box-sizing: border-box;
+
+  h1{
+    text-align: center;
+    color: $color__skyblue;
+
+    margin: 0;
+    padding: 0;
+
+    margin: 20px 0;
+
+    font-size: 3rem;
+
+    @media screen and (max-width: 770px){
+      font-size: 2rem;
+    }//end of media screen
+
+  }
+
+  p{
+    color: $color__white;
+
+    margin: 0;
+    padding: 0;
+
+    margin: 10px 0;
+
+    font-size: 1.25rem;
+
+    @media screen and (max-width: 770px){
+      font-size: 1rem;
+    }//end of media screen
+
+  }
+
+}//end of home-intro-container

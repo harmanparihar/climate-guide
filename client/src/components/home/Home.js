@@ -2,7 +2,10 @@ import React, {Component} from 'react';
 import HomeHeader from '../home/HomeHeader';
 import HomeMenu from '../navigation/HomeMenu';
 
-import Carousel from './Carousel';
+import Carousel from './Carousel'
+
+import HomeIntro from './HomeIntro'
+
 import ExpandCollapsePaper from './ExpandCollapsePaper'
 import ExpandCollapsePlastic from './ExpandCollapsePlastic'
 import ExpandCollapseTransit from './ExpandCollapseTransit'
@@ -16,6 +19,9 @@ class Home extends Component {
 
 			<Carousel />
 			<HomeMenu />
+
+			<HomeIntro />
+
 			<ExpandCollapsePaper />
 			<ExpandCollapsePlastic />
 			<ExpandCollapseTransit />

@@ -671,6 +671,30 @@ body {
     .menu-home {
       display: none; } }
 
+.home-intro-container {
+  margin-bottom: 50px;
+  padding: 0 10px;
+  box-sizing: border-box; }
+  .home-intro-container h1 {
+    text-align: center;
+    color: #90f1f9;
+    margin: 0;
+    padding: 0;
+    margin: 20px 0;
+    font-size: 3rem; }
+    @media screen and (max-width: 770px) {
+      .home-intro-container h1 {
+        font-size: 2rem; } }
+  .home-intro-container p {
+    color: white;
+    margin: 0;
+    padding: 0;
+    margin: 10px 0;
+    font-size: 1.25rem; }
+    @media screen and (max-width: 770px) {
+      .home-intro-container p {
+        font-size: 1rem; } }
+
 /* Header and footer */
 /****************************************************************/
 /*                                                              */
