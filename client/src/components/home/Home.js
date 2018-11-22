@@ -3,7 +3,10 @@ import HomeHeader from '../home/HomeHeader';
 import HomeMenu from '../navigation/HomeMenu';
 
 import Carousel from './Carousel';
-import ExpandCollapse from './ExpandCollapse';
+import ExpandCollapsePaper from './ExpandCollapsePaper'
+import ExpandCollapsePlastic from './ExpandCollapsePlastic'
+import ExpandCollapseTransit from './ExpandCollapseTransit'
+import ExpandCollapseElectricity from './ExpandCollapseElectricity'
 
 class Home extends Component {
 	render() {
@@ -13,7 +16,10 @@ class Home extends Component {
 
 			<Carousel />
 			<HomeMenu />
-			<ExpandCollapse />
+			<ExpandCollapsePaper />
+			<ExpandCollapsePlastic />
+			<ExpandCollapseTransit />
+			<ExpandCollapseElectricity />
 
 			</div>
 			);
