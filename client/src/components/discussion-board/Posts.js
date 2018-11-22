@@ -1,12 +1,34 @@
 import React from 'react';
 export default class Posts extends React.Component{
+  constructor(){
+    super();
+    this.state={
+      reply: {
+        name: "",
+        text: "",
+      }
+    };
+  }
   incrementUps(index){
     this.props.incrementUps(index);
   };
+  handleChange(e){
+    this.setState({
+      reply: {name:this.props.name, text:e.target.value}
+    });
+  }
   deletePost(e,index){
     console.log(e.target.parentElement.parentElement.parentElement.remove());
     this.props.deletePost(index);
-
+  }
+  reply(event,index){
+    event.preventDefault()
+    console.log('reply submit');
+    console.log(this.state.name);
+    console.log(this.state.text);
+    console.log(this.state);
+    console.log(this.props.name);
+    this.props.reply(index,this.state.reply.name,this.state.reply.text);
   }
   render(){
     var posts = this.props.data;
@@ -25,8 +47,12 @@ export default class Posts extends React.Component{
             <button onClick={(e) => this.deletePost(e,index)} className="delete"> Delete </button>
           </div>
           <form className="reply">
-            <input placeholder="Add Your Comment" type="text" name="fname"/>
+            <input onChange={(e)=>this.handleChange(e)} placeholder="Add Your Comment" type="text" name="fname"/>
+            <button type="submit" onClick={(event) => this.reply(event,index)} className="reply_submit"> Reply </button>
           </form>
+          {this.props.data[index].reply.map(item => (
+            <li key={item.text}>{item.name} : {item.comment}</li>
+          ))}
         </div>
         <hr/>
       </div> );

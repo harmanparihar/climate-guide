@@ -10,6 +10,7 @@ const DataSchemaReply = new Schema(
     originalMsg: String,
     comment: String,
     likes: 0,
+    reply: [],
       },
   { timestamps: true }
 );
