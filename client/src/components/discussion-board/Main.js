@@ -119,9 +119,9 @@ export default class Main extends React.Component{
           <div className="wrap">
             <div className="add_post">
             <button id="new_post" onClick={this.clickHandler.bind(this)}><span className="add_symbol">+ </span>Add New Post</button>
-            {this.state.show_form ? <Form data={this.state.data} updatedb={this.updateData.bind(this)} placeholder_text="Share your thoughts"/> : null}
+            {this.state.show_form ? <Form name={this.state.name} data={this.state.data} updatedb={this.updateData.bind(this)} placeholder_text="Share your thoughts"/> : null}
             </div>
-            <Posts data={this.state.data} deletePost={this.deletePost.bind(this)} incrementUps={this.incrementUpvotes.bind(this)}/>
+            <Posts name={this.state.name} data={this.state.data} deletePost={this.deletePost.bind(this)} incrementUps={this.incrementUpvotes.bind(this)}/>
           </div>
         </main>
         </div>

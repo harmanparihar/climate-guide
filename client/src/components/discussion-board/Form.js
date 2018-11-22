@@ -3,19 +3,18 @@ export default class Form extends React.Component{
   constructor(){
     super();
     this.state = {
-      name: "",
       username : "",
       comment : "",
       likes : 0,
     }
   }
-  handleChangeusername(event) {
-    this.setState({username: event.target.value});
-  }
+  // handleChangeusername(event) {
+  //   this.setState({username: event.target.value});
+  // }
   handleChangecomment(event) {
-    this.setState({comment: event.target.value});
+    this.setState({username:this.props.name,
+    comment: event.target.value});
   }
-
   handleSubmit(event){
     event.preventDefault();
       console.log(this.state);
@@ -37,12 +36,14 @@ export default class Form extends React.Component{
       .catch(function(error) {
         console.log(error);
       });
+      this.setState({comment:""});
   }
   render(){
+
     return(
       <form className="add_post_form" onSubmit={this.handleSubmit.bind(this)}>
-        <input onChange={this.handleChangeusername.bind(this)} id="post_username" type="text" placeholder="Username"/>
-        <textarea onChange={this.handleChangecomment.bind(this)} id="post_text" name="post" rows="4" cols="50"  placeholder={this.props.placeholder_text}></textarea>
+        <label>What's on your mind!</label>
+        <textarea onChange={this.handleChangecomment.bind(this)} value={this.state.comment} id="post_text" name="post" rows="4" cols="50"  placeholder={this.props.placeholder_text}></textarea>
       <button id="submit">Post</button>
       </form>
     );
