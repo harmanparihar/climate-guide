@@ -20,7 +20,7 @@ header {
 
   @include padding-y(.5rem);
   @include padding-x(2rem);
-  
+
 
 
   .site-title {
@@ -58,6 +58,7 @@ header {
       justify-content: flex-start;
 
       li {
+        min-width: fit-content;
         @include padding-x(2%);
       }
     }
@@ -124,6 +125,7 @@ header {
   color: $color__black;
   border: none;
   border-radius: 8px;
+  min-width: fit-content;
   font-weight: bold;
   cursor: pointer;
   @include padding-x(1.5%);
@@ -158,11 +160,11 @@ a {
 
 /*test for sliding from top menu*/
 
-.fixed-header{  
+.fixed-header{
   padding-top:70px;
 
   .site-header{
-    top:0px!important;  
+    top:0px!important;
   }
   @media (max-width: 768px){
     // padding-top:0;
