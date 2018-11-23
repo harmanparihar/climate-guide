@@ -438,6 +438,9 @@ a {
 .footer-social a {
   font-size: 1.2rem; }
 
+.support-us {
+  width: fit-content; }
+
 /* Global css (for all site) */
 body {
   background: linear-gradient(to bottom left, #8747d1, #182057) no-repeat;
@@ -677,11 +680,12 @@ body {
   box-sizing: border-box; }
   .home-intro-container h1 {
     text-align: center;
-    color: #90f1f9;
+    color: white;
     margin: 0;
     padding: 0;
     margin: 20px 0;
-    font-size: 3rem; }
+    font-size: 3rem;
+    font-weight: 900; }
     @media screen and (max-width: 770px) {
       .home-intro-container h1 {
         font-size: 2rem; } }
@@ -818,13 +822,14 @@ a {
   color: white; }
 
 .site-header nav a, .site-footer nav a {
-  transition: all .5s; }
+  color: white;
+  padding: 5px;
+  transition: all 1s;
+  border-radius: 8px; }
 .site-header nav a:hover, .site-footer nav a:hover {
   box-shadow: none;
   color: black;
-  background-color: #90f1f9;
-  padding: 5px 15px;
-  border-radius: 8px; }
+  background-color: white; }
 
 /*test for sliding from top menu*/
 .fixed-header {
@@ -987,8 +992,6 @@ a {
   margin-top: 4rem; }
 .causes-effects h2, .causes-effects p {
   color: white; }
-.causes-effects p {
-  max-width: 700px; }
 .causes-effects .causes-chart {
   margin-top: 1rem;
   margin-bottom: 1rem;

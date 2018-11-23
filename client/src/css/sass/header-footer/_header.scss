@@ -163,16 +163,19 @@ a {
 .site-header, .site-footer{
 
   nav a{
-    transition: all .5s;
+    color: $color__white;
+    padding: 5px;
+
+    transition: all 1s;
+    border-radius: 8px;
   }
 
   nav a:hover{
     box-shadow: none;
-    color: $color__black;
-    background-color: $color__skyblue;
-    padding: 5px 15px;
 
-    border-radius: 8px;
+    color: $color__black;
+    background-color: $color__white;
+    // border-radius: 8px;
   }
 
 }
