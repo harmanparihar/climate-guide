@@ -6,6 +6,7 @@ export default class Form extends React.Component{
       username : "",
       comment : "",
       likes : 0,
+      reply: [],
     }
   }
   // handleChangeusername(event) {

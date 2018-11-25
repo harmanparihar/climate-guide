@@ -50,9 +50,9 @@ export default class Posts extends React.Component{
             <input onChange={(e)=>this.handleChange(e)} placeholder="Add Your Comment" type="text" name="fname"/>
             <button type="submit" onClick={(event) => this.reply(event,index)} className="reply_submit"> Reply </button>
           </form>
-          {this.props.data[index].reply.map(item => (
+          {this.props.data[index].reply.length ? this.props.data[index].reply.map(item => (
             <li key={item.text}>{item.name} : {item.comment}</li>
-          ))}
+          )) : null}
         </div>
         <hr/>
       </div> );
