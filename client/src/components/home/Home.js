@@ -14,6 +14,7 @@ import ExpandCollapseElectricity from './ExpandCollapseElectricity'
 class Home extends Component {
 	render() {
 		return (
+			<div className="oval">
 			<div className="Home wrapper">
 			<HomeHeader />
 
@@ -28,6 +29,8 @@ class Home extends Component {
 			<ExpandCollapseElectricity />
 
 			</div>
+			</div>
+			
 			);
 		}
 	}
