@@ -50,7 +50,7 @@ export default class Main extends React.Component{
   incrementUpvotes(index){
     var temp = this.state.data;
     temp[index].likes = temp[index].likes+1;
-    this.setState(temp);
+    this.setState(temp.reverse());
     fetch(`http://localhost:8080/fetch/${temp[index]._id}`, {method: 'PUT',headers: {
             "Content-Type": "application/json; charset=utf-8",
             // "Content-Type": "application/x-www-form-urlencoded",
