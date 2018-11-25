@@ -80,11 +80,10 @@
   }
 
   .support-us{
-    background: $color__skyblue;
-    color: $color__black;
+    background: $primary_purple;
+    color: $color__white;
     border: none;
     border-radius: 8px;
-    font-weight: bold;
     cursor: pointer;
     @include padding-x(1.5%);
     @include padding-y(.5%);
@@ -128,17 +127,30 @@
       display: none;
     }
   }
+  .Home{
+    /*oval background stay on the back*/
+    position: relative;
+    @media (max-width: 768px){
+      padding-top:70px;
+    }
+  }
 
-  // .App::before {
-  //   background: url(components/assets/images/bg_home.svg) no-repeat center center;
-  //   content:"";
-  //   width: 100%;
-  //   height: 100%;
-  //   position: absolute;
-  //   left:0;
-  //   background-attachment: fixed;
-  //   @media (max-width: 768px){
-  //     background: none;
-  //   }
+  .App::before {
+    background: url(components/assets/images/bg_home.svg) no-repeat center center;
+    content:"";
+    width: 100%;
+    height: 1100px;
+    // min-height: 100vh;
+    position: absolute;
+    left:0;
+    background-attachment: scroll;
+    top:-50%;
+    background-size:cover;
+    @media (max-width: 768px){
+      background: none;
+    }
+    @media (max-height: 400px){
+      background: none;
+    }
 
-  // }
+  }

@@ -14,7 +14,9 @@
   border-top: 1px solid $color__skyblue;
   padding-top:.5rem;
   @include padding-x(2rem);
-
+@media (max-width: 768px){
+  padding:.5rem;
+}
   .site-title {
     flex-grow: 0;
 
@@ -43,6 +45,12 @@
 
       li {
         @include padding-x(.5rem);
+        @media (max-width: 768px){
+          &:nth-child(1),
+          &:nth-child(2){
+            display: none;
+          }
+        }
       }
     }
   }

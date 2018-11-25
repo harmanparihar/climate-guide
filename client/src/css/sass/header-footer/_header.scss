@@ -21,7 +21,9 @@ header {
   @include padding-y(.5rem);
   @include padding-x(2rem);
 
-
+@media (max-width: 768px){
+  top:0!important;
+}
 
   .site-title {
     flex-grow: 0;
@@ -121,12 +123,11 @@ header {
 
 
 .support-us{
-  background: $color__skyblue;
+  background: $color__white;
   color: $color__black;
   border: none;
   border-radius: 8px;
   min-width: fit-content;
-  font-weight: bold;
   cursor: pointer;
   @include padding-x(1.5%);
   @include padding-y(.5%);

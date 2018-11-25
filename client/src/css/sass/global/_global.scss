@@ -1,9 +1,9 @@
 body{
-	background: $bg_body no-repeat;
 	font-size: 16px;
 }
 #root{
 
+	background: $bg_body no-repeat;
 
 }
 .App{
@@ -11,13 +11,15 @@ body{
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+
 }
 .wrapper{
 	max-width: 1200px;
 	margin: 0 auto;
 	min-height: 100vh;
+	@include padding-x(2%);
+
 	@media (max-width: 768px){
-		@include padding-x(2%);
 		@include padding-y(2%);
 	}
 
@@ -30,8 +32,9 @@ body{
 	border-radius:8px;
 	@include padding-y(2%);
 	@include padding-x(2%);
-	@include margin-y(2rem);
-		
+	@include margin-y(2%);
+	@include margin-x(2%);
+	
 	h2{
 		margin:0;
 		color:$primary_purple;
