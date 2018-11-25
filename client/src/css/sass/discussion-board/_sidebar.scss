@@ -5,10 +5,22 @@
   position: fixed;
   max-width: 400px;
   box-sizing: border-box;
+  text-align: justify;
   @include padding-y(2%);
   @include padding-x(2%);
   @media screen and (max-width: 800px){
-    display: none;
+    position: relative;
+    margin-bottom: 20px;
+    @include padding-y(5%);
+    @include padding-x(5%);
+    max-width: 100%;
+  }
+  @media screen and (min-width: 800px){
+    position: fixed;
+    margin-bottom: 0px;
+    @include padding-y(2%);
+    @include padding-x(2%);
+    max-width: 400px;
   }
   a{
     display: block;
@@ -28,7 +40,12 @@
       @include padding-x(.6rem);
       @include padding-y(.5rem);
       @include margin-y(1rem);
-      margin-left: 250px;
+      @media screen and (max-width: 800px){
+        margin-left: 210px;
+      }
+      @media screen and (min-width: 800px){
+        margin-left: 250px;
+      }
       &:hover {
           background-color: $color__button_hover;
           color: #fff;
