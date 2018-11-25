@@ -8,6 +8,10 @@ class Member extends Component {
                 <h3>{this.props.memberName}</h3>
                 <p>{this.props.memberRole}</p>
                 <p>{this.props.memberDesc}</p>
+                <p className="connect-me">
+                  <a href={this.props.memberLinkedin} className="fab fa-linkedin"></a>
+                  <a href={this.props.memberFacebook} className="fab fa-facebook"></a>
+                </p>
             </section>
         );
     }
