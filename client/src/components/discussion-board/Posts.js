@@ -42,17 +42,20 @@ export default class Posts extends React.Component{
           <p>
             {this.props.data[index].comment}
           </p>
-          <div className="like_button">{this.props.data[index].likes}
-            <button onClick={() => this.incrementUps(index)} className="upvote"> Upvote </button>
-            <button onClick={(e) => this.deletePost(e,index)} className="delete"> Delete </button>
+          <div className="like_button">
+          <div>{this.props.data[index].likes} likes</div>
+            <i onClick={() => this.incrementUps(index)} className="upvote" class="fas fa-thumbs-up"></i>
+            <i onClick={(e) => this.deletePost(e,index)} className="delete" class="fas fa-trash-alt"></i>
           </div>
           <form className="reply">
             <input onChange={(e)=>this.handleChange(e)} placeholder="Add Your Comment" type="text" name="fname"/>
             <button type="submit" onClick={(event) => this.reply(event,index)} className="reply_submit"> Reply </button>
           </form>
+          <ul className="ul_reply">
           {this.props.data[index].reply.length ? this.props.data[index].reply.map(item => (
-            <li key={item.text}>{item.name} : {item.comment}</li>
+            <li key={item.text}><span>@{item.name} </span>: {item.comment}</li>
           )) : null}
+          </ul>
         </div>
         <hr/>
       </div> );
