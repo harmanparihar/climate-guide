@@ -67,7 +67,7 @@ app.use(express.static('public'));
 app.get('/',(req,res)=>
   res.send(`Node and express server is running on port ${PORT}`)
 );
-app.listen(PORT,"0.0.0.0",() =>
+app.listen(PORT,() =>
   console.log(`your server is running on ${PORT}`)
 );
 
