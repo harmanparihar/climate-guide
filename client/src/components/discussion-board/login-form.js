@@ -32,7 +32,6 @@ class LoginForm extends Component {
       [event.target.name]: event.target.value
     })
   }
-
   handleSubmit(event) {
     event.preventDefault()
     console.log('handleSubmit')

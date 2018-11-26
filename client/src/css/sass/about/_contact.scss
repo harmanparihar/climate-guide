@@ -1,5 +1,8 @@
-.contact-form {
+.contact-form.container {
 
+  @media screen and (max-width: 768px ){
+margin-bottom: 2rem;
+  }
     label {
         display: block;
         @include margin-y(1rem);
@@ -11,6 +14,11 @@
             padding-right: 1rem;
             box-sizing: border-box;
             color:$primary_purple;
+            @media screen and (max-width: 768px ){
+                width: 100%;
+                text-align: left;
+                margin-bottom: 5px;
+            }
         }
     }
 
@@ -21,6 +29,9 @@
         @include padding-x(.6rem);
         @include padding-y(.5rem);
         box-sizing: border-box;
+        @media screen and (max-width: 768px ){
+            width: 100%;
+        }
     }
 
     textarea {
@@ -29,6 +40,9 @@
 
     input[type="checkbox"], input[type="submit"] {
         margin-left: 15%;
+        @media screen and (max-width: 768px ){
+            margin-left:5px;
+        }
     }
 
     input[type="submit"] {
