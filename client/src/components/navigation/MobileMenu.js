@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { slide as Menu } from 'react-burger-menu'
 import SupportButton from './SupportButton';
 
@@ -11,9 +11,9 @@ class MobileMenu extends Component {
         const navLinks = pages.map((page, i) => {
         	return (
         		<li key={i}>
-        		<Link to={"/" + page}>
+        		<NavLink to={"/" + page} activeClassName="active">
         		{page}
-        		</Link>
+        		</NavLink>
         		</li>
         		);
         });

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 class NavMenu extends Component {
@@ -10,9 +10,9 @@ class NavMenu extends Component {
         const navLinks = pages.map((page, i) => {
             return (
                 <li key={i}>
-                <Link to={"/" + page}>
+                <NavLink to={"/" + page} activeClassName="active">
                 {page}
-                </Link>
+                </NavLink>
                 </li>
                 );
         });
