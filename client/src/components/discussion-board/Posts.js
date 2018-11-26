@@ -31,7 +31,7 @@ export default class Posts extends React.Component{
     this.props.reply(index,this.state.reply.name,this.state.reply.text);
   }
   render(){
-    var posts = this.props.data.reverse();
+    var posts = this.props.data;
     posts = posts.map(function(item,index){
       return(
       <div  key={index} id ={this.props.data[index]._id}>

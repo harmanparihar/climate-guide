@@ -33,7 +33,7 @@ export default class Main extends React.Component{
       console.log("Result is");
       console.log(result);
       this.setState({
-        data:tempposts
+        data:tempposts.reverse()
       });
     }.bind(this));
     this.setState({
@@ -50,7 +50,7 @@ export default class Main extends React.Component{
   incrementUpvotes(index){
     var temp = this.state.data;
     temp[index].likes = temp[index].likes+1;
-    this.setState(temp.reverse());
+    this.setState(temp);
     fetch(`http://localhost:8080/fetch/${temp[index]._id}`, {method: 'PUT',headers: {
             "Content-Type": "application/json; charset=utf-8",
             // "Content-Type": "application/x-www-form-urlencoded",
@@ -69,7 +69,7 @@ export default class Main extends React.Component{
   reply(index,name,text){
     var temp = this.state.data;
     temp[index].reply.push({name: name, comment:text});
-    this.setState(temp.reverse());
+    this.setState(temp);
     fetch(`http://localhost:8080/fetch/${temp[index]._id}`, {method: 'PUT',headers: {
             "Content-Type": "application/json; charset=utf-8",
             // "Content-Type": "application/x-www-form-urlencoded",
