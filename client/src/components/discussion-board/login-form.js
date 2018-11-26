@@ -98,7 +98,7 @@ class LoginForm extends Component {
                   />
               </label>
           <button
-          className="submit" onTouchStart={this.handleSubmit.bind(this)}
+          className="submit" style={{cursor:"pointer"}} 
           onClick={this.handleSubmit.bind(this)}
           type="submit">Login</button>
           <div className="meta-text">Don't have an account?</div>
