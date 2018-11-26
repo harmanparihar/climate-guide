@@ -19,7 +19,7 @@ export default class Form extends React.Component{
   handleSubmit(event){
     event.preventDefault();
       console.log(this.state);
-      this.props.data.push(this.state);
+      this.props.data.unshift(this.state);
       this.props.updatedb(this.props.data);
       fetch(`http://localhost:8080/fetch/`, {method: 'POST',headers: {
               "Content-Type": "application/json; charset=utf-8",
