@@ -99,7 +99,7 @@ class LoginForm extends Component {
               </label>
           <button
           className="submit"
-          onClick={this.handleSubmit}
+          onClick={this.handleSubmit.bind(this)}
           type="submit">Login</button>
           <div className="meta-text">Don't have an account?</div>
           <Link to="/get involved" className="btn btn-link">
