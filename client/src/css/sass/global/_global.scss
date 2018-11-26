@@ -52,5 +52,8 @@ body{
 
 .active{
 	color:$color__skyblue!important;
+	&:hover{
+		color:$color__black!important;
+	}
 }
 
