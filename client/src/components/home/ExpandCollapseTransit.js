@@ -39,16 +39,16 @@ class ExpandCollapseTransit extends React.Component{
             </button>
 
           </div>
-
+ <p>
+                By taking the bus to work for a year, ONE person, can prevent 4800 pounds of pollution (That’s over 2 TONS!), and saves an average of $6200.
+              </p>
           <div className="container-body">
 
             <AnimateHeight
               duration={600}
               height={height}
             >
-              <p>
-                By taking the bus to work for a year, ONE person, can prevent 4800 pounds of pollution (That’s over 2 TONS!), and saves an average of $6200.
-              </p>
+             
 
               <img src={Transit} alt="transit-image" />
 

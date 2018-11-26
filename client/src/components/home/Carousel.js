@@ -23,15 +23,15 @@ class Carousel extends React.Component{
           active={0}
         >
 
-            <img src={bus} alt='Travelling into bus can save 2 tons of gas per year.' />
+            <img src={bus} alt='Transit Facts' />
 
-            <img src={coffee} alt='1 cup can save 2 million trees.' />
+            <img src={coffee} alt='Plastic Recyling Facts' />
 
-            <img src={book} alt='Paper really helps to reduce waste.' />
+            <img src={book} alt='Paper Recycling Facts' />
 
-            <img src={automobiles} alt='This pic clicked in evening.' />
+            <img src={automobiles} alt='Transit Facts' />
 
-            <img src={sunset} alt='This is the sunset pic.' />
+            <img src={sunset} alt='Energy Conservation Facts!' />
 
         </CoverFlow>
       </div>

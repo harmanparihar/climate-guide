@@ -8,10 +8,18 @@
     margin-top:0;
     grid-column: 1;
     grid-row: 1;
+    @media (max-width: 768px){
+      font-size: 26px;
+      line-height: 1.15em;
+      font-weight: 600;
+    }
   }
   .icon{
     float: left;
     margin-right:1rem;
+    @media screen and (max-width: 768px){
+      width: 30px;
+    }
   }
 
 
@@ -37,8 +45,10 @@
     grid-row: 2;
     font-size:1.5rem;
 
-    @media screen and (max-width: 715px){
-
+    @media screen and (max-width: 768px){
+      font-size: 22px;
+      line-height: 1.12em;
+      font-weight: 600;
     }
 
   }//end of h3
@@ -50,6 +60,9 @@
 
   h3{
     grid-row: 1 / -1;
+     @media screen and (max-width: 768px){
+     clear: both;
+    }
   }
 }
 
@@ -94,6 +107,13 @@
       object-fit: cover;
     }
 
+  }
+  h3{
+    @media screen and (max-width: 768px){
+      font-size: 22px;
+      line-height: 1.12em;
+      font-weight: 600;
+    }
   }
 
 }

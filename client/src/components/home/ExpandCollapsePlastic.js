@@ -39,16 +39,16 @@ class ExpandCollapsePlastic extends React.Component{
             </button>
 
           </div>
-
+  <p>
+                By recycling plastic waste and using a reusable mug and bottle, ONE person can prevent 340 pounds of pollution a year, prevent the need for at least 100 plastic bottles, and reduce 50% of the energy it would take to burn it.
+              </p>
           <div className="container-body">
 
             <AnimateHeight
               duration={600}
               height={height}
             >
-              <p>
-                By recycling plastic waste and using a reusable mug and bottle, ONE person can prevent 340 pounds of pollution a year, prevent the need for at least 100 plastic bottles, and reduce 50% of the energy it would take to burn it.
-              </p>
+            
 
               <img src={Plastic} alt="plastic-image" />
 

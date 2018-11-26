@@ -39,16 +39,16 @@ class ExpandCollapseElectricity extends React.Component{
             </button>
 
           </div>
-
+  <p>
+                By reducing 30% of average electric use, ONE person can prevent over 2 TONS of pollution a year, as well as save between $600 - $2000.
+              </p>
           <div className="container-body">
 
             <AnimateHeight
               duration={600}
               height={height}
             >
-              <p>
-                By reducing 30% of average electric use, ONE person can prevent over 2 TONS of pollution a year, as well as save between $600 - $2000.
-              </p>
+            
 
               <img src={Electric} alt="elctric-image" />
 
