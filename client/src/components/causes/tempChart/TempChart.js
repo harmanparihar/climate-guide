@@ -69,7 +69,7 @@ class TemperatureChart extends Component {
       <ReactFusioncharts className="causes-chart"
           type = "zoomscatter"
           width = '100%'
-          height = '20%'
+          height = '25%'
           dataFormat = "json"
           dataSource = {dataSource} />
       );

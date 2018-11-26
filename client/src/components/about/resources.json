@@ -1,7 +1,19 @@
 [
     {
-        "name": "NASA",
+        "name": "NASA Data",
         "url": "https://data.nasa.gov/"
+    },
+    {
+        "name": "NASA APIs",
+        "url": "https://api.nasa.gov/"
+    },
+    {
+        "name": "NASA Climate Change",
+        "url": "https://climate.nasa.gov/"
+    },
+    {
+        "name": "Earth Now app by NASA",
+        "url": "https://itunes.apple.com/us/app/earth-now/id494633346?mt=8"
     },
     {
         "name": "NOAA",
@@ -10,10 +22,6 @@
     {
         "name": "ICOS Carbon Portal",
         "url": "https://www.icos-cp.eu/"
-    },
-    {
-        "name": "Earth Now app by NASA",
-        "url": "https://itunes.apple.com/us/app/earth-now/id494633346?mt=8"
     },
     {
         "name": "Climate Change website - by the Government of Canada",
@@ -25,15 +33,15 @@
     },
     {
         "name": "Statista",
-        "url": "https://www.statista.com/topics/1148/global-climate-change/ "
+        "url": "https://www.statista.com/topics/1148/global-climate-change/"
     },
     {
         "name": "ProgrammableWeb APIs",
         "url": "https://www.programmableweb.com/category/climate/api"
     },
     {
-        "name": "The World Bank - Renewable Energy",
-        "url": "http://ppi-re.worldbank.org/data"
+        "name": "The World Bank Data",
+        "url": "https://data.worldbank.org/"
     },
     {
         "name": "Aeris Weather",

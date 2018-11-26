@@ -80,8 +80,8 @@
     "outCnvBaseFontColor": "#000000",
     "labelFontColor": "#000000",
 
-    "captionFontBold": "0",
-    "captionFontSize": "18",
+    "captionFontBold": true,
+    "captionFontSize": "16",
     "captionFontColor": "#000000",
     "subCaptionFontBold": "0",
     "subCaptionFontSize": "15",
