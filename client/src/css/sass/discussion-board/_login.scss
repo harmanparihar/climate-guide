@@ -58,6 +58,7 @@
           border-radius: 10px;
           background-color: $color__button;
           border: 0;
+          cursor: pointer;
           color: $color__white;
           @include padding-x(.6rem);
           @include padding-y(.5rem);
