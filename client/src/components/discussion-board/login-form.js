@@ -32,7 +32,6 @@ class LoginForm extends Component {
       [event.target.name]: event.target.value
     })
   }
-
   handleSubmit(event) {
     event.preventDefault()
     console.log('handleSubmit')
@@ -98,8 +97,8 @@ class LoginForm extends Component {
                   />
               </label>
           <button
-          className="submit" style={{cursor:"pointer"}} 
-          onClick={this.handleSubmit.bind(this)}
+          className="submit"}
+          onClick={this.handleSubmit}
           type="submit">Login</button>
           <div className="meta-text">Don't have an account?</div>
           <Link to="/get involved" className="btn btn-link">
