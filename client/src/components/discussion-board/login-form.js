@@ -97,7 +97,7 @@ class LoginForm extends Component {
                   />
               </label>
           <button
-          className="submit"}
+          className="submit"
           onClick={this.handleSubmit}
           type="submit">Login</button>
           <div className="meta-text">Don't have an account?</div>
