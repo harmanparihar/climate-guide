@@ -9,6 +9,7 @@ import ExpandCollapsePaper from './ExpandCollapsePaper'
 import ExpandCollapsePlastic from './ExpandCollapsePlastic'
 import ExpandCollapseTransit from './ExpandCollapseTransit'
 import ExpandCollapseElectricity from './ExpandCollapseElectricity'
+import sunset from '../assets/images/sunset.jpg';
 
 class Home extends Component {
 	constructor(){
@@ -19,7 +20,7 @@ class Home extends Component {
 	}
 
   handleWindowResize = () => {
-    this.setState({ show: window.innerWidth > 786 });
+    this.setState({ show: window.innerWidth > 768 });
   }
 
   componentDidMount() {
@@ -33,6 +34,9 @@ class Home extends Component {
 	render() {
 		return (
 			<div className="oval">
+
+      <img src={sunset} className="img_intro"/>
+
 			<div className="Home wrapper">
 			<HomeHeader />
 			{this.state.show ? <Carousel /> : null}

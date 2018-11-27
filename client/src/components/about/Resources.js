@@ -14,7 +14,7 @@ class Resources extends Component {
         });
 
         return (
-            <div>
+            <div className="resources">
                 <h2>Resources</h2>
                 <ul>
                     {links}

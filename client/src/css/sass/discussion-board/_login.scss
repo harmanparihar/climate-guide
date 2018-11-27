@@ -22,6 +22,7 @@
     }
     .meta-text{
       text-align: center;
+      margin-top: 1rem;
     }
     .text-tertiary{
       line-height: 3rem;
@@ -39,51 +40,67 @@
       @include padding-x(10%);
       @include padding-y(5%);
       label {
-          display: grid;
-          grid-template-columns: 1fr 2fr;
-          @include margin-y(1rem);
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        @include margin-y(1rem);
 
-          span {
-              text-align: left;
-              padding-right: 1rem;
-              padding-top: 0.5rem;
-              box-sizing: border-box;
-          }
-          @media screen and (max-width:600px){
-            grid-template-columns: 1fr;
-          }
+        span {
+          text-align: left;
+          padding-right: 1rem;
+          padding-top: 0.5rem;
+          box-sizing: border-box;
+        }
+        @media screen and (max-width:600px){
+          grid-template-columns: 1fr;
+        }
       }
 
       button {
-          border-radius: 10px;
-          background-color: $color__button;
-          border: 0;
+        border-radius: 10px;
+        background-color: $color__button;
+        border: 0;
+        cursor: pointer;
+        color: $color__white;
+        @include padding-x(.6rem);
+        @include padding-y(.5rem);
+        @include margin-y(1rem);
+        &:hover {
+          background-color: $color__button_hover;
+          color: #fff;
           cursor: pointer;
-          color: $color__white;
-          @include padding-x(.6rem);
-          @include padding-y(.5rem);
-          @include margin-y(1rem);
-          &:hover {
-              background-color: $color__button_hover;
-              color: #fff;
-              cursor: pointer;
-          }
+        }
       }
       input{
-          width: 200px;
-          border-radius: 10px;
-          border: 1px solid #2f0945;
-          padding-left: 0.6rem;
-          padding-right: 0.6rem;
-          padding-top: 0.5rem;
-          padding-bottom: 0.5rem;
-          box-sizing: border-box;
+        width: 200px;
+        border-radius: 10px;
+        border: 1px solid #2f0945;
+        padding-left: 0.6rem;
+        padding-right: 0.6rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        box-sizing: border-box;
       }
       input:-webkit-autofill,
       input:-webkit-autofill:hover,
       input:-webkit-autofill:focus,
       input:-webkit-autofill:active  {
-          -webkit-box-shadow: 0 0 0 30px white inset;
+        -webkit-box-shadow: 0 0 0 30px white inset;
+      }
+      //sign up button
+      a:not(.text-secondary){
+        border-radius: 10px;
+        background-color: $color__button;
+        border: 0;
+        cursor: pointer;
+        color: $color__white;
+        @include padding-x(.6rem);
+        @include padding-y(.5rem);
+        margin-bottom: 1rem;
+        &:hover {
+          background-color: $color__button_hover;
+          color: #fff;
+          cursor: pointer;
+        }
       }
     }
   }

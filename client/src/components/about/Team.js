@@ -11,7 +11,7 @@ import diego from '../assets/images/diego.png';
 class Team extends Component {
     render() {
         return (
-            <section>
+            <section className="team">
                 <h2>Our Team</h2>
                 <p>Our team is very collaborative and driven. We’re comprised of 5 members: 2 computer science graduates, an experienced web designer, a talented graphic designer and a proficient project manager. Most importantly, we share the same level of passion, devotion and commitment to environmental causes.</p>
                 <img src={team} alt="Climate Guide Team" className="team_pic" />

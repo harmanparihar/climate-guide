@@ -112,7 +112,7 @@ class Signup extends Component {
 				<Link to="/login">
 				<span className="text-secondary">Login</span>
 				</Link>
-				<Link to="/">
+				<Link to="/" className="btn btn-link text-secondary">
 				<span className="text-tertiary">Back to Home</span>
 				</Link>
 				</form>

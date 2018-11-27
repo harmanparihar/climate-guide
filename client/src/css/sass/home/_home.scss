@@ -118,9 +118,9 @@
           color:#fff;
           font-size: 20px;
           text-decoration: none;
-        &:hover{
-          text-decoration: underline;
-        }
+          &:hover{
+            text-decoration: underline;
+          }
         }
       }
 
@@ -133,15 +133,16 @@
     /*oval background stay on the back*/
     position: relative;
     @media (max-width: 768px){
-      padding-top:70px;
+      padding-top:20px;
     }
   }
 
-  .oval::before {
-    background: url(components/assets/images/bg_home.svg) no-repeat center center;
-    content:"";
-    width: 100%;
-    height: 1100px;
+  .oval{
+    &:before {
+      background: url(components/assets/images/bg_home.svg) no-repeat center center;
+      content:"";
+      width: 100%;
+      height: 1100px;
     // min-height: 100vh;
     position: absolute;
     left:0;
@@ -154,5 +155,13 @@
     @media (max-height: 400px){
       background: none;
     }
+  }//end before
 
+  .img_intro{
+    margin-top:70px;
+
+    @media screen and (min-width: 768px){
+      display: none;
+    }
   }
+}
