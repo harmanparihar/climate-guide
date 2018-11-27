@@ -1,54 +1,117 @@
 [
     {
         "name": "NASA Data",
+        "logo": "nasa.png",
         "url": "https://data.nasa.gov/"
     },
     {
         "name": "NASA APIs",
+        "logo": "nasa.png",
         "url": "https://api.nasa.gov/"
     },
     {
         "name": "NASA Climate Change",
+        "logo": "nasa.png",
         "url": "https://climate.nasa.gov/"
     },
     {
         "name": "Earth Now app by NASA",
+        "logo": "nasa.png",
         "url": "https://itunes.apple.com/us/app/earth-now/id494633346?mt=8"
     },
     {
         "name": "NOAA",
+        "logo": "noaa.png",
         "url": "https://www.noaa.gov/"
     },
     {
         "name": "ICOS Carbon Portal",
+        "logo": "icos.png",
         "url": "https://www.icos-cp.eu/"
     },
     {
         "name": "Climate Change website - by the Government of Canada",
+        "logo": "canada.png",
         "url": "https://www.canada.ca/en/services/environment/weather/climatechange.html"
     },
     {
         "name": "Climate Change website - by the National Geographic",
+        "logo": "natgeo.png",
         "url": "https://www.nationalgeographic.com/environment/climate-change/"
     },
     {
         "name": "Statista",
+        "logo": "statista.png",
         "url": "https://www.statista.com/topics/1148/global-climate-change/"
     },
     {
-        "name": "ProgrammableWeb APIs",
-        "url": "https://www.programmableweb.com/category/climate/api"
-    },
-    {
         "name": "The World Bank Data",
+        "logo": "wb.png",
         "url": "https://data.worldbank.org/"
     },
     {
+        "name": "ProgrammableWeb APIs",
+        "logo": "pw.png",
+        "url": "https://www.programmableweb.com/category/climate/api"
+    },
+    {
         "name": "Aeris Weather",
+        "logo": "aeris.png",
         "url": "https://www.aerisweather.com/develop/"
     },
     {
         "name": "DataBC",
+        "logo": "databc.png",
         "url": "https://catalogue.data.gov.bc.ca/dataset?sector=Natural+Resources&download_audience=Public"
+    },
+    {
+        "name": "LoveToKnow - Recycling Paper",
+        "logo": "news.svg",
+        "url": "https://greenliving.lovetoknow.com/How_Does_Recycling_Affect_the_Environment"
+    },
+    {
+        "name": "Recycling Advocates - Coffee cups",
+        "logo": "news.svg",
+        "url": "http://www.recyclingadvocates.org/single-use-coffee-cup-reduction/"
+    },
+    {
+        "name": "LiveStrong - Recycling Plastic Water Bottles",
+        "logo": "news.svg",
+        "url": "https://www.livestrong.com/article/181103-the-effect-of-recycling-plastic-water-bottles-on-the-environment/"
+    },
+    {
+        "name": "Plastic World Recycling - Recycling Plastic",
+        "logo": "news.svg",
+        "url": "http://plasticworldrecycling.com/plastic-recycling-facts/"
+    },
+    {
+        "name": "State of Delaware - Public Transit",
+        "logo": "news.svg",
+        "url": "http://www.dnrec.delaware.gov/dwhs/info/Pages/OzonePublicTrans.aspx"
+    },
+    {
+        "name": "Canadian Association of Recycling Industries",
+        "logo": "news.svg",
+        "url": "https://www.cari-acir.org/education/"
+    },
+    {
+        "name": "City Green - Energy Efficiency",
+        "logo": "news.svg",
+        "url": "https://www.citygreen.ca/benefits-energy-efficiency"
+    },
+    {
+        "name": "Measure Of Things",
+        "logo": "news.svg",
+        "url": "http://www.bluebulbprojects.com/measureofthings/default.php"
+    },
+    {
+        "name": "Green Living - Average Carbon Footprint",
+        "logo": "news.svg",
+        "url": "https://greenliving.lovetoknow.com/What_Is_the_Average_Carbon_Footprint"
+    },
+    {
+        "name": "The Balance Small Business - Recycling Facts and Figures",
+        "logo": "news.svg",
+        "url": "https://www.thebalancesmb.com/recycling-facts-and-figures-2878049"
     }
 ]

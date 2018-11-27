@@ -1,84 +1,89 @@
-.team_pic{
-  border-radius: 8px;
+.team_pic {
+    border-radius: 8px;
 }
 
-.team-members-container{
+.team-members-container {
+    margin: 20px 0;
 
-  margin: 20px 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 
-  display: flex;
-  flex-direction: row;
-
-  flex-wrap: wrap;
-
-  justify-content: center;
-
-  .about-member{
-    padding: 10px;
-    box-sizing: border-box;
-
-    transition: all .5s;
-
-    flex-basis: 380px;
-    margin: 10px;
-
-    flex-shrink: 1;
-    display: grid;
-
-    background-color: rgba(255, 255, 255, .7);
-
-    img{
-      width: 60%;
-      height: auto;
-
-      justify-self: center;
-    }
-
-    //for linkedin and facebook icon
-    .connect-me{
-      margin: 0;
-      padding: 0;
-
-      font-size: 2.1rem;
-
-      justify-self: center;
-
-      a{
-        margin: 0;
-        padding: 0;
-
-        // padding: 5px;
-        margin: 0 10px;
-
+    .about-member {
+        padding: 10px;
         box-sizing: border-box;
 
-        transition: all 1s;
-      }
+        transition: all .5s;
 
-      a:hover{
-        transform: scale(1.2);
-      }
+        flex-basis: 380px;
+        margin: 10px;
 
+        flex-shrink: 1;
+        display: grid;
+
+        background-color: rgba(255, 255, 255, .7);
+
+        img {
+            width: 60%;
+            height: auto;
+
+            justify-self: center;
+        }
+
+        //for linkedin and facebook icon
+        .connect-me {
+            margin: 0;
+            padding: 0;
+            font-size: 2.1rem;
+            justify-self: center;
+
+            a {
+                margin: 0;
+                padding: 0;
+
+                margin: 0 10px;
+                box-sizing: border-box;
+                transition: all 1s;
+            }
+
+            // a:hover {
+            //   transform: scale(1.2);
+            // }
+
+        }
+        //end
+
+        p:first-of-type {
+            font-weight: 500;
+        }
+
+        h3, p {
+            margin: 5px 0;
+            justify-self: flex-start;
+        }
+    }//end of about-member class
+
+    .about-member:hover {
+        background-color: rgba(255, 255, 255, 1);
+        padding: 10px;
     }
-    //end
-
-    p:first-of-type{
-      font-weight: 500;
-    }
-
-    h3, p{
-      margin: 5px 0;
-      justify-self: flex-start;
-    }
-  }//end of about-member class
-
-  .about-member:hover{
-    background-color: rgba(255, 255, 255, 1);
-    padding: 10px;
-  }
 
 }
 
-.contact-form.container{
-  margin:7rem 0;
+
+
+// resources styling
+.resources {
+    li {
+        // list-style-type: none;
+        // margin: 0;
+        // padding: 0;
+        @include margin-y(1rem);
+    }
+
+    img {
+        margin-right: 10px;
+        width: 30px;
+        vertical-align: bottom;
+    }
 }

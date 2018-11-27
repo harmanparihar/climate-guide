@@ -81,25 +81,26 @@ class Contact extends Component {
                         checked={this.state.userSubscribe}
                         onChange={this.handleChange}
                     />
-                    Susbcribe to our newsletters!
+                    Did you join in the conversation in our discussion board?
                 </label>
-                <input type="submit" value="Send" />
+                <input type="submit" value="Send message" />
             </form>
         );
     }
 
     renderSuccess() {
         return (
-            <div className="contact-success">
+            <div className="contact-success container">
+                <h2>Contact Us</h2>
                 <p>Thank you for contacting us. We'll get back to you within 5 days.</p>
                 <div className="contact-success-results">
                     <p><strong>Your message</strong></p>
-                    <p>Name: <em>{this.state.userName}</em></p>
-                    <p>Email: <em>{this.state.userEmail}</em></p>
-                    <p>Subject: <em>{this.state.userSubject}</em></p>
-                    <p>Message: <em>{this.state.userMessage}</em></p>
+                    <p>Name: {this.state.userName}</p>
+                    <p>Email: {this.state.userEmail}</p>
+                    <p>Subject: {this.state.userSubject}</p>
+                    <p>Message: {this.state.userMessage}</p>
                     <p>
-                        I <em>{this.state.userSubscribe ? " want " : " do not want "}</em> to susbcribe to GlobalStats newsletters.
+                        I <em>{this.state.userSubscribe ? "did" : "didn't"}</em> join in the conversation.
                     </p>
                 </div>
             </div>

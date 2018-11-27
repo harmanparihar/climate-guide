@@ -37,7 +37,7 @@ class CO2Chart extends Component {
       <ReactFusioncharts className="causes-chart"
           type = "zoomscatter"
           width = '100%'
-          height = '25%'
+          height = '22%'
           dataFormat = "json"
           dataSource = {dataSource} />
       );

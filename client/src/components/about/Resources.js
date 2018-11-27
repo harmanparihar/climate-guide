@@ -5,20 +5,19 @@ class Resources extends Component {
     render() {
         const links = resources.map((resource, i) => {
             return (
-              <li key={i}>
-                  <a href={resource.url}>
-                      {resource.name}
-                  </a>
-              </li>
+                <li key={i}>
+                    <a href={resource.url}>
+                        <img src={require("../assets/logos/" + resource.logo)} alt={resource.name} />
+                        {resource.name}
+                    </a>
+                </li>
             );
         });
 
         return (
-            <div className="resources">
+            <div className="resources container">
                 <h2>Resources</h2>
-                <ul>
-                    {links}
-                </ul>
+                <ol>{links}</ol>
             </div>
         );
     }

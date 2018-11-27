@@ -78,7 +78,7 @@ class CarbonChart extends Component {
               className="causes-chart"
               type = "zoomscatter"
               width = '100%'
-              height = '45%'
+              height = '37%'
               dataFormat = "json"
               dataSource = {dataSource}
           />
