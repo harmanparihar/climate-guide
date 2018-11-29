@@ -16,8 +16,7 @@ componentDidMount() {
     if (isTop !== this.state.isTop) {
       this.setState({ isTop })
     }
-  })
-
+});
 }
 render() {
   return (
@@ -32,7 +31,7 @@ render() {
   <NavMenu className="header-nav" />
 
   <Search />
-  <MobileMenu /> 
+  <MobileMenu />
   <SupportButton />
   </header>
   );

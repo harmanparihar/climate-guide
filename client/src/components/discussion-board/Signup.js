@@ -59,7 +59,6 @@ class Signup extends Component {
 
 		render() {
 			return (
-
 				<div className="fixed-header">
 				<Header/>
 				<div className="form-page">

@@ -33,12 +33,14 @@ router.post('/', (req, res) => {
 router.post(
   '/login',
   function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
     console.log('routes/user.js, login, req.body: ');
     console.log(req.body)
     next()
   },
   passport.authenticate('local'),
   (req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
     console.log('logged in here are details', req.user);
     var userInfo = {
       username: req.user.username,
@@ -49,6 +51,7 @@ router.post(
   )
 
 router.get('/', (req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
   console.log('===== user!!======')
   if (req.user) {
     res.json({ user: req.user })
@@ -62,6 +65,7 @@ router.get('/', (req, res, next) => {
 })
 
 router.post('/logout', (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
   if (req.user) {
     req.logout()
     res.send({ msg: 'logging out' })
@@ -73,6 +77,7 @@ router.post('/logout', (req, res) => {
 // GET request : http://localhost:8080/user/getusers
 // Gives you a json object of all the users and their data
 router.get('/getusers', (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
   User.find({}, (err, userdata) => {
       if (err) {
           res.send({msg:'Could not fetch user data'});

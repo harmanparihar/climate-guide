@@ -86,10 +86,6 @@ export default class Main extends React.Component{
       console.log(error);
     });
   };
-  componentWillUnmount(){
-    // clearInterval(this.update)
-    // this.serverRequest.abort();
-  }
   deletePost(index){
     var temp = this.state.data;
     fetch(`${path_backend}/fetch/${temp[index]._id}`, {method: 'DELETE',headers: {

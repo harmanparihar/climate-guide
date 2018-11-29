@@ -48,8 +48,8 @@ export default class Posts extends React.Component{
           </p>
           <div className="like_button">
           <div>{this.props.data[index].likes} likes</div>
-            <i onClick={() => this.incrementUps(index)} className="upvote" class="fas fa-thumbs-up"></i>
-            <i onClick={(e) => this.deletePost(e,index)} className="delete" class="fas fa-trash-alt"></i>
+            <i onClick={() => this.incrementUps(index)} className="upvote" className="fas fa-thumbs-up"></i>
+            <i onClick={(e) => this.deletePost(e,index)} className="delete" className="fas fa-trash-alt"></i>
           </div>
           <form className="reply">
             <input onChange={(e)=>this.handleChange(e)} placeholder="Add Your Comment" type="text" name="fname"/>
@@ -57,7 +57,7 @@ export default class Posts extends React.Component{
           </form>
           <ul className="ul_reply">
           {this.props.data[index].reply.length ? this.props.data[index].reply.map(item => (
-            <li key={item.text}><span>@{item.name} </span>: {item.comment}</li>
+            <li key={item.name+item.text}><span>@{item.name} </span>: {item.comment}</li>
           )) : null}
           </ul>
         </div>
