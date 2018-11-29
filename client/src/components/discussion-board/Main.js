@@ -4,6 +4,7 @@ import axios from 'axios';
 import Form from './Form';
 import Sidebar from './Sidebar';
 import Header from '../Header';
+import path_backend from './path';
 
 export default class Main extends React.Component{
   constructor(){
@@ -27,7 +28,7 @@ export default class Main extends React.Component{
   }
   componentDidMount(){
     this.serverRequest = axios
-    .get('http://localhost:8080/fetch')
+    .get(`${path_backend}/fetch`)
     .then(function(result){
       var tempposts = result.data;
       console.log("Result is");
@@ -51,7 +52,7 @@ export default class Main extends React.Component{
     var temp = this.state.data;
     temp[index].likes = temp[index].likes+1;
     this.setState(temp);
-    fetch(`http://localhost:8080/fetch/${temp[index]._id}`, {method: 'PUT',headers: {
+    fetch(`${path_backend}/fetch/${temp[index]._id}`, {method: 'PUT',headers: {
             "Content-Type": "application/json; charset=utf-8",
             // "Content-Type": "application/x-www-form-urlencoded",
         },body: JSON.stringify(this.state.data[index])})
@@ -70,7 +71,7 @@ export default class Main extends React.Component{
     var temp = this.state.data;
     temp[index].reply.push({name: name, comment:text});
     this.setState(temp);
-    fetch(`http://localhost:8080/fetch/${temp[index]._id}`, {method: 'PUT',headers: {
+    fetch(`${path_backend}/fetch/${temp[index]._id}`, {method: 'PUT',headers: {
             "Content-Type": "application/json; charset=utf-8",
             // "Content-Type": "application/x-www-form-urlencoded",
         },body: JSON.stringify(this.state.data[index])})
@@ -91,7 +92,7 @@ export default class Main extends React.Component{
   }
   deletePost(index){
     var temp = this.state.data;
-    fetch(`http://localhost:8080/fetch/${temp[index]._id}`, {method: 'DELETE',headers: {
+    fetch(`${path_backend}/fetch/${temp[index]._id}`, {method: 'DELETE',headers: {
             "Content-Type": "application/json; charset=utf-8",
             // "Content-Type": "application/x-www-form-urlencoded",
         }})

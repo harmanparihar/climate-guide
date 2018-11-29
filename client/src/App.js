@@ -10,6 +10,7 @@ import Signup from './components/discussion-board/Signup';
 import Login from './components/discussion-board/login-form';
 import CausesEffects from './components/causes/CausesEffects';
 import About from './components/about/About';
+import path_backend from './components/discussion-board/path';
 import axios from 'axios';
 
 //import routing packages
@@ -23,7 +24,7 @@ class App extends Component {
         this.state = {
             loggedIn: false,
             username: null,
-            name: null
+            name: null,
         };
         this.getUser = this.getUser.bind(this);
         this.componentDidMount = this.componentDidMount.bind(this);
@@ -40,7 +41,7 @@ class App extends Component {
     }
 
     getUser() {
-        axios.get('http://localhost:8080/user/').then(response => {
+        axios.get(`${path_backend}/user/`).then(response => {
             console.log('Get user response: ');
             console.log(response.data);
             if (response.data.user) {

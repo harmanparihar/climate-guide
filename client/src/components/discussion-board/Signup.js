@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import Header from '../Header';
-
+import path_backend from './path';
 
 class Signup extends Component {
 	constructor() {
@@ -28,7 +28,7 @@ class Signup extends Component {
 		event.preventDefault()
 
 		//request to server to add a new username/password
-		axios.post('http://localhost:8080/user/', {
+		axios.post(`${path_backend}/user/`, {
 			name:			this.state.name,
 			username: this.state.username,
 			password: this.state.password
@@ -38,7 +38,7 @@ class Signup extends Component {
 			if (!response.data.errmsg) {
 				console.log('successful signup')
 					this.setState({ //redirect to login page
-						redirectTo: 'http://localhost:8080/login'
+						redirectTo: `${path_backend}/login`
 					})
 				} else {
 					console.log('username already taken')

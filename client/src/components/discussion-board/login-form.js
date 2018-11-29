@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import Header from '../Header';
+import path_backend from './path';
 
 class LoginForm extends Component {
   constructor() {
@@ -36,7 +37,7 @@ class LoginForm extends Component {
     event.preventDefault()
     console.log('handleSubmit')
 
-    axios.post('http://localhost:8080/user/login', {
+    axios.post(`${path_backend}/user/login`, {
       username: this.state.username,
       password: this.state.password
     })

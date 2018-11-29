@@ -1,4 +1,6 @@
 import React from 'react';
+import path_backend from './path';
+
 export default class Form extends React.Component{
   constructor(){
     super();
@@ -21,7 +23,7 @@ export default class Form extends React.Component{
       console.log(this.state);
       this.props.data.unshift(this.state);
       this.props.updatedb(this.props.data);
-      fetch(`http://localhost:8080/fetch/`, {method: 'POST',headers: {
+      fetch(`${path_backend}/fetch/`, {method: 'POST',headers: {
               "Content-Type": "application/json; charset=utf-8",
               // "Content-Type": "application/x-www-form-urlencoded",
           },
