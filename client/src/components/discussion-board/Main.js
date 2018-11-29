@@ -12,8 +12,8 @@ export default class Main extends React.Component{
     this.state = {
       show_form : false,
       data : [],
-      name: "hola",
-      username: "hola123",
+      name: "",
+      username: "",
       loggedIn: false
     }
   }
@@ -44,10 +44,19 @@ export default class Main extends React.Component{
   }
   updateData(temp){
     this.setState(temp);
+    fetch(`${path_backend}/fetch`, {method: 'GET'})
+    .then(function(response) {
+      if(response.ok) {
+        console.log('Database was updated new post added');
+        return;
+      }
+      throw new Error('Request failed.');
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
   }
-  // deletePost(index){
-  //
-  // }
+
   incrementUpvotes(index){
     var temp = this.state.data;
     temp[index].likes = temp[index].likes+1;

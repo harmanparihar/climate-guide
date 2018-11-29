@@ -2,13 +2,13 @@ import mongoose from 'mongoose';
 import { DataSchemaReply } from '../models/crmModel';
 import { userSchema } from '../models/user';
 
-const Contact = mongoose.model('comments', DataSchemaReply);
+const Post = mongoose.model('comments', DataSchemaReply);
 const User = mongoose.model('User', userSchema)
 
 export const addNewPost = (req, res) => {
-    let newContact = new Contact(req.body);
+    let newPost = new Post(req.body);
 
-    newContact.save((err, contact) => {
+    newPost.save((err, contact) => {
         if (err) {
             res.send(err);
         }
@@ -17,7 +17,7 @@ export const addNewPost = (req, res) => {
 };
 
 export const getPosts = (req, res) => {
-    Contact.find({}, (err, contact) => {
+    Post.find({}, (err, contact) => {
         if (err) {
             res.send(err);
         }
@@ -26,7 +26,7 @@ export const getPosts = (req, res) => {
 };
 
 export const getPostWithID = (req, res) => {
-    Contact.findById(req.params.userId, (err, contact) => {
+    Post.findById(req.params.userId, (err, contact) => {
         if (err) {
             res.send(err);
         }
@@ -35,7 +35,7 @@ export const getPostWithID = (req, res) => {
 };
 
 export const updatePost = (req, res) => {
-  Contact.findOneAndUpdate({ _id: req.params.userId}, req.body, {new :true}, (err, contact) => {
+  Post.findOneAndUpdate({ _id: req.params.userId}, req.body, {new :true}, (err, contact) => {
     if (err) {
         res.send(err);
     }
@@ -44,7 +44,7 @@ export const updatePost = (req, res) => {
 };
 
 export const deletePost = (req, res) => {
-  Contact.remove({ _id: req.params.userId}, (err,contact) => {
+  Post.remove({ _id: req.params.userId}, (err,contact) => {
     if (err) {
         res.send(err);
     }

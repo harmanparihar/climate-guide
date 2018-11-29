@@ -11,9 +11,6 @@ export default class Form extends React.Component{
       reply: [],
     }
   }
-  // handleChangeusername(event) {
-  //   this.setState({username: event.target.value});
-  // }
   handleChangecomment(event) {
     this.setState({username:this.props.name,
     comment: event.target.value});
@@ -42,7 +39,6 @@ export default class Form extends React.Component{
       this.setState({comment:""});
   }
   render(){
-
     return(
       <form className="add_post_form" onSubmit={this.handleSubmit.bind(this)}>
         <textarea onChange={this.handleChangecomment.bind(this)} value={this.state.comment} id="post_text" name="post" rows="4" cols="50"  placeholder={this.props.placeholder_text}></textarea>

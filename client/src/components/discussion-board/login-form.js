@@ -62,56 +62,41 @@ class LoginForm extends Component {
 
     })
   }
-
   render() {
     if (this.state.redirectTo) {
       return <Redirect to={{ pathname: this.state.redirectTo }} />
     } else {
       return (
-            <div className="get-involved">
-      <div className="fixed-header">
-      <Header/>
-      <div className="form-page">
-        <div className="form-div">
-          <h3>Share your thoughts with others!</h3>
-          <h4>Be an active member of our community</h4>
-          <form className="login-form ">
-              <label>
-                  <span>Username: </span>
-                  <input className="form-input"
-                  type="text"
-                  id="username"
-                  name="username"
-                  placeholder="Username"
-                  value={this.state.username}
-                  onChange={this.handleChange}
-                  />
-              </label>
-              <label>
-                  <span>Password: </span>
-                  <input className="form-input"
-                  placeholder="password"
-                  type="password"
-                  name="password"
-                  value={this.state.password}
-                  onChange={this.handleChange}
-                  />
-              </label>
-          <button
-          className="submit"
-          onClick={this.handleSubmit}
-          type="submit">Login</button>
-          <div className="meta-text">Don't have an account?</div>
-          <Link to="/get involved" className="btn btn-link">
-          <span className="text-secondary">Sign up</span>
-          </Link>
-          <Link to="/" className="btn btn-link text-secondary">
-          <span className="text-tertiary">Back to Home</span>
-          </Link>
-          </form>
+      <div className="get-involved">
+        <div className="fixed-header">
+        <Header/>
+          <div className="form-page">
+            <div className="form-div">
+              <h3>Share your thoughts with others!</h3>
+              <h4>Be an active member of our community</h4>
+              <form className="login-form ">
+                  <label>
+                      <span>Username: </span>
+                      <input className="form-input" type="text" id="username" name="username" placeholder="Username" value={this.state.username} onChange={this.handleChange}
+                      />
+                  </label>
+                  <label>
+                      <span>Password: </span>
+                      <input className="form-input" placeholder="password" type="password" name="password" value={this.state.password} onChange={this.handleChange}
+                      />
+                  </label>
+                  <button className="submit" onClick={this.handleSubmit} type="submit">Login</button>
+                  <div className="meta-text">Don't have an account?</div>
+                  <Link to="/get involved" className="btn btn-link">
+                  <span className="text-secondary">Sign up</span>
+                  </Link>
+                  <Link to="/" className="btn btn-link text-secondary">
+                  <span className="text-tertiary">Back to Home</span>
+                  </Link>
+              </form>
+            </div>
+          </div>
         </div>
-      </div>
-      </div>
       </div>
       )
     }

@@ -59,65 +59,48 @@ class Signup extends Component {
 
 		render() {
 			return (
-				<div className="fixed-header">
+			<div className="fixed-header">
 				<Header/>
 				<div className="form-page">
-				<div className="form-div">
-				<h3>Create a new account today! </h3>
-				<h4>Join Our Community</h4>
-				<form className="login-form ">
-				<div className="form-group">
-				<div className="col-1 col-ml-auto">
-				<label>
-				<span>Full Name: </span>
-				<input className="form-input"
-				type="text"
-				id="name"
-				name="name"
-				placeholder="Full Name"
-				value={this.state.name}
-				onChange={this.handleChange}
-				/>
-				</label>
-				<label>
-				<span>Email Id: </span>
-				<input className="form-input"
-				type="email"
-				id="username"
-				name="username"
-				placeholder="Username"
-				value={this.state.username}
-				onChange={this.handleChange}
-				/>
-				</label>
-				<label>
-				<span>Password: </span>
-				<input className="form-input"
-				placeholder="Password"
-				type="password"
-				name="password"
-				value={this.state.password}
-				onChange={this.handleChange}
-				/>
-				</label>
+					<div className="form-div">
+						<h3>Create a new account today! </h3>
+						<h4>Join Our Community</h4>
+						<form className="login-form ">
+							<div className="form-group">
+								<div className="col-1 col-ml-auto">
+									<label>
+										<span>Full Name: </span>
+										<input className="form-input" type="text" id="name" name="name" placeholder="Full Name" value={this.state.name} onChange={this.handleChange}
+										/>
+									</label>
+									<label>
+										<span>Email Id: </span>
+										<input className="form-input" type="email" id="username" name="username" placeholder="Username" value={this.state.username} onChange={this.handleChange}
+										/>
+									</label>
+									<label>
+										<span>Password: </span>
+										<input className="form-input" placeholder="Password" type="password" name="password" value={this.state.password} onChange={this.handleChange}
+										/>
+									</label>
+								</div>
+							</div>
+							<button
+							className="btn"
+							onClick={this.handleSubmit}
+							type="submit"
+							>Sign up</button>
+							<div className="meta-text">Already have an account?</div>
+							<Link to="/login">
+								<span className="text-secondary">Login</span>
+							</Link>
+							<Link to="/" className="btn btn-link text-secondary">
+								<span className="text-tertiary">Back to Home</span>
+							</Link>
+						</form>
+					</div>
 				</div>
-				</div>
-				<button
-				className="btn"
-				onClick={this.handleSubmit}
-				type="submit"
-				>Sign up</button>
-				<div className="meta-text">Already have an account?</div>
-				<Link to="/login">
-				<span className="text-secondary">Login</span>
-				</Link>
-				<Link to="/" className="btn btn-link text-secondary">
-				<span className="text-tertiary">Back to Home</span>
-				</Link>
-				</form>
-				</div>
-				</div>
-				</div>
+			</div>
 				)
 		}
 	}
