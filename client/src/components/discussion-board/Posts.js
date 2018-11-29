@@ -22,13 +22,17 @@ export default class Posts extends React.Component{
     this.props.deletePost(index);
   }
   reply(event,index){
-    event.preventDefault()
+    event.preventDefault();
+    if(this.state.text!=""){
     console.log('reply submit');
     console.log(this.state.name);
     console.log(this.state.text);
     console.log(this.state);
     console.log(this.props.name);
     this.props.reply(index,this.state.reply.name,this.state.reply.text);
+  } else{
+    alert("Please enter your reply before posting!");
+  }
   }
   render(){
     var posts = this.props.data;
