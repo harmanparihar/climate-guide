@@ -8,6 +8,27 @@ import automobiles from '../assets/images/automobiles.jpg';
 import sunset from '../assets/images/sunset.jpg';
 
 class Carousel extends React.Component{
+
+  constructor(props){
+    super(props)
+    this.state = {
+      isActive: false
+    }
+  }
+
+  openPage = () =>{
+
+    this.setState = {
+      isActive: true
+    }
+    const isActive = this.state.isActive
+
+    if(isActive){
+      window.open("https://www.youtube.com")
+    }
+
+  }
+
   render() {
     return (
 
@@ -26,7 +47,7 @@ class Carousel extends React.Component{
 
             <img src={bus} alt='Transit Facts!' />
 
-            <img src={coffee} alt='Plastic Recyling Facts!' />
+            <img src={coffee} id="hello" alt='Plastic Recyling Facts!' onClick={this.openPage} />
 
             <img src={book} alt='Paper Recycling Facts!' />
 
