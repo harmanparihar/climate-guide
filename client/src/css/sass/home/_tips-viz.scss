@@ -1,16 +1,30 @@
 .viz {
-    img {
-        width: 100px;
-        height: auto;
-    }
+	img {
+		width: 100px;
+		height: auto;
+	}
 
-    button {
-        background: transparent;
-        border: 0;
+	button {
+		background: transparent;
+		border: 0;
 
-        img{
-        	width: 20px;
-        	cursor: pointer;
-        }
-    }
+		img{
+			width: 20px;
+			cursor: pointer;
+		}
+	}
 }
+// .tips-paper{
+// 	display: grid;
+// 	grid-template-columns: repeat(4, 1fr);
+// 	grid-template-rows: repeat(4, 1fr);
+
+// 	.img_base{
+// 		grid-column: 1;
+// 		grid-row:1;
+// 	}
+// 	.viz_btn.first{
+// 		grid-column: 2;
+// 		grid-row: 1;
+// 	}
+// }
