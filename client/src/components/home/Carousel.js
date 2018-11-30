@@ -8,6 +8,7 @@ import automobiles from '../assets/images/automobiles.jpg';
 import sunset from '../assets/images/sunset.jpg';
 
 class Carousel extends React.Component{
+
   render() {
     return (
 
@@ -26,7 +27,7 @@ class Carousel extends React.Component{
 
             <img src={bus} alt='Transit Facts!' />
 
-            <img src={coffee} alt='Plastic Recyling Facts!' />
+            <img src={coffee} id="hello" alt='Plastic Recyling Facts!' />
 
             <img src={book} alt='Paper Recycling Facts!' />
 

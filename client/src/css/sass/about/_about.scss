@@ -44,11 +44,15 @@
 
                 margin: 0 10px;
                 box-sizing: border-box;
-                transition: all 1s;
+                transition: all .5s;
             }
 
-            a:hover {
-              transform: scale(1.2);
+            .fa-facebook:hover {
+              color: #3B5998;
+            }
+
+            .fa-linkedin:hover{
+              color: #0077B5;
             }
 
         }

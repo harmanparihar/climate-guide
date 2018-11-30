@@ -444,9 +444,11 @@ code {
         padding: 0;
         margin: 0 10px;
         box-sizing: border-box;
-        transition: all 1s; }
-      .team-members-container .about-member .connect-me a:hover {
-        transform: scale(1.2); }
+        transition: all .5s; }
+      .team-members-container .about-member .connect-me .fa-facebook:hover {
+        color: #3B5998; }
+      .team-members-container .about-member .connect-me .fa-linkedin:hover {
+        color: #0077B5; }
     .team-members-container .about-member p:first-of-type {
       font-weight: 500; }
     .team-members-container .about-member h3, .team-members-container .about-member p {
