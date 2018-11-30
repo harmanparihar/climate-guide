@@ -106,7 +106,7 @@ request.get(urlTemp, (error, respond, body) => {
         console.log('************************** ' + error);
     }
 
-    // create 2 new JSON files so that react charts can use
+    // create a new JSON files so that react charts can use
     fs.writeFile('../client/src/components/causes/tempChart/dataSource/dataset.json', JSON.stringify(dataArray1), 'utf8', (error) => {
         if (error) throw error;
     });
@@ -206,6 +206,7 @@ client.on('ready', () => {
         stream.on('data', (chunk) => {
             content += chunk;
         });
+
         stream.on('end', () => {
             dataArray3 = content.split('\n');
             for (let line = 57; line < dataArray3.length-1; line++) {
@@ -214,11 +215,15 @@ client.on('ready', () => {
                     "y": dataArray3[line].trim().split("   ")[1]
                 });
             }
+            console.log(dataArray4);
             fs.writeFile('../client/src/components/causes/co2Chart/dataSource/dataset.json', JSON.stringify(dataArray4), 'utf8', (error) => {
                 if (error) throw error;
             });
         });
     });
+});
+app.get('/fusionCharts', (req, res) => {
+    res.send({exp: "hi"});
 });
 
 client.connect({

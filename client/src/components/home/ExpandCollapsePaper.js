@@ -1,6 +1,7 @@
 import React from 'react';
 import AnimateHeight from 'react-animate-height';
-import paper from '../assets/images/paper.png';
+import PaperInteractive from './PaperInteractive';
+// import paper from '../assets/images/paper.png';
 import paperPlane from '../assets/icons/paper-plane.svg';
 
 class ExpandCollapsePaper extends React.Component{
@@ -51,41 +52,42 @@ class ExpandCollapsePaper extends React.Component{
               >
 
 
-                  <img src={paper} alt="Paper Tips" />
+                  {/* <img src={paper} alt="Paper Tips" /> */}
+                  <PaperInteractive />
 
                   <div className="tips-container">
 
                       <h3>Tips! How you can make a difference</h3>
 
-      <ol className="tips-list">
-      <li>
-      Prepare a container for all your paper waste (unheeded documents, cardboard boxes and such). It will make it easier to throw away into the paper recycling bin.
-      </li>
-      <li>
-      To reduce paper cups use – get a reusable mug and water bottle. Below are some affordable and easy to find products of decent quality:
+                      <ol className="tips-list">
+                          <li>
+                              Prepare a container for all your paper waste (unheeded documents, cardboard boxes and such). It will make it easier to throw away into the paper recycling bin.
+                          </li>
+                          <li>
+                              To reduce paper cups use – get a reusable mug and water bottle. Below are some affordable and easy to find products of decent quality:
 
-      <ul className="shopping-list-container">
+                              <ul className="shopping-list-container">
 
-      <li>
-      <a href="https://www.londondrugs.com/thermocafe-travel-mug---470ml/L7857121.html?cgid=brand-thermos-hydration">ThermoCafe Travel Mug</a>
-      </li>
-      <li>
-      <a href="https://www.londondrugs.com/thermos-vacuum-insulated-bottle---stainless-steel---500ml/L8781056.html?cgid=brand-thermos-hydration">Thermos Vacuum Insulated Bottle - Stainless Steel - 500ml</a>
-      </li>
-      <li>
-      <a href="https://www.londondrugs.com/london-drugs-double-wall-bottle---stainless-steel---490ml/L6352835.html">Double Wall Bottle - Stainless Steel - 490ml</a>
-      </li>
-      <li>
-      <a href="https://www.londondrugs.com/lab-o-glass-water-bottle-with-silicone-sleeve---assorted---500ml/L5520747.html">Glass Water Bottle with Silicone Sleeve</a>
-      </li>
+                                  <li>
+                                      <a href="https://www.londondrugs.com/thermocafe-travel-mug---470ml/L7857121.html?cgid=brand-thermos-hydration">ThermoCafe Travel Mug</a>
+                                  </li>
+                                  <li>
+                                      <a href="https://www.londondrugs.com/thermos-vacuum-insulated-bottle---stainless-steel---500ml/L8781056.html?cgid=brand-thermos-hydration">Thermos Vacuum Insulated Bottle - Stainless Steel - 500ml</a>
+                                  </li>
+                                  <li>
+                                      <a href="https://www.londondrugs.com/london-drugs-double-wall-bottle---stainless-steel---490ml/L6352835.html">Double Wall Bottle - Stainless Steel - 490ml</a>
+                                  </li>
+                                  <li>
+                                      <a href="https://www.londondrugs.com/lab-o-glass-water-bottle-with-silicone-sleeve---assorted---500ml/L5520747.html">Glass Water Bottle with Silicone Sleeve</a>
+                                  </li>
 
-      </ul>
+                              </ul>
 
-      </li>
-      <li>
-      Whenever it is possible, go for the digital option. Many services offer a digital form of receipts and documents
-      </li>
-      </ol>
+                          </li>
+                          <li>
+                              Whenever it is possible, go for the digital option. Many services offer a digital form of receipts and documents
+                          </li>
+                      </ol>
 
       </div>
       </AnimateHeight>

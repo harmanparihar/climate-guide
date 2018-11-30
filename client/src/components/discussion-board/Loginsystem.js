@@ -1,9 +1,8 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import axios from 'axios'
+import React, { Component } from 'react';
+// import { Link } from 'react-router-dom';
+import axios from 'axios';
 import Main from './Main';
-import Signup from "./Signup"
-import Header from '../Header';
+import Signup from "./Signup";
 import path_backend from './path';
 
 class LoginSystem extends Component {
