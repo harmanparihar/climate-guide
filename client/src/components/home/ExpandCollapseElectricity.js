@@ -1,7 +1,10 @@
-import React from 'react'
-import AnimateHeight from 'react-animate-height'
-import electric from '../assets/images/electric.png'
-import electricity from '../assets/icons/energy-colour.svg'
+import React from 'react';
+import AnimateHeight from 'react-animate-height';
+import electric from '../assets/images/electric.png';
+import electricity from '../assets/icons/energy-colour.svg';
+
+// import Interactive from './Interactive';
+// import person from '../assets/icons/person.svg';
 
 class ExpandCollapseElectricity extends React.Component{
 
@@ -27,49 +30,54 @@ class ExpandCollapseElectricity extends React.Component{
 
           <div className="container-head">
 
-            <div className="heading">
-              <img src={electricity} alt='Causes' className="icon" />
+              <div className="heading">
+                  <img src={electricity} alt='Causes' className="icon" />
 
-              <h2>Electricity</h2>
-              <h3>Energy Conservation Facts!</h3>
-            </div>
+                  <h2>Electricity</h2>
+                  <h3>Energy Conservation Facts!</h3>
+              </div>
 
-            <button className="btn" onClick={this.toggle}>
-              { height === 0 ? 'Expand' : 'Collapse' }
-            </button>
+              <button className="btn" onClick={this.toggle}>
+                  { height === 0 ? 'Expand' : 'Collapse' }
+              </button>
 
           </div>
-  <p>
-                By reducing 30% of average electric use, ONE person can prevent over 2 TONS of pollution a year, as well as save between $600 - $2000.
-              </p>
+          <p>
+              By reducing 30% of average electric use, ONE person can prevent over 2 TONS of pollution a year, as well as save between $600 - $2000.
+          </p>
           <div className="container-body">
 
-            <AnimateHeight
-              duration={600}
-              height={height}
-            >
+              <AnimateHeight
+                  duration={600}
+                  height={height}
+              >
 
+                  {/* <Interactive
+                      className="tips-electricity"
+                      src1={person}
+                      src2={battery}
+                      src3={bottles}
+                      src4={carbon}
+                  /> */}
 
-              <img src={electric} alt="Electricity Tips" />
+                  <div className="tips-container">
 
-              <div className="tips-container">
+                      <h3>Tips! How you can make a difference</h3>
 
-                <h3>Tips! How you can make a difference</h3>
+                      <ol className="tips-list">
+                          <li>
+                              Turn off unused appliances and unused light sources. This will save money and indoor pollution.
+                          </li>
+                          <li>
+                              Use energy smart appliances and lightbulbs, they run more efficiently and cleanly.
+                          </li>
+                          <li>
+                              If you have electric heat, lower your thermostat by two degrees to save 5% on your heating bill. Lowering it to five degrees could save 10%. This will help you save $120.
+                          </li>
+                      </ol>
 
-                <ol className="tips-list">
-                  <li>
-                    Turn off unused appliances and unused light sources. This will save money and indoor pollution.
-                  </li>
-                  <li>
-                    Use energy smart appliances and lightbulbs, they run more efficiently and cleanly.
-                  </li>
-                  <li>
-                    If you have electric heat, lower your thermostat by two degrees to save 5% on your heating bill. Lowering it to five degrees could save 10%. This will help you save $120.
-                  </li>
-                </ol>
-
-              </div>
-            </AnimateHeight>
+                  </div>
+              </AnimateHeight>
 
           </div>
 

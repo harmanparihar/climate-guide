@@ -5,7 +5,7 @@ import treeForest from '../assets/icons/tree-forest.svg';
 import co2Pollution from '../assets/icons/co2-pollution.svg';
 import trucks from '../assets/icons/trucks.svg';
 
-class PaperInteractive extends Component {
+class Interactive extends Component {
     constructor(props) {
         super(props);
 
@@ -41,16 +41,18 @@ class PaperInteractive extends Component {
     render() {
         return (
             <div className="viz">
-                <img src={papers} alt="viz" />
+                <img src={this.props.src1} alt="viz" />
                 <button onClick={this.first}>{this.state.first[1]}</button>
                 <button onClick={this.second}>{this.state.second[1]}</button>
-                <button onClick={this.third}>{this.state.third[1]}</button>
-                <img src={treeForest} alt="viz" style={{opacity: this.state.first[0]}} />
-                <img src={co2Pollution} alt="viz" style={{opacity: this.state.second[0]}} />
-                <img src={trucks} alt="viz" style={{opacity: this.state.third[0]}} />
+                {this.props.className === "tips-paper" ? <button onClick={this.third}>{this.state.third[1]}</button> : null}
+                {this.props.className === "tips-plastic" ? <button onClick={this.third}>{this.state.third[1]}</button> : null}
+                <img src={this.props.src2} alt="viz" style={{opacity: this.state.first[0]}} />
+                <img src={this.props.src3} alt="viz" style={{opacity: this.state.second[0]}} />
+                {this.props.className === "tips-paper" ? <img src={this.props.src4} alt="viz" style={{opacity: this.state.third[0]}} /> : null}
+                {this.props.className === "tips-plastic" ? <img src={this.props.src4} alt="viz" style={{opacity: this.state.third[0]}} /> : null}
             </div>
         );
     }
 }
 
-export default PaperInteractive;
+export default Interactive;

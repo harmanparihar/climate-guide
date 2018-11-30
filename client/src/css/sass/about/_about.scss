@@ -80,15 +80,12 @@
 // resources styling
 .resources {
     li {
-        // list-style-type: none;
-        // margin: 0;
-        // padding: 0;
         @include margin-y(1rem);
     }
 
     img {
         margin-right: 10px;
-        width: 30px;
-        vertical-align: bottom;
+        width: 20px;
+        vertical-align: middle;
     }
 }
