@@ -35,7 +35,7 @@ class Home extends Component {
 		return (
 			<div className="oval">
 
-      <img src={sunset} className="img_intro"/>
+      <img src={sunset} alt="Beautiful Sunset" className="img_intro"/>
 
 			<div className="Home wrapper">
 			<HomeHeader />

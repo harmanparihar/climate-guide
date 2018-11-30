@@ -63,7 +63,7 @@ const dataSource = {
     // ],
 }
 
-class TemperatureChart extends Component {
+class TempChart extends Component {
    render() {
       return (
       <ReactFusioncharts className="causes-chart"
@@ -76,4 +76,4 @@ class TemperatureChart extends Component {
    }
 }
 
-export default TemperatureChart;
+export default TempChart;

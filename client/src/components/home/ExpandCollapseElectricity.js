@@ -1,7 +1,7 @@
 import React from 'react'
 import AnimateHeight from 'react-animate-height'
-import Electric from '../assets/images/Electric.png'
-import Electricity from '../assets/icons/energy-colour.svg'
+import electric from '../assets/images/electric.png'
+import electricity from '../assets/icons/energy-colour.svg'
 
 class ExpandCollapseElectricity extends React.Component{
 
@@ -28,7 +28,7 @@ class ExpandCollapseElectricity extends React.Component{
           <div className="container-head">
 
             <div className="heading">
-              <img src={Electricity} alt='Causes' className="icon" />
+              <img src={electricity} alt='Causes' className="icon" />
 
               <h2>Electricity</h2>
               <h3>Energy Conservation Facts!</h3>
@@ -48,9 +48,9 @@ class ExpandCollapseElectricity extends React.Component{
               duration={600}
               height={height}
             >
-            
 
-              <img src={Electric} alt="elctric-image" />
+
+              <img src={electric} alt="Electricity Tips" />
 
               <div className="tips-container">
 

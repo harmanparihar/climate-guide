@@ -1,7 +1,7 @@
 import React from 'react'
 import AnimateHeight from 'react-animate-height'
-import Plastic from '../assets/images/Plastic.png'
-import Bottle from '../assets/icons/bottle-purple.svg'
+import plastic from '../assets/images/plastic.png'
+import bottle from '../assets/icons/bottle-purple.svg'
 
 class ExpandCollapsePlastic extends React.Component{
 
@@ -28,7 +28,7 @@ class ExpandCollapsePlastic extends React.Component{
           <div className="container-head">
 
             <div className="heading">
-              <img src={Bottle} alt='Causes' className="icon plastic-bottle" />
+              <img src={bottle} alt='Causes' className="icon plastic-bottle" />
 
               <h2>Plastic</h2>
               <h3>Plastic Recyling Facts!</h3>
@@ -48,9 +48,9 @@ class ExpandCollapsePlastic extends React.Component{
               duration={600}
               height={height}
             >
-            
 
-              <img src={Plastic} alt="plastic-image" />
+
+              <img src={plastic} alt="Plastic Tips" />
 
               <div className="tips-container">
 

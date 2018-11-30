@@ -1,7 +1,7 @@
 import React from 'react'
 import AnimateHeight from 'react-animate-height'
-import Transit from '../assets/images/Transit.png'
-import CarSmoke from '../assets/icons/transit-colour.svg'
+import transit from '../assets/images/transit.png'
+import carSmoke from '../assets/icons/transit-colour.svg'
 
 class ExpandCollapseTransit extends React.Component{
 
@@ -28,7 +28,7 @@ class ExpandCollapseTransit extends React.Component{
           <div className="container-head">
 
             <div className="heading">
-              <img src={CarSmoke} alt='Causes' className="icon" />
+              <img src={carSmoke} alt='Causes' className="icon" />
 
               <h2>Transit</h2>
               <h3>Transit Facts!</h3>
@@ -48,9 +48,9 @@ class ExpandCollapseTransit extends React.Component{
               duration={600}
               height={height}
             >
-             
 
-              <img src={Transit} alt="transit-image" />
+
+              <img src={transit} alt="Transit Tips" />
 
               <div className="tips-container">
 

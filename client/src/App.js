@@ -14,7 +14,7 @@ import path_backend from './components/discussion-board/path';
 import axios from 'axios';
 
 //import routing packages
-import {Router, browserHistory} from 'react-router';
+// import {Router, browserHistory} from 'react-router';
 
 import './App.scss';
 

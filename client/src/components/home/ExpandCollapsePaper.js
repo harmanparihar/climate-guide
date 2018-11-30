@@ -1,7 +1,7 @@
 import React from 'react';
 import AnimateHeight from 'react-animate-height';
-import Paper from '../assets/images/Paper.png';
-import PaperPlane from '../assets/icons/paper-plane.svg';
+import paper from '../assets/images/paper.png';
+import paperPlane from '../assets/icons/paper-plane.svg';
 
 class ExpandCollapsePaper extends React.Component{
 
@@ -25,37 +25,37 @@ class ExpandCollapsePaper extends React.Component{
 
       <div className="expand-collapse-container container">
 
-      <div className="container-head">
+          <div className="container-head">
 
-      <div className="heading">
-      <img src={PaperPlane} alt='Causes' className="icon" />
+              <div className="heading">
+                  <img src={paperPlane} alt='Causes' className="icon" />
 
-      <h2>Paper</h2>
-      <h3>Paper Recycling Facts!</h3>
-      
-      </div>
+                  <h2>Paper</h2>
+                  <h3>Paper Recycling Facts!</h3>
 
-      <button className="btn" onClick={this.toggle}>
-      { height === 0 ? 'Expand' : 'Collapse' }
-      </button>
+              </div>
 
-      </div>
-      <p>
-      Recycling one ton of office paper, will save 17 trees, 7000 gallons of water and prevent 60 pounds of pollution.
-      </p>
-      <div className="container-body">
+              <button className="btn" onClick={this.toggle}>
+                  { height === 0 ? 'Expand' : 'Collapse' }
+              </button>
 
-      <AnimateHeight
-      duration={600}
-      height={height}
-      >
-      
+          </div>
+          <p>
+              Recycling one ton of office paper, will save 17 trees, 7000 gallons of water and prevent 60 pounds of pollution.
+          </p>
+          <div className="container-body">
 
-      <img src={Paper} alt="paper-image" />
+              <AnimateHeight
+                  duration={600}
+                  height={height}
+              >
 
-      <div className="tips-container">
 
-      <h3>Tips! How you can make a difference</h3>
+                  <img src={paper} alt="Paper Tips" />
+
+                  <div className="tips-container">
+
+                      <h3>Tips! How you can make a difference</h3>
 
       <ol className="tips-list">
       <li>
