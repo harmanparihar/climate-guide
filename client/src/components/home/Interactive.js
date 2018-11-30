@@ -40,8 +40,8 @@ class Interactive extends Component {
 
     render() {
         return (
-            <div className="viz">
-                <img src={this.props.src1} alt="viz" />
+ <div className={"viz " + this.props.className} >
+                 <img src={this.props.src1} alt="viz" />
                 <button onClick={this.first}>{this.state.first[1]}</button>
                 <button onClick={this.second}>{this.state.second[1]}</button>
                 {this.props.className === "tips-paper" ? <button onClick={this.third}>{this.state.third[1]}</button> : null}
