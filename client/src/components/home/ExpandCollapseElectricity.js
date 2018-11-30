@@ -3,62 +3,62 @@ import AnimateHeight from 'react-animate-height';
 import electric from '../assets/images/electric.png';
 import electricity from '../assets/icons/energy-colour.svg';
 
-// import Interactive from './Interactive';
-// import person from '../assets/icons/person.svg';
+import Interactive from './Interactive';
+// import PUTSOMETHINGHERE!!!!!!!!! from '../assets/icons/.svg';
 
 class ExpandCollapseElectricity extends React.Component{
 
   state = {
-    height: 0
+      height: 0
   }
 
   toggle = () => {
-    const { height } = this.state;
+      const { height } = this.state;
 
-    this.setState({
-      height: height === 0 ? 'auto' : 0
-    })
+      this.setState({
+          height: height === 0 ? 'auto' : 0
+      })
   }
 
   render(){
 
-    const { height } = this.state
+      const { height } = this.state
 
-    return(
+      return(
 
-      <div className="expand-collapse-container container">
+          <div className="expand-collapse-container container">
 
-          <div className="container-head">
+              <div className="container-head">
 
-              <div className="heading">
-                  <img src={electricity} alt='Causes' className="icon" />
+                  <div className="heading">
+                      <img src={electricity} alt='Causes' className="icon" />
 
-                  <h2>Electricity</h2>
-                  <h3>Energy Conservation Facts!</h3>
+                      <h2>Electricity</h2>
+                      <h3>Energy Conservation Facts!</h3>
+                  </div>
+
+                  <button className="btn" onClick={this.toggle}>
+                      { height === 0 ? 'Expand' : 'Collapse' }
+                  </button>
+
               </div>
+              <p>
+                  By reducing 30% of average electric use, ONE person can prevent over 2 TONS of pollution a year, as well as save between $600 - $2000.
+              </p>
+              <div className="container-body">
 
-              <button className="btn" onClick={this.toggle}>
-                  { height === 0 ? 'Expand' : 'Collapse' }
-              </button>
+                  <AnimateHeight
+                      duration={600}
+                      height={height}
+                  >
 
-          </div>
-          <p>
-              By reducing 30% of average electric use, ONE person can prevent over 2 TONS of pollution a year, as well as save between $600 - $2000.
-          </p>
-          <div className="container-body">
-
-              <AnimateHeight
-                  duration={600}
-                  height={height}
-              >
-
-                  {/* <Interactive
-                      className="tips-electricity"
-                      src1={person}
-                      src2={battery}
-                      src3={bottles}
-                      src4={carbon}
-                  /> */}
+                      {/* PUT SVG BELOW !!!!!!!!!!
+                          <Interactive
+                          className="tips-electricity"
+                          src1={}
+                          src2={}
+                          src3={}
+                      /> */}
 
                   <div className="tips-container">
 
