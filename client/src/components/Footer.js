@@ -17,6 +17,7 @@ class Footer extends Component {
 		</div>
 		<NavMenu className="footer-nav" />
 		<SocialMenu className="footer-social" />
+		<div className="copyright">climateguide © </div>
 		</footer>
 		);
 	}
