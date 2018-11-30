@@ -21,6 +21,7 @@
         flex-shrink: 1;
         display: grid;
 
+        border-radius: 8px;
         background-color: rgba(255, 255, 255, .7);
 
         img {
@@ -46,9 +47,9 @@
                 transition: all 1s;
             }
 
-            // a:hover {
-            //   transform: scale(1.2);
-            // }
+            a:hover {
+              transform: scale(1.2);
+            }
 
         }
         //end

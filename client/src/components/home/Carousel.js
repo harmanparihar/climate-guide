@@ -20,16 +20,17 @@ class Carousel extends React.Component{
           infiniteScroll={true}
           navigation={false}
           enableHeading={true}
+          enableScroll={false}
           active={0}
         >
 
-            <img src={bus} alt='Transit Facts' />
+            <img src={bus} alt='Transit Facts!' />
 
-            <img src={coffee} alt='Plastic Recyling Facts' />
+            <img src={coffee} alt='Plastic Recyling Facts!' />
 
-            <img src={book} alt='Paper Recycling Facts' />
+            <img src={book} alt='Paper Recycling Facts!' />
 
-            <img src={automobiles} alt='Transit Facts' />
+            <img src={automobiles} alt='Causes for Global Warming' />
 
             <img src={sunset} alt='Energy Conservation Facts!' />
 

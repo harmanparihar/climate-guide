@@ -352,42 +352,60 @@ code {
   font-weight: 500; }
 
 /* All forms and elements (links, buttons) */
-.contact-form label {
-  display: block;
-  margin-top: 1rem;
-  margin-bottom: 1rem; }
-  .contact-form label span {
-    display: inline-block;
-    width: 15%;
-    text-align: right;
+.contact-form.container {
+  margin-top: 7rem;
+  margin-bottom: 7rem; }
+  @media screen and (max-width: 768px) {
+    .contact-form.container {
+      margin-bottom: 2rem; } }
+  .contact-form.container label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+    .contact-form.container label span {
+      display: inline-block;
+      width: 15%;
+      text-align: right;
+      padding-right: 1rem;
+      box-sizing: border-box;
+      color: #2f0945; }
+      @media screen and (max-width: 768px) {
+        .contact-form.container label span {
+          display: block;
+          text-align: left;
+          margin-bottom: 5px; } }
+  .contact-form.container input:not([type="checkbox"]):not([type="submit"]), .contact-form.container textarea {
+    width: 80%;
+    border: 1px solid #0071bb;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    box-sizing: border-box; }
+    @media screen and (max-width: 768px) {
+      .contact-form.container input:not([type="checkbox"]):not([type="submit"]), .contact-form.container textarea {
+        width: 100%; } }
+  .contact-form.container textarea {
+    min-height: 10rem; }
+  .contact-form.container input[type="checkbox"], .contact-form.container input[type="submit"] {
+    margin-left: 15%;
+    margin-right: 5px; }
+    @media screen and (max-width: 768px) {
+      .contact-form.container input[type="checkbox"], .contact-form.container input[type="submit"] {
+        margin-left: 5px; } }
+  .contact-form.container input[type="submit"] {
+    border-radius: 10px;
+    background-color: #684388;
+    border: 0;
+    color: white;
+    padding-left: 1rem;
     padding-right: 1rem;
-    box-sizing: border-box;
-    color: #2f0945; }
-.contact-form input:not([type="checkbox"]):not([type="submit"]), .contact-form textarea {
-  width: 80%;
-  border: 1px solid #0071bb;
-  padding-left: 0.6rem;
-  padding-right: 0.6rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  box-sizing: border-box; }
-.contact-form textarea {
-  min-height: 10rem; }
-.contact-form input[type="checkbox"], .contact-form input[type="submit"] {
-  margin-left: 15%; }
-.contact-form input[type="submit"] {
-  border-radius: 10px;
-  background-color: #684388;
-  border: 0;
-  color: white;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.3rem;
-  padding-bottom: 0.3rem; }
-  .contact-form input[type="submit"]:hover {
-    background-color: #90f1f9;
-    color: #fff;
-    cursor: pointer; }
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem; }
+    .contact-form.container input[type="submit"]:hover {
+      background-color: #90f1f9;
+      color: #fff;
+      cursor: pointer; }
 
 .contact-success-results {
   border-radius: 1rem;
@@ -400,8 +418,7 @@ code {
 .team-members-container {
   margin: 20px 0;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   justify-content: center; }
   .team-members-container .about-member {
     padding: 10px;
@@ -411,6 +428,7 @@ code {
     margin: 10px;
     flex-shrink: 1;
     display: grid;
+    border-radius: 8px;
     background-color: rgba(255, 255, 255, 0.7); }
     .team-members-container .about-member img {
       width: 60%;
@@ -437,6 +455,14 @@ code {
   .team-members-container .about-member:hover {
     background-color: white;
     padding: 10px; }
+
+.resources li {
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+.resources img {
+  margin-right: 10px;
+  width: 30px;
+  vertical-align: bottom; }
 
 a {
   text-decoration: none;
@@ -507,6 +533,11 @@ body {
 [class*="creditgroup"] {
   display: none; }
 
+.active {
+  color: #90f1f9 !important; }
+  .active:hover {
+    color: black !important; }
+
 /* For carousel images */
 .carousel-container img {
   width: 100% !important;
@@ -517,12 +548,11 @@ body {
 .carousel-container .coverflow__container__1P-xE {
   background: none; }
 .carousel-container [class*=coverflow__text] {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.7);
   color: #2f0945;
-  text-align: left; }
-@media screen and (max-width: 768px) {
-  .carousel-container {
-    display: none; } }
+  text-align: center;
+  font-family: "Proza Libre", helvetica, verdana, arial, sans-serif;
+  padding: 1.5rem 1.5rem 1.5rem 1rem; }
 
 .container-head {
   display: grid !important;
@@ -536,9 +566,17 @@ body {
     margin-top: 0;
     grid-column: 1;
     grid-row: 1; }
+    @media (max-width: 768px) {
+      .container-head h2 {
+        font-size: 26px;
+        line-height: 1.15em;
+        font-weight: 600; } }
   .container-head .icon {
     float: left;
     margin-right: 1rem; }
+    @media screen and (max-width: 768px) {
+      .container-head .icon {
+        width: 30px; } }
   .container-head .btn {
     grid-column: 2;
     grid-row: 1;
@@ -557,12 +595,20 @@ body {
     grid-column: 1;
     grid-row: 2;
     font-size: 1.5rem; }
+    @media screen and (max-width: 768px) {
+      .container-head h3 {
+        font-size: 22px;
+        line-height: 1.12em;
+        font-weight: 600; } }
 
 .container-head .heading {
   grid-column: 1;
   grid-row: 1; }
   .container-head .heading h3 {
     grid-row: 1 / -1; }
+    @media screen and (max-width: 768px) {
+      .container-head .heading h3 {
+        clear: both; } }
 
 .container-head .plastic-bottle {
   height: 55px !important; }
@@ -590,6 +636,11 @@ body {
       width: 100%;
       height: 350px;
       object-fit: cover; } }
+@media screen and (max-width: 768px) {
+  .container-body h3 {
+    font-size: 22px;
+    line-height: 1.12em;
+    font-weight: 600; } }
 
 /*Top home*/
 .home_header {
@@ -652,9 +703,11 @@ body {
       background-color: initial;
       top: 10px; }
   .home_header .support-us {
-    background: #2f0945;
+    background: #662e55;
     color: white;
     border: none;
+    width: 110px;
+    height: 40px;
     border-radius: 8px;
     cursor: pointer;
     padding-left: 1.5%;
@@ -701,9 +754,9 @@ body {
   position: relative; }
   @media (max-width: 768px) {
     .Home {
-      padding-top: 70px; } }
+      padding-top: 20px; } }
 
-.oval::before {
+.oval:before {
   background: url(components/assets/images/bg_home.svg) no-repeat center center;
   content: "";
   width: 100%;
@@ -714,11 +767,16 @@ body {
   top: -50%;
   background-size: cover; }
   @media (max-width: 768px) {
-    .oval::before {
+    .oval:before {
       background: none; } }
   @media (max-height: 400px) {
-    .oval::before {
+    .oval:before {
       background: none; } }
+.oval .img_intro {
+  margin-top: 70px; }
+  @media screen and (min-width: 768px) {
+    .oval .img_intro {
+      display: none; } }
 
 .home-intro-container {
   margin-bottom: 50px;
@@ -852,7 +910,8 @@ header {
     color: black;
     border: none;
     border-radius: 8px;
-    min-width: fit-content;
+    width: 110px;
+    height: 40px;
     cursor: pointer;
     padding-left: 1.5%;
     padding-right: 1.5%;
@@ -1012,12 +1071,12 @@ a {
       justify-content: flex-start;
       flex-grow: 1;
       margin: .3rem 0 0; }
-      .site-footer .footer-nav ul li {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem; }
-        @media (max-width: 768px) {
-          .site-footer .footer-nav ul li:nth-child(1), .site-footer .footer-nav ul li:nth-child(2) {
-            display: none; } }
+      @media (max-width: 768px) {
+        .site-footer .footer-nav ul {
+          display: none; }
+          .site-footer .footer-nav ul li {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem; } }
   .site-footer .footer-social ul {
     list-style: none;
     padding: 0;
@@ -1108,16 +1167,33 @@ main {
     padding-left: 10%;
     padding-right: 10%;
     margin: 20px auto; }
+    .wrap .post_section .reply_submit {
+      background-color: #684388;
+      border: 0;
+      width: 100px;
+      padding-left: 0.6rem;
+      padding-right: 0.6rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      color: white;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px; }
     .wrap .post_section form.reply {
-      display: block;
-      margin-top: 20px; }
+      border-radius: 10px;
+      display: grid;
+      grid-template-columns: 1fr 100px;
+      justify-items: flex-end;
+      margin-top: 20px;
+      max-height: 40px; }
       .wrap .post_section form.reply input {
         width: 100%;
-        height: 25px;
-        border-radius: 8px;
-        border: 1px solid #aaa;
-        background-color: #eee;
+        height: 100%;
+        border: 1px solid #2f0945;
+        background-color: rgba(0, 0, 0, 0);
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
         padding: 3px 15px;
+        box-sizing: border-box;
         color: #555;
         font-size: 0.8rem; }
     .wrap .post_section img {
@@ -1135,9 +1211,23 @@ main {
       align-self: flex-end; }
     .wrap .post_section .post {
       display: flex;
+      border-radius: 10px;
       flex-direction: column;
       padding: 1% 5%;
+      background-color: rgba(255, 255, 255, 0.75);
       margin: 20px auto; }
+      .wrap .post_section .post .ul_reply {
+        list-style-type: none;
+        padding: 0; }
+        .wrap .post_section .post .ul_reply li {
+          border: 1px solid rgba(255, 255, 255, 0.75);
+          background-color: rgba(255, 255, 255, 0.75);
+          padding: 10px;
+          width: fit-content;
+          margin: 10px auto 10px 0;
+          border-radius: 10px; }
+          .wrap .post_section .post .ul_reply li span {
+            font-weight: 500; }
 
 .add_post_form {
   display: grid;
@@ -1165,8 +1255,22 @@ main {
     padding: 6px 12px;
     font-size: 14px;
     border-radius: 4px;
+    cursor: pointer;
     background: #2f0945;
     color: white; }
+
+.like_button {
+  display: grid;
+  width: 100%;
+  grid-template-columns: auto 30px 30px;
+  font-size: 1.2rem;
+  color: #2f0945; }
+  .like_button i {
+    padding-right: 20px;
+    padding-top: 1px; }
+    .like_button i:hover {
+      transform: scale(1.2);
+      cursor: pointer; }
 
 button:focus {
   outline: none; }
@@ -1184,13 +1288,29 @@ h1 {
   position: fixed;
   max-width: 400px;
   box-sizing: border-box;
+  text-align: justify;
   padding-top: 2%;
   padding-bottom: 2%;
   padding-left: 2%;
   padding-right: 2%; }
   @media screen and (max-width: 800px) {
     .sidebar {
-      display: none; } }
+      position: relative;
+      margin-bottom: 20px;
+      padding-top: 5%;
+      padding-bottom: 5%;
+      padding-left: 5%;
+      padding-right: 5%;
+      max-width: 100%; } }
+  @media screen and (min-width: 800px) {
+    .sidebar {
+      position: fixed;
+      margin-bottom: 0px;
+      padding-top: 2%;
+      padding-bottom: 2%;
+      padding-left: 2%;
+      padding-right: 2%;
+      max-width: 400px; } }
   .sidebar a {
     display: block; }
   .sidebar h4 {
@@ -1200,15 +1320,21 @@ h1 {
     background-color: #684388;
     border: 0;
     width: 100px;
+    cursor: pointer;
     padding-left: 0.6rem;
     padding-right: 0.6rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-left: 250px; }
+    margin-bottom: 1rem; }
     .sidebar button a {
       color: white; }
+    @media screen and (max-width: 800px) {
+      .sidebar button {
+        margin-left: 210px; } }
+    @media screen and (min-width: 800px) {
+      .sidebar button {
+        margin-left: 250px; } }
     .sidebar button:hover {
       background-color: #502b70;
       color: #fff;
@@ -1237,7 +1363,8 @@ h1 {
       text-align: center;
       color: #2f0945; }
     .form-page .form-div .meta-text {
-      text-align: center; }
+      text-align: center;
+      margin-top: 1rem; }
     .form-page .form-div .text-tertiary {
       line-height: 3rem;
       font-size: 0.9rem; }
@@ -1270,6 +1397,7 @@ h1 {
         border-radius: 10px;
         background-color: #684388;
         border: 0;
+        cursor: pointer;
         color: white;
         padding-left: 0.6rem;
         padding-right: 0.6rem;
@@ -1295,6 +1423,21 @@ h1 {
       .form-page .form-div .login-form input:-webkit-autofill:focus,
       .form-page .form-div .login-form input:-webkit-autofill:active {
         -webkit-box-shadow: 0 0 0 30px white inset; }
+      .form-page .form-div .login-form a:not(.text-secondary) {
+        border-radius: 10px;
+        background-color: #684388;
+        border: 0;
+        cursor: pointer;
+        color: white;
+        padding-left: 0.6rem;
+        padding-right: 0.6rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem; }
+        .form-page .form-div .login-form a:not(.text-secondary):hover {
+          background-color: #502b70;
+          color: #fff;
+          cursor: pointer; }
 
 /* Articles (accessed from carousel) */
 /* Media: images */

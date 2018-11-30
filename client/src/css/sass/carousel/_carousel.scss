@@ -15,7 +15,9 @@
     [class*=coverflow__text]{
       background:rgba($color__white, $alpha7);
       color:$primary_purple;
-      text-align: left;
+      text-align: center;
+
+      font-family: $font__heading;
       padding:1.5rem 1.5rem 1.5rem 1rem;
     }
 
