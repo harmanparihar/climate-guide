@@ -38,7 +38,7 @@ class Team extends Component {
                   <Member
                     memberName="Diego Rodrigues"
                     memberImg={diego}
-                    memberRole="Lead Backend developer / UX UI support"
+                    memberRole="Lead Backend / UX UI support"
                     memberDesc="Diego has a Bachelor of Graphic Design and over 5 years of professional experience in e-commerce and responsive web design. He is excited about taking on new roles and new challenges for this project, as he will be in charge of the dataset and server, along with its structures and processing algorithms."
                     memberLinkedin="http://linkedin.com/in/diegoro"
                     memberFacebook="https://www.facebook.com/rodriguesdito"
@@ -47,7 +47,7 @@ class Team extends Component {
                   <Member
                     memberName="Yulia Stanovsky"
                     memberImg={julia}
-                    memberRole="Lead UX UI / Designer / Animator"
+                    memberRole="Lead Designer / UX UI / Animator"
                     memberDesc="With a Bachelor degree of fine arts and animation, Yulia enjoys creating beautiful and practical design solutions in her projects. She carries her sketch book and color pencils all the time so that she’s always ready to create great UX and UI design along with the animation (via user interaction) of our web app."
                     memberLinkedin="http://linkedin.com/in/yulia-stan"
                     memberFacebook="https://www.facebook.com/jul.stan.50"

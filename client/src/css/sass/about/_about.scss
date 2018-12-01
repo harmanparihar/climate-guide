@@ -79,8 +79,16 @@
 
 // resources styling
 .resources {
+    @media screen and (min-width: 1200px) {
+        ol {
+            display: flex;
+            flex-flow: row wrap;
+        }
+    }
+
     li {
         @include margin-y(1rem);
+        flex-basis: 50%;
     }
 
     img {
