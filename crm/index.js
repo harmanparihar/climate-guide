@@ -215,7 +215,7 @@ client.on('ready', () => {
                     "y": dataArray3[line].trim().split("   ")[1]
                 });
             }
-            console.log(dataArray4);
+            // console.log(dataArray4);
             fs.writeFile('../client/src/components/causes/co2Chart/dataSource/dataset.json', JSON.stringify(dataArray4), 'utf8', (error) => {
                 if (error) throw error;
             });
