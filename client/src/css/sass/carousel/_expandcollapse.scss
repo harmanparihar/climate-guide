@@ -60,10 +60,10 @@
 
   h3{
     grid-row: 1 / -1;
-     @media screen and (max-width: 768px){
+    @media screen and (max-width: 768px){
      clear: both;
-    }
-  }
+   }
+ }
 }
 
 .container-head .plastic-bottle{
@@ -84,12 +84,14 @@
   background:$color__button_hover;
 }
 
-.tips-container .tips-list{
+.tips-container {
+  clear: both;
+  .tips-list{
 
-  li{
-    margin: 10px 0;
+    li{
+      margin: 10px 0;
+    }
   }
-
 }
 
 .container-body{

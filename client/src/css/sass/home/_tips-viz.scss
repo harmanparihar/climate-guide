@@ -1,5 +1,10 @@
-.viz {
-	img {
+.vis {
+	@include clearfix;
+	max-width: 600px;
+	width: 100%;
+	margin:0 auto;
+	img[class^="vis_img"],
+	.img_base {
 		width: 100px;
 		height: auto;
 	}
@@ -10,21 +15,138 @@
 
 		img{
 			width: 20px;
+			height: 20px;
 			cursor: pointer;
 		}
 	}
 }
-// .tips-paper{
-// 	display: grid;
-// 	grid-template-columns: repeat(4, 1fr);
-// 	grid-template-rows: repeat(4, 1fr);
+.tips-paper{
+	// display: grid;
+	// grid-template-columns: repeat(4, 1fr);
+	// grid-template-rows: repeat(4, 1fr);
 
-// 	.img_base{
-// 		grid-column: 1;
-// 		grid-row:1;
-// 	}
-// 	.viz_btn.first{
-// 		grid-column: 2;
-// 		grid-row: 1;
-// 	}
-// }
+
+	.img_base{
+		// grid-column: 1;
+		// grid-row:1;
+		float: left;
+	}
+	.vis_btn.first{
+		// grid-column: 2;
+		// grid-row: 1;
+		float:left;
+		margin-top: 2rem;
+		margin-left: 1rem;
+		
+	}
+	.vis_btn.second{
+		float: left;
+		clear: both;
+		margin-left: 6rem;
+		margin-top: .5rem;
+
+	}
+	.vis_btn.third{
+		float:left;
+		clear: both;
+		margin-left: 3.5rem;
+		margin-top:-4rem
+
+	}
+	.vis_arrow_1{
+		float: left;
+		width: 210px;
+		height: auto;
+		margin-top: 2rem;
+		margin-left: 4rem;
+	}
+	.vis_img_1{
+		float: right;
+		margin-top: 1rem;
+	}
+	.vis_arrow_2{
+		float: left;
+		width: 190px;
+		height: auto;
+		margin-top: 2rem;
+		margin-left: 3rem;
+	}
+	.vis_img_2{
+		float: right;
+	}
+	.vis_arrow_3{
+		float: left;
+		width: 26px;
+		height: auto;
+		margin-left:4.5rem;
+		margin-top:-2rem;
+	}
+	.vis_img_3{
+		float:left;
+		clear: both;
+		margin-left: 2rem;
+	}
+
+	@media screen and (max-width: 768px){
+		.img_base{
+		// grid-column: 1;
+		// grid-row:1;
+		float: left;
+	}
+	.vis_btn.first{
+		// grid-column: 2;
+		// grid-row: 1;
+		float:left;
+		margin-top: 2rem;
+		margin-left: 1rem;
+		
+	}
+	.vis_btn.second{
+		float: left;
+		clear: both;
+		margin-left: 6rem;
+		margin-top: .5rem;
+
+	}
+	.vis_btn.third{
+		float:left;
+		clear: both;
+		margin-left: 3.5rem;
+		margin-top:-4rem
+
+	}
+	.vis_arrow_1{
+		float: left;
+		width: 210px;
+		height: auto;
+		margin-top: 2rem;
+		margin-left: 4rem;
+	}
+	.vis_img_1{
+		float: right;
+		margin-top: 1rem;
+	}
+	.vis_arrow_2{
+		float: left;
+		width: 190px;
+		height: auto;
+		margin-top: 2rem;
+		margin-left: 3rem;
+	}
+	.vis_img_2{
+		float: right;
+	}
+	.vis_arrow_3{
+		float: left;
+		width: 26px;
+		height: auto;
+		margin-left:4.5rem;
+		margin-top:-2rem;
+	}
+	.vis_img_3{
+		float:left;
+		clear: both;
+		margin-left: 2rem;
+	}
+	}
+}

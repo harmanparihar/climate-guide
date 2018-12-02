@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 65.5 148.4" style="enable-background:new 0 0 65.5 148.4;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#XMLID_8_);stroke:#FFFFFF;stroke-miterlimit:10;}
+	.st1{fill:#1E8C7F;stroke:#FFFFFF;stroke-width:5.001761e-002;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#FFFFFF;stroke-width:1.0979;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#000000;stroke-width:1.213;stroke-miterlimit:10;}
+	.st4{fill:#4D66C1;stroke:#FFFFFF;stroke-width:2.285253e-002;stroke-miterlimit:10;}
+</style>
+<g id="lamp_1_">
+	<g id="XMLID_2_">
+		<linearGradient id="XMLID_8_" gradientUnits="userSpaceOnUse" x1="32.7502" y1="0" x2="32.7502" y2="87.6372">
+			<stop  offset="0" style="stop-color:#FFEB86;stop-opacity:0.96"/>
+			<stop  offset="0.2089" style="stop-color:#FFE681;stop-opacity:0.9684"/>
+			<stop  offset="0.4563" style="stop-color:#FFD873;stop-opacity:0.9783"/>
+			<stop  offset="0.7231" style="stop-color:#FFC25B;stop-opacity:0.9889"/>
+			<stop  offset="1" style="stop-color:#FFA23A"/>
+		</linearGradient>
+		<path id="XMLID_3_" class="st0" d="M65.5,32.8C65.5,14.7,50.8,0,32.8,0C14.7,0,0,14.7,0,32.8C0,41,3.1,48.6,8.1,54.3l2.6,3.7
+			c4.7,6.7,7.8,14.4,8.9,22.6l1,7h24l1.6-10.4c0.9-6.1,3.3-12,6.9-17l4-5.5C62.3,48.9,65.5,41.2,65.5,32.8z"/>
+		<path id="XMLID_4_" class="st1" d="M43.7,98.9H44c1.5,0,2.7-1.2,2.7-2.7c0-1.5-1.2-2.7-2.7-2.7H21.8c-1.5,0-2.7,1.2-2.7,2.7
+			c0,1.5,1.2,2.7,2.7,2.7h-0.3c-1.5,0-2.7,1.2-2.7,2.7c0,1.5,1.2,2.7,2.7,2.7H25c-0.7,0.5-1.2,1.3-1.2,2.3c0,1.5,1.2,2.7,2.7,2.7
+			h12.7c1.5,0,2.7-1.2,2.7-2.7c0-0.9-0.5-1.8-1.2-2.3h2.9c1.5,0,2.7-1.2,2.7-2.7C46.4,100.1,45.2,98.9,43.7,98.9z"/>
+	</g>
+	<path id="XMLID_5_" class="st2" d="M19,36.1c-0.5,1-1,3.6,0.2,5.4c2.7,4,7.1,6,13,5.8c7.9-0.3,15.2-2.4,14.9-9.4
+		c-0.2-3.6-3.9-6.7-7.6-2.1c-2,2.4-2.4,47-2.4,47h-7.9l-2.1-45.2c0-1.1-0.5-2.1-1.3-2.7C24.1,33.4,21.1,31.8,19,36.1z"/>
+	<g id="XMLID_6_">
+		<line class="st3" x1="32.8" y1="109.3" x2="32.8" y2="142.1"/>
+		<path id="XMLID_7_" class="st4" d="M33.2,148.4h-1c-0.7,0-1.2-0.6-1.1-1.3l0.9-5.4h1.6l0.7,5.4C34.4,147.8,33.9,148.4,33.2,148.4z
+			"/>
+	</g>
+</g>
+</svg>
