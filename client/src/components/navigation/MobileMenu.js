@@ -6,20 +6,20 @@ import SupportButton from './SupportButton';
 class MobileMenu extends Component {
 	render() {
         // const pages = ['home', 'causes', 'effects', 'solutions', 'about', 'contact'];
-        let pages = ["tips", "causes & effects", "get involved", "about"];
+        let pages = ["home", "causes & effects", "get involved", "about"];
 
         const navLinks = pages.map((page, i) => {
         	return (
         		<li key={i}>
-        		<NavLink to={"/" + page} activeClassName="active">
-        		{page}
-        		</NavLink>
+						{page=="home" ? (<NavLink to={"/"} activeClassName="active">{page}
+            </NavLink>) : (<NavLink to={"/" + page} activeClassName="active">{page}
+            </NavLink>)}
         		</li>
         		);
         });
 
         return (
-        	
+
         	<Menu right className="responsive_menu">
         	<nav className={this.props.className}>
         	<SupportButton />

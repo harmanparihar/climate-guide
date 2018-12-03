@@ -5,19 +5,19 @@ import { NavLink } from 'react-router-dom';
 class NavMenu extends Component {
     render() {
         // const pages = ['home', 'causes', 'effects', 'solutions', 'about', 'contact'];
-        let pages = ["tips", "causes & effects", "get involved", "about"];
+        let pages = ["home", "causes & effects", "get involved", "about"];
 
         const navLinks = pages.map((page, i) => {
             return (
                 <li key={i}>
-                <NavLink to={"/" + page} activeClassName="active">
-                {page}
-                </NavLink>
+                {page=="home" ? (<NavLink to={"/"} activeClassName="">{page}
+                </NavLink>) : (<NavLink to={"/" + page} activeClassName="active">{page}
+                </NavLink>)}
                 </li>
                 );
         });
 
-        return (        
+        return (
          <nav className={this.props.className}>
          <ul>{navLinks}</ul>
          </nav>

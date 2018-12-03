@@ -82,10 +82,7 @@ class App extends Component {
             path="/login"
             render={() => <Login updateUser={this.updateUser} />}
             />
-            <Route
-            path="/tips"
-            render={() => <Home />}
-            />
+            
             <Route
             path="/causes & effects"
             render={() => <CausesEffects />}
