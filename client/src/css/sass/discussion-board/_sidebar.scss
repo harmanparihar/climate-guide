@@ -8,14 +8,14 @@
   text-align: justify;
   @include padding-y(2%);
   @include padding-x(2%);
-  @media screen and (max-width: 800px){
+  @media screen and (max-width: 900px){
     position: relative;
     margin-bottom: 20px;
     @include padding-y(5%);
     @include padding-x(5%);
     max-width: 100%;
   }
-  @media screen and (min-width: 800px){
+  @media screen and (min-width: 900px){
     position: fixed;
     margin-bottom: 0px;
     @include padding-y(2%);
@@ -41,10 +41,10 @@
       @include padding-x(.6rem);
       @include padding-y(.5rem);
       @include margin-y(1rem);
-      @media screen and (max-width: 800px){
+      @media screen and (max-width: 900px){
         margin-left: 210px;
       }
-      @media screen and (min-width: 800px){
+      @media screen and (min-width: 900px){
         margin-left: 250px;
       }
       &:hover {

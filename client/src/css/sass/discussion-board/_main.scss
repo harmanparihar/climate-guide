@@ -11,7 +11,7 @@ main{
   margin: auto;
   margin-left: 420px;
   @include padding-y(5%);
-  @media screen and (max-width: 800px){
+  @media screen and (max-width: 900px){
     margin-left: auto;
   }
   background-color: $color__white-075;
@@ -81,8 +81,12 @@ main{
       margin-right: 20px;
     }
     h3{
-      display: flex;
+      display: grid;
+      grid-template-columns: 60px 5fr 30px;
       align-items: center;
+      @media screen and (max-width: 600px){
+        font-size: 23px;
+      }
     }
     .upvote{
       cursor: pointer;
@@ -153,7 +157,7 @@ main{
 .like_button{
   display: grid;
   width: 100%;
-  grid-template-columns: auto 30px 30px;
+  grid-template-columns: auto 30px;
   font-size:1.2rem;
   color:$primary_purple;
   i{
@@ -165,6 +169,12 @@ main{
     }
   }
 
+}
+.delete{
+  &:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+  }
 }
 button:focus{
   outline: none;

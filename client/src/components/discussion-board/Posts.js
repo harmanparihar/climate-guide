@@ -18,8 +18,11 @@ export default class Posts extends React.Component{
     });
   }
   deletePost(e,index){
-    console.log(e.target.parentElement.parentElement.parentElement.remove());
-    this.props.deletePost(index);
+    if(window.confirm("Do you really want to delete this post permenantly?"))
+    {
+      console.log(e.target.parentElement.parentElement.parentElement.remove());
+      this.props.deletePost(index);
+    }
   }
   reply(event,index){
     event.preventDefault();
@@ -42,6 +45,7 @@ export default class Posts extends React.Component{
         <div className="post">
           <h3>
             <img src="./user.png" alt="user icon"/>{this.props.data[index].username}
+            {(this.props.name==this.props.data[index].username) ? <i onClick={(e) => this.deletePost(e,index)}  className="delete fas fa-trash-alt"></i> : null}
           </h3>
           <p>
             {this.props.data[index].comment}
@@ -49,7 +53,6 @@ export default class Posts extends React.Component{
           <div className="like_button">
           <div>{this.props.data[index].likes} likes</div>
             <i onClick={() => this.incrementUps(index)} className="upvote" className="fas fa-thumbs-up"></i>
-            <i onClick={(e) => this.deletePost(e,index)} className="delete" className="fas fa-trash-alt"></i>
           </div>
           <form className="reply">
             <input onChange={(e)=>this.handleChange(e)} placeholder="Add Your Comment" type="text" name="fname"/>
