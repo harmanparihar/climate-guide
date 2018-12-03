@@ -517,22 +517,23 @@
 	 align-self: flex-start;
 	 justify-self:center;
  }
+
  .vis_img_1{
 	 grid-column: 1;
 	 grid-row: 1;
 	 justify-self:flex-end;
-   max-width: 130px;
-   height: auto;
    width:100%;
+   max-width: 110px;
+   height: auto;
 
  }
  .vis_img_2{
 	 grid-column: 1;
 	 grid-row: 3;
-   min-width: 100px;
+   width:100%;
+   max-width: 150px;
    height: auto;
 	 justify-self:center;
-   width:100%;
  }
  .vis_img_3{
 	 grid-column: 2;
@@ -553,4 +554,13 @@
 }
 .vis{
   padding: 20px;
+}
+.img_base, .vis_img_1, .vis_img_2, .vis_img_3{
+  max-width: 150px;
+  @media screen and (max-width: 600px){
+    width:110px;
+  }
+}
+.img_base{
+  justify-self:center;
 }
