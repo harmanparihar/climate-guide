@@ -26,7 +26,7 @@ export default class Posts extends React.Component{
   }
   reply(event,index){
     event.preventDefault();
-    if(this.state.text!=""){
+    if(this.state.text!==""){
     console.log('reply submit');
     console.log(this.state.name);
     console.log(this.state.text);
@@ -45,7 +45,7 @@ export default class Posts extends React.Component{
         <div className="post">
           <h3>
             <img src="./user.png" alt="user icon"/>{this.props.data[index].username}
-            {(this.props.name==this.props.data[index].username) ? <i onClick={(e) => this.deletePost(e,index)}  className="delete fas fa-trash-alt"></i> : null}
+            {(this.props.name===this.props.data[index].username) ? <i onClick={(e) => this.deletePost(e,index)}  className="delete fas fa-trash-alt"></i> : null}
           </h3>
           <p>
             {this.props.data[index].comment}
