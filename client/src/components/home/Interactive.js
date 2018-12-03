@@ -42,44 +42,28 @@ class Interactive extends Component {
   render() {
     return (
       <div className={"vis  " + this.props.className} >
-     <img src={this.props.src1} alt="vis" className="img_base" />
+      <img src={this.props.src1} alt="vis" className="img_base" />
+
+      <button onClick={this.first} className="vis_btn first"> <img src={this.state.first[1]}/></button>
+      <img src={this.props.src2} alt="vis" style={{opacity: this.state.first[0]}} className="vis_img_1" />
+
+      <button onClick={this.second} className="vis_btn second"> 
+      <img src={this.state.second[1]}/></button>
 
 
+      {this.props.className === "tips-paper" ? <button onClick={this.third} className="vis_btn third"> <img src={this.state.third[1]}/></button> : null}
+      <img src={this.props.src3} alt="vis" style={{opacity: this.state.second[0]}} className="vis_img_2" />
+
+      {this.props.className === "tips-plastic" ? <button onClick={this.third} className="vis_btn third"> <img src={this.state.third[1]}/></button> : null}
 
 
+      {this.props.className === "tips-paper" ? <img src={this.props.src4} alt="vis" style={{opacity: this.state.third[0]}} className="vis_img_3" />  : null}
 
+      {this.props.className === "tips-plastic" ? <img src={this.props.src4} alt="vis" style={{opacity: this.state.third[0]}} className="vis_img_3"/> : null}
+      
+      </div>
+      );
+    }
+  }
 
-
-     <button onClick={this.first} className="vis_btn first"> <img src={this.state.first[1]}/></button>
-     <img src={this.props.srcArrowOne} alt="vis" style={{opacity: this.state.first[0]}} className="vis_arrow_1" /> 
-     <img src={this.props.src2} alt="vis" style={{opacity: this.state.first[0]}} className="vis_img_1" />
-
-
-
-     <button onClick={this.second} className="vis_btn second"> 
-     <img src={this.state.second[1]}/></button>
-
-     <img src={this.props.srcArrowTwo} alt="vis" style={{opacity: this.state.second[0]}} className="vis_arrow_2" />
-
-     {this.props.className === "tips-paper" ? <button onClick={this.third} className="vis_btn third"> <img src={this.state.third[1]}/></button> : null}
-
-
-     {this.props.className === "tips-plastic" ? <button onClick={this.third} className="vis_btn third"> <img src={this.state.third[1]}/></button> : null}
-
-
-     <img src={this.props.srcArrowThree} alt="vis" style={{opacity: this.state.third[0]}} className="vis_arrow_3" />
-
-     <img src={this.props.src3} alt="vis" style={{opacity: this.state.second[0]}} className="vis_img_2" />
-
-
-
-     {this.props.className === "tips-paper" ? <img src={this.props.src4} alt="vis" style={{opacity: this.state.third[0]}} className="vis_img_3" />  : null}
-
-
-     {this.props.className === "tips-plastic" ? <img src={this.props.src4} alt="vis" style={{opacity: this.state.third[0]}} className="vis_img_3"/> : null}
-     </div>
-     );
-   }
- }
-
- export default Interactive;
+  export default Interactive;

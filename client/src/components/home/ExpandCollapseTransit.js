@@ -1,9 +1,11 @@
 import React from 'react';
 import AnimateHeight from 'react-animate-height';
 import carSmoke from '../assets/icons/transit-colour.svg';
+import bus from '../assets/icons/bus_transit.svg';
+import ton from '../assets/icons/ton.svg';
+import money from '../assets/icons/money.svg';
 
 import Interactive from './Interactive';
-// import PUTSOMETHINGHERE!!!!!!!!! from '../assets/icons/.svg';
 
 class ExpandCollapseTransit extends React.Component{
 
@@ -51,13 +53,12 @@ class ExpandCollapseTransit extends React.Component{
                   height={height}
               >
 
-                  {/* PUT SVG BELOW !!!!!!!!!!
                       <Interactive
                       className="tips-transit"
-                      src1={}
-                      src2={}
-                      src3={}
-                  /> */}
+                      src1={bus}
+                      src2={ton}
+                      src3={money}
+                  /> 
 
                   <div className="tips-container">
 

@@ -1,6 +1,6 @@
 .vis {
 	@include clearfix;
-	max-width: 600px;
+	max-width: 500px;
 	width: 100%;
 	margin:0 auto;
 	img[class^="vis_img"],
@@ -20,20 +20,14 @@
 		}
 	}
 }
+
+/*tips for paper*/
 .tips-paper{
-	// display: grid;
-	// grid-template-columns: repeat(4, 1fr);
-	// grid-template-rows: repeat(4, 1fr);
-
-
+	box-sizing: border-box;
 	.img_base{
-		// grid-column: 1;
-		// grid-row:1;
 		float: left;
 	}
 	.vis_btn.first{
-		// grid-column: 2;
-		// grid-row: 1;
 		float:left;
 		margin-top: 2rem;
 		margin-left: 1rem;
@@ -50,37 +44,19 @@
 		float:left;
 		clear: both;
 		margin-left: 3.5rem;
-		margin-top:-4rem
+		margin-top:2rem
 
 	}
-	.vis_arrow_1{
-		float: left;
-		width: 210px;
-		height: auto;
-		margin-top: 2rem;
-		margin-left: 4rem;
-	}
+	
 	.vis_img_1{
 		float: right;
 		margin-top: 1rem;
 	}
-	.vis_arrow_2{
-		float: left;
-		width: 190px;
-		height: auto;
-		margin-top: 2rem;
-		margin-left: 3rem;
-	}
+	
 	.vis_img_2{
 		float: right;
 	}
-	.vis_arrow_3{
-		float: left;
-		width: 26px;
-		height: auto;
-		margin-left:4.5rem;
-		margin-top:-2rem;
-	}
+	
 	.vis_img_3{
 		float:left;
 		clear: both;
@@ -88,65 +64,253 @@
 	}
 
 	@media screen and (max-width: 768px){
+
+		padding-left: 15vh;
+
 		.img_base{
-		// grid-column: 1;
-		// grid-row:1;
-		float: left;
+		padding-left: 15vh;
+		
+			float: left;
+		}
+		.vis_btn.first{
+			float:left;
+			clear: both;
+			margin-top: 2rem;
+			margin-left: 0rem;
+
+		}
+		.vis_btn.second{
+			float: left;
+			clear: none;
+			margin-left: 0rem;
+			margin-top: -2rem;
+
+		}
+		.vis_btn.third{
+			float:left;
+			clear: none;
+			margin-left: 7rem;
+			margin-top: -2rem;
+
+		}
+
+		.vis_img_1{
+			float: left;
+			clear: both;
+			margin-top: 1rem;
+		}
+
+		.vis_img_2{
+			float: left;
+		}
+
+		.vis_img_3{
+			float:left;
+			clear: none;
+			margin-left:1rem;
+		}
+	}
+	@media screen and (max-width: 500px){
+		padding-left: 4vh;
+		.img_base{
+			margin-left:5rem;
+			padding:0;
+			float: left;
+		}
+	}
+}
+
+
+/*tips for plastic */
+.tips-plastic{
+	.img_base{
+		float: right;
+		width: 50px;
+		margin-right: 5rem;
 	}
 	.vis_btn.first{
-		// grid-column: 2;
-		// grid-row: 1;
-		float:left;
+		float:right;
 		margin-top: 2rem;
-		margin-left: 1rem;
-		
+		margin-right: 1rem;
+
 	}
 	.vis_btn.second{
-		float: left;
-		clear: both;
-		margin-left: 6rem;
-		margin-top: .5rem;
+		float: right;
+		clear:left;
+		margin-right: 1rem;
+		margin-top: 5rem;
+
 
 	}
 	.vis_btn.third{
-		float:left;
+		float:right;
 		clear: both;
-		margin-left: 3.5rem;
-		margin-top:-4rem
+		margin-right: 5rem;
+		margin-top:2rem
 
 	}
-	.vis_arrow_1{
-		float: left;
-		width: 210px;
-		height: auto;
-		margin-top: 2rem;
-		margin-left: 4rem;
-	}
+
 	.vis_img_1{
-		float: right;
+		float: left;
 		margin-top: 1rem;
 	}
-	.vis_arrow_2{
-		float: left;
-		width: 190px;
-		height: auto;
-		margin-top: 2rem;
-		margin-left: 3rem;
-	}
+
 	.vis_img_2{
-		float: right;
-	}
-	.vis_arrow_3{
 		float: left;
-		width: 26px;
-		height: auto;
-		margin-left:4.5rem;
-		margin-top:-2rem;
+		margin-top: 5rem;
 	}
+
 	.vis_img_3{
 		float:left;
-		clear: both;
-		margin-left: 2rem;
 	}
+
+	@media screen and (max-width: 768px){
+		.img_base{
+
+			float: left;
+		}
+		.vis_btn.first{
+
+			float:left;
+			clear: both;
+			margin-left: 1rem;
+
+		}
+		.vis_btn.second{
+			float: left;
+			margin-left: 6rem;
+
+		}
+		.vis_btn.third{
+			float:left;
+			margin-left: 3.5rem;
+
+		}
+
+		.vis_img_1{
+			float: right;
+			margin-top: 1rem;
+		}
+
+		.vis_img_2{
+			float: right;
+		}
+
+		.vis_img_3{
+			float:left;
+			clear: both;
+			margin-left: 2rem;
+		}
+	}
+}
+
+/*tips for transit */
+.tips-transit{
+	.img_base{
+		width: 240px;
+		margin: 0 auto;
+	}
+	.vis_btn.first{
+		float:left;
+		margin-top: 2rem;
+	}
+	.vis_btn.second{
+		float: right;
+		margin-right: 1rem;
+	}
+	.vis_img_1{
+		float: left;
+		clear: both;
+		margin-top: 5rem;
+	}
+
+	.vis_img_2{
+		float: right;
+		margin-top: 6rem;
+	}
+
+
+
+	@media screen and (max-width: 768px){
+		.img_base{
+
+		}
+		.vis_btn.first{
+
+			float:left;
+			margin-top: 2rem;
+			margin-left: 1rem;
+
+		}
+		.vis_btn.second{
+			float: left;
+			clear: both;
+			margin-left: 6rem;
+			margin-top: .5rem;
+
+		}
+		.vis_img_1{
+			float: right;
+			margin-top: 1rem;
+		}
+		.vis_img_2{
+			float: right;
+		}
+	}
+}
+
+/*tips for eletricity */
+.tips-eletricity{
+	.img_base{
+		width: 60px;
+		margin: 0 auto;
+		display: block;
+	}
+	.vis_btn.first{
+		float:left;
+		clear: both;
+	}
+	.vis_btn.second{
+		float: right;
+		margin-right: 1rem;
+	}
+	.vis_img_1{
+		float: left;
+		clear: both;
+		margin-top: 5rem;
+	}
+
+	.vis_img_2{
+		float: right;
+		margin-top: 6rem;
+	}
+
+
+
+	@media screen and (max-width: 768px){
+		.img_base{
+
+		}
+		.vis_btn.first{
+
+			float:left;
+			margin-top: 2rem;
+			margin-left: 1rem;
+
+		}
+		.vis_btn.second{
+			float: left;
+			clear: both;
+			margin-left: 6rem;
+			margin-top: .5rem;
+
+		}
+		.vis_img_1{
+			float: right;
+			margin-top: 1rem;
+		}
+		.vis_img_2{
+			float: right;
+		}
 	}
 }

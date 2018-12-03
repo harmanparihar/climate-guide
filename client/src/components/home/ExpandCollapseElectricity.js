@@ -2,14 +2,16 @@ import React from 'react';
 import AnimateHeight from 'react-animate-height';
 import electric from '../assets/images/electric.png';
 import electricity from '../assets/icons/energy-colour.svg';
+import lamp from '../assets/icons/lamp_eletricity.svg';
+import ton from '../assets/icons/ton.svg';
+import money from '../assets/icons/money.svg';
 
 import Interactive from './Interactive';
-// import PUTSOMETHINGHERE!!!!!!!!! from '../assets/icons/.svg';
 
 class ExpandCollapseElectricity extends React.Component{
 
   state = {
-      height: 0
+      // height: 0
   }
 
   toggle = () => {
@@ -52,13 +54,12 @@ class ExpandCollapseElectricity extends React.Component{
                       height={height}
                   >
 
-                      {/* PUT SVG BELOW !!!!!!!!!!
-                          <Interactive
-                          className="tips-electricity"
-                          src1={}
-                          src2={}
-                          src3={}
-                      /> */}
+                       <Interactive
+                      className="tips-eletricity"
+                      src1={lamp}
+                      src2={ton}
+                      src3={money}
+                  /> 
 
                   <div className="tips-container">
 

@@ -8,9 +8,6 @@ import treeForest from '../assets/icons/tree-forest.svg';
 import pollution from '../assets/icons/co2-pollution.svg';
 import trucks from '../assets/icons/trucks.svg';
 
-import ArrowPaperOne from '../assets/icons/paper_arrow1.svg';
-import ArrowPaperTwo from '../assets/icons/paper_arrow2.svg';
-import ArrowPaperThree from '../assets/icons/paper_arrow3.svg';
 
 class ExpandCollapsePaper extends React.Component{
 
@@ -62,11 +59,7 @@ class ExpandCollapsePaper extends React.Component{
         <Interactive
         className="tips-paper"
         src1={papers}
-        srcArrowOne={ArrowPaperOne}
-        srcArrowTwo={ArrowPaperTwo}
-        srcArrowThree={ArrowPaperThree}
         src2={treeForest}
-
         src3={pollution}
         src4={trucks}
         />
