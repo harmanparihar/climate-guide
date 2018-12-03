@@ -41,6 +41,9 @@ main{
     // border: 1px solid #666;
     border-radius: 4px;
     @include padding-x(10%);
+    @media screen and (max-width: 600px){
+      @include padding-x(2%);
+    }
     margin: 20px auto;
     .reply_submit{
       background-color: #684388;
