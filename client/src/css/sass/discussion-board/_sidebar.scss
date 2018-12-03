@@ -42,7 +42,8 @@
       @include padding-y(.5rem);
       @include margin-y(1rem);
       @media screen and (max-width: 900px){
-        margin-left: 210px;
+        float: right;
+        margin-right: 0px;
       }
       @media screen and (min-width: 900px){
         margin-left: 250px;

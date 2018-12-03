@@ -12,7 +12,6 @@ class Signup extends Component {
 			username: '',
 			password: '',
 			confirmPassword: '',
-
 		}
 		this.handleSubmit = this.handleSubmit.bind(this)
 		this.handleChange = this.handleChange.bind(this)
@@ -37,9 +36,7 @@ class Signup extends Component {
 			console.log(response)
 			if (!response.data.errmsg) {
 				console.log('successful signup')
-					this.setState({ //redirect to login page
-						redirectTo: `${path_backend}/login`
-					})
+					window.location.replace("/login");
 				} else {
 					console.log('username already taken')
 				}
@@ -53,7 +50,8 @@ class Signup extends Component {
 				username: '',
 				password: '',
 			});
-			alert("Your account has been created");
+
+
 		}
 
 
