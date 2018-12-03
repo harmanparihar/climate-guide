@@ -523,7 +523,7 @@
 	 grid-row: 1;
 	 justify-self:flex-end;
    width:100%;
-   max-width: 110px;
+   max-width: 150px;
    height: auto;
 
  }
@@ -531,7 +531,6 @@
 	 grid-column: 1;
 	 grid-row: 3;
    width:100%;
-   max-width: 150px;
    height: auto;
 	 justify-self:center;
  }
@@ -539,7 +538,7 @@
 	 grid-column: 2;
 	 grid-row: 3;
 	 margin-top: 120px;
-   min-width: 100px;
+   min-width: 110px;
    height: auto;
 	 @media screen and (max-width: 700px){
 		 margin-top: 70px;
