@@ -42,15 +42,14 @@ export default class Main extends React.Component{
       username: this.props.username,
     })
   }
-  updateData(temp){
-    this.setState(temp);
+  updateData(){
+    // this.setState();
     fetch(`${path_backend}/fetch`, {method: 'GET'})
-    .then(function(response) {
-      if(response.ok) {
-        console.log('Database was updated new post added');
-        return;
-      }
-      throw new Error('Request failed.');
+    .then(response => response.json())
+    .then(jsondata => {
+        console.log(this.state.data)
+        this.setState({data: jsondata.reverse()})
+        console.log(this.state.data)
     })
     .catch(function(error) {
       console.log(error);
@@ -97,6 +96,7 @@ export default class Main extends React.Component{
   };
   deletePost(index){
     var temp = this.state.data;
+    const hulu_obj_ref =this;
     fetch(`${path_backend}/fetch/${temp[index]._id}`, {method: 'DELETE',headers: {
             "Content-Type": "application/json; charset=utf-8",
             // "Content-Type": "application/x-www-form-urlencoded",
@@ -104,6 +104,7 @@ export default class Main extends React.Component{
     .then(function(response) {
       if(response.ok) {
         console.log('Record was deleted');
+        hulu_obj_ref.updateData();
         return;
 
       }

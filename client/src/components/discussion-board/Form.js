@@ -15,11 +15,11 @@ export default class Form extends React.Component{
     this.setState({username:this.props.name,
     comment: event.target.value});
   }
+
   handleSubmit(event){
     event.preventDefault();
       console.log(this.state);
-      this.props.data.unshift(this.state);
-      this.props.updatedb(this.props.data);
+      const hululu = this;
       fetch(`${path_backend}/fetch/`, {method: 'POST',headers: {
               "Content-Type": "application/json; charset=utf-8",
               // "Content-Type": "application/x-www-form-urlencoded",
@@ -29,6 +29,9 @@ export default class Form extends React.Component{
       .then(function(response) {
         if(response.ok) {
           console.log('Click was recorded');
+          console.log("ander");
+          hululu.props.updatedb();
+          console.log(hululu);
           return;
         }
         throw new Error('Request failed.');
@@ -38,6 +41,7 @@ export default class Form extends React.Component{
       });
       this.setState({comment:""});
   }
+
   render(){
     return(
       <form className="add_post_form" onSubmit={this.handleSubmit.bind(this)}>

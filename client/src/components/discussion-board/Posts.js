@@ -20,7 +20,7 @@ export default class Posts extends React.Component{
   deletePost(e,index){
     if(window.confirm("Do you really want to delete this post permenantly?"))
     {
-      console.log(e.target.parentElement.parentElement.parentElement.remove());
+      // console.log(e.target.parentElement.parentElement.parentElement.remove());
       this.props.deletePost(index);
     }
   }
