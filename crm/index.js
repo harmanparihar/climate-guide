@@ -234,7 +234,6 @@ client.connect({
 // SEND FORM SUBMISSION TO EMAIL
 
 const nodemailer = require('nodemailer');
-const path = require('path');
 
 app.post('/api/form', (req, res) =>{
     nodemailer.createTestAccount(( err, account) => {
