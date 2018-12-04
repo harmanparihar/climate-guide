@@ -311,9 +311,14 @@ a {
             border-radius: 0;
           }
         }
-      }
-    }
-  }
+        a.active{
+         box-shadow: none;
+         background:$color__menu_mobile_hover;
+         border-radius: 0;
+       }
+     }
+   }
+ }
 
 
 }

@@ -9,8 +9,8 @@ class Member extends Component {
                 <p>{this.props.memberRole}</p>
                 <p>{this.props.memberDesc}</p>
                 <p className="connect-me">
-                    <a href={this.props.memberLinkedin}><span className="fab fa-linkedin"></span></a>
-                    {this.props.memberGithub ? <a href={this.props.memberGithub}><span className="fab fa-github"></span></a> : null}
+                    <a href={this.props.memberLinkedin} target="_blank" rel="noopener noreferrer"><span className="fab fa-linkedin"></span></a>
+                    {this.props.memberGithub ? <a href={this.props.memberGithub} target="_blank"  rel="noopener noreferrer"><span className="fab fa-github"></span></a> : null}
                 </p>
             </section>
         );

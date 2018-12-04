@@ -19,6 +19,7 @@
     margin-right:1rem;
     @media screen and (max-width: 768px){
       width: 30px;
+      margin-right:.5rem;
     }
   }
 
@@ -67,7 +68,10 @@
 }
 
 .container-head .plastic-bottle{
-  height: 55px !important;
+  height: 55px;
+  @media screen and (max-width: 768px){
+    height: 40px;
+  }
 }
 
 .container-head .btn{
