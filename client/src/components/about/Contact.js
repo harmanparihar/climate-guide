@@ -12,7 +12,8 @@ class Contact extends Component {
             userSubject: "",
             userMessage: "",
             userSubscribe: false,
-            sentSuccess: false
+            sending: false,
+            sent: false
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -32,11 +33,20 @@ class Contact extends Component {
     async handleSubmit(e) {
         e.preventDefault();
         this.setState({
-            sentSuccess: true
+            sending: true
         });
+
         await axios.post('http://localhost:8080/api/form', this.state)
         .then(res => {
-            console.log("Response on front-end" + res);
+            if (res.data.message === 'success') {
+                this.setState({
+                    sending: false,
+                    sent: true
+                });
+            } else {
+                alert("Something's not right... Would you like to try again?");
+            }
+
         })
         .catch(err => {
             console.log('ERROR on front-end ' + err);
@@ -94,7 +104,9 @@ class Contact extends Component {
                     />
                     Did you join in the conversation in our discussion board?
                 </label>
-                <input type="submit" value="Send message" />
+                <button type="submit">
+                    {this.state.sending ? <span><span class="fas fa-spinner fa-spin"></span> Sending</span> : "Send message"}
+                </button>
             </form>
         );
     }
@@ -119,7 +131,7 @@ class Contact extends Component {
     }
 
     render() {
-        return this.state.sentSuccess ? this.renderSuccess() : this.renderForm();
+        return this.state.sent ? this.renderSuccess() : this.renderForm();
     }
 }
 

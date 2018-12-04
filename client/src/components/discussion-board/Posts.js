@@ -1,4 +1,6 @@
 import React from 'react';
+import userIcon from '../assets/icons/user.png';
+
 export default class Posts extends React.Component{
   constructor(){
     super();
@@ -44,7 +46,7 @@ export default class Posts extends React.Component{
       <div  key={index} id ={this.props.data[index]._id}>
         <div className="post">
           <h3>
-            <img src="./user.png" alt="user icon"/>{this.props.data[index].username}
+            <img src={userIcon} alt="user icon"/>{this.props.data[index].username}
             {(this.props.name===this.props.data[index].username) ? <i onClick={(e) => this.deletePost(e,index)}  className="delete fas fa-trash-alt"></i> : null}
           </h3>
           <p>

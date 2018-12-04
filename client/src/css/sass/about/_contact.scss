@@ -39,7 +39,7 @@
         min-height: 10rem;
     }
 
-    input[type="checkbox"], input[type="submit"] {
+    input[type="checkbox"], button[type="submit"] {
         margin-left: 15%;
         margin-right: 5px;
         @media screen and (max-width: 768px ){
@@ -47,11 +47,12 @@
         }
     }
 
-    input[type="submit"] {
-        border-radius: 10px;
-        background-color: $color__button;
-        border: 0;
+    button[type="submit"] {
         color: $color__white;
+        background-color: $color__button;
+        border-radius: 10px;
+        border: 0;
+        width: 145px;
         @include padding-x(1rem);
         @include padding-y(.3rem);
 
@@ -66,7 +67,10 @@
 }
 
 .contact-success-results {
-    // border: 2px solid $color__hippie-pink;
     border-radius: 1rem;
     @include padding-x(1rem);
+
+    p {
+        @include margin-y(.5rem);
+    }
 }
