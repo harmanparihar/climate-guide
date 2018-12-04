@@ -50,10 +50,9 @@ body{
 	display: none;
 }
 
-.active{
+.header-nav .active{
 	color:$color__skyblue!important;
 	&:hover{
 		color:$color__black!important;
 	}
 }
-

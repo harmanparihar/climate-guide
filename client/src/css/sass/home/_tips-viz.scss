@@ -404,13 +404,16 @@
    grid-template-columns: 2fr 110px 2fr;
    grid-template-rows: auto 30px auto ;
  }
- img{
-	 height: 100px;
-	 width: auto;
-	 @media screen and (max-width: 700px){
-		 height: 70px;
-	 }
- }
+
+.vis {
+     img{
+    	 height: 100px;
+    	 width: auto;
+    	 @media screen and (max-width: 700px){
+    		 height: 70px;
+    	 }
+     }
+}
  .img_base{
 	 width: 100%;
 	 height: auto;
