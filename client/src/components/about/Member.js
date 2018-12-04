@@ -10,7 +10,7 @@ class Member extends Component {
                 <p>{this.props.memberDesc}</p>
                 <p className="connect-me">
                     <a href={this.props.memberLinkedin}><span className="fab fa-linkedin"></span></a>
-                    <a href={this.props.memberFacebook}><span className="fab fa-facebook"></span></a>
+                    {this.props.memberGithub ? <a href={this.props.memberGithub}><span className="fab fa-github"></span></a> : null}
                 </p>
             </section>
         );

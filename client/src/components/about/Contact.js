@@ -92,7 +92,7 @@ class Contact extends Component {
         return (
             <div className="contact-success container">
                 <h2>Contact Us</h2>
-                <p>Thank you for contacting us. We'll get back to you within 5 days.</p>
+                <p>Thank you for contacting us. We'll get back to you within 5 days. Or <a href="mailto:maggievu91@gmail.com?subject=Hello%20from%20Climate%20Guide%20user">email us directly</a>. </p>
                 <div className="contact-success-results">
                     <p><strong>Your message</strong></p>
                     <p>Name: {this.state.userName}</p>
