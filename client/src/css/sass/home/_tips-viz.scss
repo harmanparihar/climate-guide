@@ -559,6 +559,11 @@
 .vis{
   padding: 20px;
 }
+
+.vis_btn:hover{
+  cursor: pointer;
+}
+
 .img_base, .vis_img_1, .vis_img_2, .vis_img_3{
   max-width: 150px;
   @media screen and (max-width: 600px){
