@@ -1,7 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import bodyParser from 'body-parser'
-import routes from './src/routes/crmRoutes'
+import bodyParser from 'body-parser';
+import routes from './src/routes/crmRoutes';
 
 import cors from 'cors';
 const passport = require('./src/passport');
@@ -10,10 +10,10 @@ const app = express();
 const PORT = 8080;
 const db_dev= 'mongodb://diego:langara123@ds241133.mlab.com:41133/climate_guide_v0';
 
-const session = require('express-session')
-const MongoStore = require('connect-mongo')(session)
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
 
-const user = require('./src/routes/user')
+const user = require('./src/routes/user');
 
 // mongoose connection
 mongoose.Promise = global.Promise;
@@ -222,10 +222,57 @@ client.on('ready', () => {
         });
     });
 });
-app.get('/fusionCharts', (req, res) => {
-    res.send({exp: "hi"});
-});
+// app.get('/fusionCharts', (req, res) => {
+//     res.send({exp: "hibyy"});
+// });
 
 client.connect({
     host: "aftp.cmdl.noaa.gov"
 });
+
+
+// SEND FORM SUBMISSION TO EMAIL
+
+const nodemailer = require('nodemailer');
+const path = require('path');
+
+app.post('/api/form', (req, res) =>{
+    nodemailer.createTestAccount(( err, account) => {
+        const htmlEmail = `
+        <div>
+        <p>Name: ${req.body.userName}</p>
+        <p>Email: ${req.body.userEmail}</p>
+        <p>Subject: ${req.body.userSubject}</p>
+        <p>Message: ${req.body.userMessage}</p>
+        <p>Member of Discussion Board: ${req.body.userSubscribe}</p>
+        </div>
+        `;
+
+        var transporter = nodemailer.createTransport({
+            host: 'smtp.mailgun.org',
+            port: 587,
+            auth: {
+                // user: process.env.GMAIL_EMAIL,
+                // pass: process.env.GMAIL_PASS
+                user: "postmaster@sandbox3d5d1673a19941b6bad15f59c7585e15.mailgun.org",
+                pass: "123456aS"
+            }
+        });
+
+        let mailOptions = {
+            from: req.body.userEmail,
+            to:'maggievu91@gmail.com',
+            replyTo: req.body.userEmail,
+            subject: req.body.userSubject,
+            text: req.body.userMessage,
+            html: htmlEmail
+        }
+
+        transporter.sendMail(mailOptions, function (err, info) {
+            if(err)
+            console.log('ERROR' + err)
+            else
+            console.log('INFO' + info);
+        });
+    })
+})

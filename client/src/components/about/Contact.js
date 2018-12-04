@@ -1,6 +1,7 @@
 // Form.js use React local state management to render the notification of successfully sent message
 
 import React, { Component } from "react";
+import axios from 'axios';
 
 class Contact extends Component {
     constructor(props) {
@@ -28,11 +29,19 @@ class Contact extends Component {
         });
     }
 
-    handleSubmit(e) {
+    async handleSubmit(e) {
         e.preventDefault();
         this.setState({
             sentSuccess: true
         });
+        await axios.post('http://localhost:8080/api/form', this.state)
+        .then(res => {
+            console.log("Response on front-end" + res);
+        })
+        .catch(err => {
+            console.log('ERROR on front-end ' + err);
+        });
+        // console.log(this.state);
     }
 
     renderForm() {
@@ -55,6 +64,7 @@ class Contact extends Component {
                         name="userEmail"
                         value={this.state.userEmail}
                         onChange={this.handleChange}
+                        required
                     />
                 </label>
                 <label>
@@ -72,6 +82,7 @@ class Contact extends Component {
                         name="userMessage"
                         value={this.state.userMessage}
                         onChange={this.handleChange}
+                        required
                     />
                 </label>
                 <label>
@@ -100,7 +111,7 @@ class Contact extends Component {
                     <p>Subject: {this.state.userSubject}</p>
                     <p>Message: {this.state.userMessage}</p>
                     <p>
-                        I <em>{this.state.userSubscribe ? "did" : "didn't"}</em> join in the conversation.
+                        I {this.state.userSubscribe ? "am" : "am not"} a member of Climate Guide's discussion board.
                     </p>
                 </div>
             </div>
