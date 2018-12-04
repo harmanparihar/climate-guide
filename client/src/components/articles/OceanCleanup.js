@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 class OceanCleanup extends Component {
     render() {
         return (
-            <article>
+                 <article className="article">
+
                 <h3 className="article-title">The Ocean Cleanup</h3>
                 <a href="https://www.theoceancleanup.com">www.theoceancleanup.com</a>
                 <div className="article-content">

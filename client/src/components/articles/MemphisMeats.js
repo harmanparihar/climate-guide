@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 class MemphisMeats extends Component {
     render() {
         return (
-            <article>
+                 <article className="article">
+
                 <h3 className="article-title">Memphis Meats - No Kill Meat</h3>
                 <a href="http://www.memphismeats.com/home">www.memphismeats.com</a>
                 <div className="article-content">

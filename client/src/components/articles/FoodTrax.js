@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 class FoodTrax extends Component {
     render() {
         return (
-            <article>
+                  <article className="article">
+
                 <h3 className="article-title">FoodTrax – Food Chain traceability solution for food processors to track and trace products</h3>
                 <a href="https://www.bcdc.online/foodtrax">www.bcdc.online/foodtrax</a>
                 <div className="article-content">
