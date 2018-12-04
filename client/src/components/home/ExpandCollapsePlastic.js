@@ -36,7 +36,7 @@ class ExpandCollapsePlastic extends React.Component{
                   <img src={bottle} alt='Causes' className="icon plastic-bottle" />
 
                   <h2>Plastic</h2>
-                  <h3>Plastic Recyling Facts!</h3>
+                  <p className="font-weight-medium">Plastic Recyling Facts!</p>
               </div>
 
               <button className="btn" onClick={this.toggle}>
@@ -44,9 +44,9 @@ class ExpandCollapsePlastic extends React.Component{
               </button>
 
           </div>
-          <p>
-              By recycling plastic waste and using a reusable mug and bottle, ONE person can prevent 340 pounds of pollution a year, prevent the need for at least 100 plastic bottles, and reduce 50% of the energy it would take to burn it.
-          </p>
+
+          <p>By recycling plastic waste and using a reusable mug and bottle, ONE person can prevent 340 pounds of carbon pollution a year, prevent the need for at least 100 plastic bottles, and reduce 50% of the energy it would take to burn it.</p>
+
           <div className="container-body">
 
               <AnimateHeight
@@ -64,7 +64,7 @@ class ExpandCollapsePlastic extends React.Component{
 
                   <div className="tips-container">
 
-                      <h3>Tips! How you can make a difference</h3>
+                      <p className="font-weight-medium">Tips! How you can make a difference</p>
 
                       <ol className="tips-list">
                           <li>
@@ -72,7 +72,7 @@ class ExpandCollapsePlastic extends React.Component{
 
                           </li>
                           <li>
-                              Be sure to recycle any plastic containers you might have (Shampoo bottles, detergent bottles, food boxed and so on)
+                              Be sure to recycle any plastic containers you might have, such as shampoo bottles, detergent bottles, food boxed and so on.
                           </li>
                           <li>
                               Get a reusable water bottle. Below are some affordable options:

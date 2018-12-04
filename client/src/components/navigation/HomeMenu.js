@@ -9,7 +9,7 @@ class HomeMenu extends Component {
         const navLinks = pages.map((page, i) => {
           return (
             <li key={i}>
-            {page=="home" ? (<NavLink to={"/"} activeClassName="active">{page}
+            {page==="home" ? (<NavLink to={"/"} activeClassName="active">{page}
             </NavLink>) : (<NavLink to={"/" + page} activeClassName="">{page}
             </NavLink>)}
 
