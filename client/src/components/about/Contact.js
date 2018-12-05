@@ -52,7 +52,6 @@ class Contact extends Component {
         .catch(err => {
             console.log('ERROR on front-end ' + err);
         });
-        // console.log(this.state);
     }
 
     renderForm() {
@@ -120,9 +119,9 @@ class Contact extends Component {
                 <div className="contact-success-results">
                     <p><strong>Your message</strong></p>
                     <p>Name: {this.state.userName}</p>
-                    <p>Email: {this.state.userEmail}</p>
+                    <p>Email*: {this.state.userEmail}</p>
                     <p>Subject: {this.state.userSubject}</p>
-                    <p>Message: {this.state.userMessage}</p>
+                    <p>Message*: {this.state.userMessage}</p>
                     <p>
                         I {this.state.userSubscribe ? "am" : "am not"} a member of Climate Guide's discussion board.
                     </p>
