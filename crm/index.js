@@ -37,7 +37,12 @@ app.use(bodyParser.urlencoded({ extended:true }));
 app.use(bodyParser.json());
 app.use(cors());
 
-
+app.use( express.static( `${__dirname}/../client/build` ) );
+console.log("hello i am serving build");
+const path = require('path')
+app.get('*', (req, res)=>{
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+})
 
 
 routes(app);
