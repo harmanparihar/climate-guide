@@ -1,9 +1,10 @@
 import React from 'react';
 import AnimateHeight from 'react-animate-height';
 import carSmoke from '../assets/icons/transit-colour.svg';
-import bus from '../assets/icons/bus_transit.svg';
-import ton from '../assets/icons/ton.svg';
-import money from '../assets/icons/money.svg';
+
+import bus from '../assets/icons/bus_transit.png';
+import ton from '../assets/icons/ton.png';
+import money from '../assets/icons/money.png';
 
 import Interactive from './Interactive';
 

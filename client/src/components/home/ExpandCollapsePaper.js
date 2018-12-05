@@ -3,10 +3,10 @@ import AnimateHeight from 'react-animate-height';
 import paperPlane from '../assets/icons/paper-plane.svg';
 
 import Interactive from './Interactive';
-import papers from '../assets/icons/papers.svg';
-import treeForest from '../assets/icons/tree-forest.svg';
-import pollution from '../assets/icons/co2-pollution.svg';
-import trucks from '../assets/icons/trucks.svg';
+import papers from '../assets/icons/papers.png';
+import treeForest from '../assets/icons/tree-forest.png';
+import pollution from '../assets/icons/co2-pollution.png';
+import trucks from '../assets/icons/trucks.png';
 
 
 class ExpandCollapsePaper extends React.Component{

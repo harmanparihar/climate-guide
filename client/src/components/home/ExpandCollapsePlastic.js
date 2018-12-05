@@ -3,10 +3,10 @@ import AnimateHeight from 'react-animate-height';
 import bottle from '../assets/icons/bottle-purple.svg';
 
 import Interactive from './Interactive';
-import person from '../assets/icons/person.svg';
-import battery from '../assets/icons/battery-half.svg';
-import bottles from '../assets/icons/bottle-mountain.svg';
-import carbon from '../assets/icons/carbon-pollution.svg';
+import person from '../assets/icons/person.png';
+import battery from '../assets/icons/battery-half.png';
+import bottles from '../assets/icons/bottle-mountain.png';
+import carbon from '../assets/icons/carbon-pollution.png';
 
 class ExpandCollapsePlastic extends React.Component{
 
