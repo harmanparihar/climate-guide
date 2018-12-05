@@ -67,7 +67,7 @@ app.use(express.static('public'));
 app.get('/',(req,res)=>
   res.send(`Node and express server is running on port ${PORT}`)
 );
-app.listen(PORT,"localhost", () =>
+app.listen(PORT, "localhost", () =>
   console.log(`your server is running on ${PORT}`)
 );
 
@@ -222,6 +222,7 @@ client.on('ready', () => {
         });
     });
 });
+
 // app.get('/fusionCharts', (req, res) => {
 //     res.send({exp: "hibyy"});
 // });
@@ -235,24 +236,22 @@ client.connect({
 
 const nodemailer = require('nodemailer');
 
-app.post('/api/form', (req, res) =>{
-    nodemailer.createTestAccount(( err, account) => {
+app.post('/api/form', (req, res) => {
+    nodemailer.createTestAccount((err, account) => {
         const htmlEmail = `
         <div>
         <p>Name: ${req.body.userName}</p>
         <p>Email: ${req.body.userEmail}</p>
         <p>Subject: ${req.body.userSubject}</p>
         <p>Message: ${req.body.userMessage}</p>
-        <p>Member of Discussion Board: ${req.body.userSubscribe}</p>
+        <p>Joined the discussion board: ${req.body.userSubscribe}</p>
         </div>
         `;
 
-        var transporter = nodemailer.createTransport({
+        let transporter = nodemailer.createTransport({
             host: 'smtp.mailgun.org',
             port: 587,
             auth: {
-                // user: process.env.GMAIL_EMAIL,
-                // pass: process.env.GMAIL_PASS
                 user: "postmaster@sandbox3d5d1673a19941b6bad15f59c7585e15.mailgun.org",
                 pass: "123456aS"
             }
@@ -260,18 +259,25 @@ app.post('/api/form', (req, res) =>{
 
         let mailOptions = {
             from: req.body.userEmail,
-            to:'maggievu91@gmail.com',
+            to: 'maggievu91@gmail.com',
             replyTo: req.body.userEmail,
             subject: req.body.userSubject,
             text: req.body.userMessage,
             html: htmlEmail
         }
 
-        transporter.sendMail(mailOptions, function (err, info) {
-            if(err)
-            console.log('ERROR' + err)
-            else
-            console.log('INFO' + info);
+        transporter.sendMail(mailOptions, (error, success) => {
+            if (err) {
+                console.log('ERROR: ' + error);
+                res.json({
+                    message: 'fail'
+                });
+            } else {
+                console.log('SUCCESS: ' + JSON.stringify(success));
+                res.json({
+                    message: 'success'
+                });
+            }
         });
     })
-})
+});

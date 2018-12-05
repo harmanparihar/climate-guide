@@ -2,6 +2,7 @@
 
 import React, { Component } from "react";
 import axios from 'axios';
+import path from '../discussion-board/path';
 
 class Contact extends Component {
     constructor(props) {
@@ -36,7 +37,7 @@ class Contact extends Component {
             sending: true
         });
 
-        await axios.post('http://localhost:8080/api/form', this.state)
+        await axios.post(path + '/api/form', this.state)
         .then(res => {
             if (res.data.message === 'success') {
                 this.setState({
@@ -115,7 +116,7 @@ class Contact extends Component {
         return (
             <div className="contact-success container">
                 <h2>Contact Us</h2>
-                <p>Thank you for contacting us. We'll get back to you within 5 days. Or <a href="mailto:maggievu91@gmail.com?subject=Hello%20from%20Climate%20Guide%20user">email us directly</a>. </p>
+                <p>Thank you for contacting us. We'll get back to you within 5 days. Or you can <a href="mailto:maggievu91@gmail.com?subject=Hello%20from%20Climate%20Guide%20user">email us directly</a>. </p>
                 <div className="contact-success-results">
                     <p><strong>Your message</strong></p>
                     <p>Name: {this.state.userName}</p>
