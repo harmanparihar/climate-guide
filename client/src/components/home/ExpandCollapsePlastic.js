@@ -28,7 +28,7 @@ class ExpandCollapsePlastic extends React.Component{
 
     return(
 
-      <div className="expand-collapse-container container">
+      <div id="plastic" className="expand-collapse-container container">
 
           <div className="container-head">
 

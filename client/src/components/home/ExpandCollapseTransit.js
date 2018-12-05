@@ -28,7 +28,7 @@ class ExpandCollapseTransit extends React.Component{
 
     return(
 
-      <div className="expand-collapse-container container">
+      <div id="transit" className="expand-collapse-container container">
 
           <div className="container-head">
 
