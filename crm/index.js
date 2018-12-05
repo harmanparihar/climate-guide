@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import routes from './src/routes/crmRoutes';
 import serveStatic from 'serve-static';
+import cors from 'cors';
 
 const passport = require('./src/passport');
 
@@ -35,6 +36,7 @@ mongoose.connect(db_dev, {
 // bodyparser setup
 app.use(bodyParser.urlencoded({ extended:true }));
 app.use(bodyParser.json());
+app.use(cors());
 
 app.use( express.static( `${__dirname}/../client/build` ) );
 console.log("hello i am serving build");
