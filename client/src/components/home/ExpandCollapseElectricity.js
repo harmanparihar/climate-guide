@@ -1,9 +1,9 @@
 import React from 'react';
 import AnimateHeight from 'react-animate-height';
 import electricity from '../assets/icons/energy-colour.svg';
-import lamp from '../assets/icons/lamp_eletricity.png';
-import ton from '../assets/icons/ton-electricity.png';
-import money from '../assets/icons/money-electricity.png';
+import lamp from '../assets/icons/lamp_eletricity.svg';
+import ton from '../assets/icons/ton-electricity.svg';
+import money from '../assets/icons/money-electricity.svg';
 
 import Interactive from './Interactive';
 
